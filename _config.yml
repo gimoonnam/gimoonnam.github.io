@@ -23,7 +23,7 @@ title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Gimoon Nam"
 description              : "An amazing website."
-url                      : "https://gmnam.github.io"
+url                      : "https://gimoonnam.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -97,7 +97,7 @@ analytics:
 author:
   name             : "Gimoon Nam"
   avatar           :  #path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
+  bio              : "Software Engineer at Metron HK Ltd"
   location         : "Seoul"
   email            :
   links:
