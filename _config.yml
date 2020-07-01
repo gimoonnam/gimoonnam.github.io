@@ -21,7 +21,7 @@ locale                   : "en-US"
 title                    : "GM's blog"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Gimoon Nam"
+name                     : "software engineer"
 description              : "An amazing website."
 url                      : "https://gimoonnam.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
