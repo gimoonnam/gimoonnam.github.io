@@ -1,7 +1,7 @@
 # main links
 main:
-  - title: "OpenCV"
-    url: /categories/OpenCCV/
+#   - title: "OpenCV"
+#     url: /categories/OpenCV/
   - title: "Categories"
     url: /categories/
   - title: "Tags"
