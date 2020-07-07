@@ -28,7 +28,12 @@ use_math: true
  
    
 # Demosaicing 
- 
+
+   Bayer filter에서 각 픽셀은 자기와 같은 색만을 통과시켜 RGB로 세종류로 이루어진 격자를 만든다. 
+   이것을 Bayer image이라고 부르고 사진을 찍으면 가장 먼저 생성되는 일종의 raw 데이타이다. 
+  
+  <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2Fbv2Isg%2FbtqFtJxSlJh%2FuqCUUx7xXKxNYVwiR9RONK%2Fimg.png" width="450px" height="300px" title="px(픽셀) 크기 설정">
+  
   The raw output of Bayer-filter cameras is called a Bayer pattern image, which is a record of one of three colors in each pixel. 
   However, in this image, each pixel cannot fully specify each of the red, green, blue values.
   
