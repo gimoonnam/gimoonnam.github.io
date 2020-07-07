@@ -52,8 +52,14 @@ use_math: true
     3. linear interpolation (for 1D array)
     
    
-      
+ # other terminologies for further study 
+   
+    1. Charge-coupled Device(CCD)
+    2. anti-aliasing 
+    3. Nyquist-Shannon sampling 
+    
 
+   
    
    
   
