@@ -32,7 +32,7 @@ use_math: true
   그래서 to obtain a full-color image, 다양한 demosaicing 알고리즘이 interpolation을 통해서 각 픽셀당 RGB의 조합을 찾아낸다. 이 알고리즘의 기본은 주변의 픽셀값들을 이용한다는 것이다. 
   
   
- ## Demosaicing 
+   ## Demosaicing 
  
    Color Filter Array(CFA)는 디지털 카메라내에 이미지 센서 앞에 위치한다. 따라서 빛이 들어오면 센서에 감지되는 것은 필터링된 컬러이다. 
    
