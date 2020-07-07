@@ -1,7 +1,7 @@
 ---
 title: "Bayer's Pattern"
 date: 2020-7-3 18:22:28 -0400
-categories: OpenCV
+categories: Image Processing
 tags:
   - BayerPattern 
   - Color Filter Array(CFA)
