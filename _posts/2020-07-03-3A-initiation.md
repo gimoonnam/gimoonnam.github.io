@@ -3,10 +3,10 @@ title: "Camera 3A algorithm"
 date: 2020-7-3 23:34:28 -0400
 categories: OpenCV
 tags:
-  -3A
-  -Autofocus
-  -AutoWhiteBalance
-  -AutoExposure
+  - 3A algorithm
+  - Autofocus
+  - AutoWhiteBalance
+  - AutoExposure
 use_math: true
 ---
 
