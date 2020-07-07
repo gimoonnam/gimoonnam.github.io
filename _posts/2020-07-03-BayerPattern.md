@@ -13,7 +13,7 @@ use_math: true
   Bayer's pattern에 대해서 이해한다. 
   
 # Bryce Bayer: an inventor of the Bayer's filter 
-  <img src="https://github.com/gimoonnam/gimoonnam.github.io/blob/master/BBayer.001.jpeg" width="450px" height="300px" title="px(픽셀) 크기 설정" alt="Bryce Bayer"></img><br/>
+  <img src="https://gmnam.tistory.com/101" width="450px" height="300px" title="px(픽셀) 크기 설정" alt="Bryce Bayer"></img><br/>
 
   
 # Theory 
