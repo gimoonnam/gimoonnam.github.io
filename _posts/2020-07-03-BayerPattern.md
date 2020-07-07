@@ -18,7 +18,7 @@ use_math: true
   Bayer filter mosaic은 RGB 컬러를 필터링 하기 위한 2차원 격자 배열이다. 이 배열은 디지털 사진에 컬러를 입히는데 사용되는 Color Filter Array(CFA)의 대표적인 필터링이다. 
   이것은 Kodak의 연구원이었던 Bryce Bayer가 처음으로 고안하여 지금까지 거의 모든 디지털 카메라에 사용되고 있다. 
   
-  <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2FxHLex%2FbtqFtKiGpxL%2FpysnUzBETa4Ge7mC50kA1K%2Fimg.jpg" title="px(픽셀) 크기 설정" alt="Bryce Bayer">
+  <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2FxHLex%2FbtqFtKiGpxL%2FpysnUzBETa4Ge7mC50kA1K%2Fimg.jpg" width="450px" height="300px" title="px(픽셀) 크기 설정" alt="Bryce Bayer">
 
   Bayer필터는 50%(Green), 25%(Red), and 25%(Blue)로 이루어있다. 인간의 눈은 자연광에서 녹색에 가장 민감하게 반응하기 때문에 Bayer필터에는 
   Green이 Blue나 Red보다 많이 들어있으며, 녹색은 휘도감지, 즉 빛의 밝기에 민감한 센서요소가 되며, 빨강과 파랑은 색차를 감지하는데 좋은 요소이다. 이것을 영어로 다음과 같이 표현한다. 
@@ -32,7 +32,7 @@ use_math: true
    Bayer filter에서 각 픽셀은 자기와 같은 색만을 통과시켜 RGB로 세종류로 이루어진 격자를 만든다. 
    이것을 Bayer image이라고 부르고 사진을 찍으면 가장 먼저 생성되는 일종의 raw 데이타이다. 
   
-  <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2Fbv2Isg%2FbtqFtJxSlJh%2FuqCUUx7xXKxNYVwiR9RONK%2Fimg.png" width="450px" height="300px" title="px(픽셀) 크기 설정">
+  <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2Fbv2Isg%2FbtqFtJxSlJh%2FuqCUUx7xXKxNYVwiR9RONK%2Fimg.png" title="px(픽셀) 크기 설정">
   
   The raw output of Bayer-filter cameras is called a Bayer pattern image, which is a record of one of three colors in each pixel. 
   However, in this image, each pixel cannot fully specify each of the red, green, blue values.
