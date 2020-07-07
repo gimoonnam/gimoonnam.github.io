@@ -47,9 +47,9 @@ use_math: true
    
    여러가지 알고리즘 중 가장 많이 사용되는 것은 interpolation(내삽)을 이용한 방법이다. 대표적으로 다음의 두 가지 간단한 내삽을 사용한다.
    
-    - nearest-neighbor interpolation (poor result but good for previews) 
-    - bilinear interpolation (a bit more complicated algorithm)
-    - linear interpolation (the most good results)
+    1. nearest-neighbor interpolation (poor quality)
+    2. bilinear interpolation (suitable for 2D array)
+    3. linear interpolation (for 1D array)
     
    
       
