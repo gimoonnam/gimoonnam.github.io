@@ -1,7 +1,7 @@
 ---
 title: "Image filtering using Matlab"
 date: 2020-7-2 18:22:28 -0400
-categories: OpenCV
+categories: ImageProcessing
 tags:
   - matlab image filtering
   - imfilter 
