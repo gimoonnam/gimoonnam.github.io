@@ -4,6 +4,9 @@ date: 2020-7-3 18:22:28 -0400
 categories: OpenCV
 tags:
   - BayerPattern 
+  - Color Filter Array(CFA)
+  - Demosaicing 
+  - interpolation algorithm 
 use_math: true
 ---
 
@@ -30,6 +33,7 @@ use_math: true
   
   
  ## Demosaicing 
+ 
    Color Filter Array(CFA)는 디지털 카메라내에 이미지 센서 앞에 위치한다. 따라서 빛이 들어오면 센서에 감지되는 것은 필터링된 컬러이다. 
    
    즉, Bayer filter를 사용했을때 각 픽셀에 R,G,B 컬러 셋중 하나씩 raw intensity로 기록된다. 이것은 알고리즘을 통해 픽셀당 RGB컬의 조합을 찾아내는 것이다. 이것을 demosaicing이라고 한다. 
