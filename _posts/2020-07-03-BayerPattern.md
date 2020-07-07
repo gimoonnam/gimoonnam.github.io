@@ -13,8 +13,8 @@ use_math: true
   Bayer's pattern에 대해서 이해한다. 
   
 # Bryce Bayer: an inventor of the Bayer's filter 
-  
-  ![Alt text](https://github.com/gimoonnam/gimoonnam.github.io/blob/master/BBayer.001.jpeg)
+  <img src="https://github.com/gimoonnam/gimoonnam.github.io/blob/master/BBayer.001.jpeg" width="450px" height="300px" title="px(픽셀) 크기 설정" alt="Bryce Bayer"></img><br/>
+
   
 # Theory 
   Bayer filter mosaic은 RGB 컬러를 필터링 하기 위한 2차원 격자 배열이다. 이 필터는 50%(Green), 25%(Red), and 25%(Blue)로 이루어져있다. 
@@ -28,6 +28,7 @@ use_math: true
   
   The raw output of Bayer-filter cameras is called a Bayer pattern image, which is a record of one of three colors in each pixel. 
   However, in this image, each pixel cannot fully specify each of the red, green, blue values.
+  
   그래서 to obtain a full-color image, 다양한 demosaicing 알고리즘이 interpolation을 통해서 각 픽셀당 RGB의 조합을 찾아낸다. 이 알고리즘의 기본은 주변의 픽셀값들을 이용한다는 것이다. 
   
   
