@@ -1,7 +1,7 @@
 ---
 title: "Camera 3A algorithm"
 date: 2020-7-3 23:34:28 -0400
-categories: OpenCV
+categories: ImageProcessing
 tags:
   - 3A algorithm
   - Autofocus
