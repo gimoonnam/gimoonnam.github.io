@@ -59,6 +59,7 @@ toc_sticky: true
 
   $$
     \hat{W}_{ij,k} = \frac{W_{ij,k}}{\left[\sum_{k^{\prime}}^{N} W_{ij,k^{\prime}} \right]}
+    \tag{2}
   $$
 
   The resultant fusion image can then be obtained via a weighted blending of image stack. But it was turned out that the simple fusion produced undesired disturbing seams and halos on resulting images. 
@@ -69,12 +70,14 @@ toc_sticky: true
 
   $$
     \mathbf{L}[R]_{ij}^l = \sum_{k=1}^{N}\mathbf{G}[{\hat W}]_{ij,k}^l \mathbf{L}[I]_{ij,k}^l
+    \tag{3}
   $$
 
   Then the final result is obtained by collapsing the Laplacian pyramid up to the original image size. 
 
   $$
     R_{ij} = \sum_{k=1}^N \mathbf{L}[R]_{ij} I_{ij,k}
+    \tag{4}    
   $$
 
 ## 2. Import 
