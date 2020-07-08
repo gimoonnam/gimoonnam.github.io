@@ -119,7 +119,7 @@ from IPython.display import Image
   ![ ](/assets/images/house.png)
   
 
-## 3.Acquire weight maps
+## 3. Acquire weight maps
 
 ```
 def getContrastWeight(self): return self.contrast_para
@@ -128,4 +128,15 @@ def getExposurednessWeight(self): return self.wexp_para
 ``` 
 
 
-## x. Wrapping it up 
+## 4. Simple blending of images with weight maps 
+
+  but this yielded a poor quality ... 
+
+
+## 5. Multiresolution blending using image pyramid
+
+
+## 6. Test for various examples 
+
+
+## 7. Wrapping it up 
