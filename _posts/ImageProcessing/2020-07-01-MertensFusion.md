@@ -21,12 +21,17 @@ use_math: true
   Besides, the Mertens' algorithm does not require a conversion to an HDR image, which is thus proposed as an effective method for an image fusion, 
   as a counterpart of others involving the conversion. The demonstration of HDR's fusion will be studied soon though.  
 
-  **Key Points of Mertens' algorithm **
+  **Key Points of Mertens' algorithm**
   ``` 
     1. No conversion into HDR images 
-    2. Multiresolution blend by Gaussian and Laplacian pyramid images  
-    3. No further post improvement requried 
+    2. Multiresolution blending by Gaussian and Laplacian pyramid images  
+    3. No additional post improvements requried 
   ```
+ 
+  ![alt text](https://github.com/gimoonnam/ImageProcessing/blob/master/images/house.png)
+ 
+ 
+# Theory  
 
 
 ## <span style="color:blue"> Quality measures </span> 
