@@ -13,7 +13,7 @@ use_math: true
 # Introduction  
 
   This post presents a Python implementation on an exposure fusion using openCV. 
-  This method is called a multiresolution blending and was proposed by [Mertens et al.][https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-8659.2008.01171.x]
+  This method is called a multiresolution blending and was proposed by [Mertens et al.](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-8659.2008.01171.x)
  
   The exposure fusion blends images taken at different exposures. 
   As shown in the picture below, an underexposed image becomes darker, but losses details in dark region. 
@@ -31,12 +31,11 @@ use_math: true
     3. No additional post improvements requried 
   ```
  
-  <src img="https://github.com/gimoonnam/gimoonnam.github.io/blob/master/assets/images/house.png">
+  <src img="https://github.com/gimoonnam/gimoonnam.github.io/blob/master/assets/images/house.png"/>
  
  
  
 # Theory  
-
 
 ## <span style="color:blue"> Quality measures </span> 
 
