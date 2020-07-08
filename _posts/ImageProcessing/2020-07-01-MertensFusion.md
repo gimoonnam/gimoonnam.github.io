@@ -20,15 +20,16 @@ use_math: true
   as a counterpart of others involving the conversion. The demonstration of HDR's fusion will be studied soon though.  
 
   **Key Points of Mertens' algorithm**
-  >  1. No conversion into HDR images 
-  >  2. Not need to know exposure times 
-  >  3. Multiresolution blending by Gaussian and Laplacian pyramid images   
-  >  4. No additional post improvements requried 
+  >1. No conversion into HDR images 
+  >2. Not need to know exposure times 
+  >3. Multiresolution blending by Gaussian and Laplacian pyramid images   
+  >4. No additional post improvements requried 
 
  
 # Multiresolution Exposure Fusion  
 
   ## 1. Theory 
+  
   ### <span style="color:blue"> a. Quality measures </span> 
 
    * **Contrast ($C$)**
@@ -101,3 +102,11 @@ use_math: true
 
   ![ ](/assets/images/house.png)
   
+
+## 3.Acquire weight maps
+
+```
+def getContrastWeight(self): return self.contrast_para
+def getSaturationWeight(self): return self.sat_para
+def getExposurednessWeight(self): return self.wexp_para
+``` 
