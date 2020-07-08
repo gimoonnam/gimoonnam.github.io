@@ -20,6 +20,8 @@ use_math: true
   On the other hand, an overexposed image becomes brighter but losses details in bright region.  
   The goal of the fusion is to obain an image with details over the entire region. 
   
+  ![ ](/assets/images/house.png)
+  
   The image blending using such pyramids is a powerful method, and yields a high quality image. 
   Besides, the Mertens' algorithm does not require a conversion to an HDR image, which is thus proposed as an effective method for an image fusion, 
   as a counterpart of others involving the conversion. The demonstration of HDR's fusion will be studied soon though.  
@@ -30,10 +32,6 @@ use_math: true
     2. Multiresolution blending by Gaussian and Laplacian pyramid images  
     3. No additional post improvements requried 
   ```
- 
- ![ ](/assets/images/house.png)
- 
- 
  
 # Theory  
 
