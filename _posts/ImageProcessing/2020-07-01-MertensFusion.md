@@ -80,21 +80,21 @@ use_math: true
   First, we import images with different exposure and store them as a list stack. 
   
   ```
-        # read images and save them as a stack 
-        path = os.getcwd() + "/house/"    
+  # read images and save them as a stack 
+  path = os.getcwd() + "/house/"    
 
-        filenames = ["A.jpg","B.jpg","C.jpg","D.jpg"]    
-        self.images = []
+  filenames = ["A.jpg","B.jpg","C.jpg","D.jpg"]    
+  self.images = []
         
-        for filename in filenames:
-            im = cv2.imread(path+filename).astype(np.float32)/255.0
-            self.images.append(im)
+  for filename in filenames:
+      im = cv2.imread(path+filename).astype(np.float32)/255.0
+      self.images.append(im)
     
-        self.N = len(self.images) # the number of images 
-        self.width  = len(self.images[0]) 
-        self.height = len(self.images[0][0])
-        self.weightParam = weightParam 
-        self.nlev = nlev # number of levels in image pyramids   
+  self.N = len(self.images) # the number of images 
+  self.width  = len(self.images[0]) 
+  self.height = len(self.images[0][0])
+  self.weightParam = weightParam 
+  self.nlev = nlev # number of levels in image pyramids   
   ``` 
   
   This picture shows the original images writh four different exposures, where an underexposed image becomes darker, but loses details in dark region. 
