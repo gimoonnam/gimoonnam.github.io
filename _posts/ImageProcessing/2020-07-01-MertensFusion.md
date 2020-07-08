@@ -31,7 +31,7 @@ use_math: true
     3. No additional post improvements requried 
   ```
  
-  <src img="https://github.com/gimoonnam/gimoonnam.github.io/blob/master/assets/images/house.png"/>
+ <src img="https://github.com/gimoonnam/gimoonnam.github.io/blob/master/assets/images/house.png"/>
  
  
  
