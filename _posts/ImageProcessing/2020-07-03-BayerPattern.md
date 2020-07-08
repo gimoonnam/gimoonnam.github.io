@@ -8,6 +8,8 @@ tags:
   - Demosaicing 
   - interpolation algorithm 
 use_math: true
+toc: true
+toc_sticky: true
 ---
 
 # Goal 
