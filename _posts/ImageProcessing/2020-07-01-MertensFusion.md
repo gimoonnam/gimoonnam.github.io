@@ -46,7 +46,8 @@ toc_sticky: true
    The weight map with the above three measures are given as a power function
 
   $$ 
-    W_{ij,k} = \left(C_{ij,k}\right)^{\omega_C}\times \left(S_{ij,k}\right)^{\omega_S} \times \left(E_{ij,k}\right)^{\omega_E}                            
+    W_{ij,k} = \left(C_{ij,k}\right)^{\omega_C}\times \left(S_{ij,k}\right)^{\omega_S} \times \left(E_{ij,k}\right)^{\omega_E}  
+    \tag{1}
   $$
 
   where $k$ indicates an index of image in given image stack, and $i,j$ are pixel's indices. The relative contributions of each measure to the weight is controlled by the exponents $\omega_{C,S,E}$, varying between 0 and 1.
@@ -122,3 +123,6 @@ def getContrastWeight(self): return self.contrast_para
 def getSaturationWeight(self): return self.sat_para
 def getExposurednessWeight(self): return self.wexp_para
 ``` 
+
+
+## x. Wrapping it up 
