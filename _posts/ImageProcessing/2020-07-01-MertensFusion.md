@@ -28,7 +28,8 @@ use_math: true
     3. No additional post improvements requried 
   ```
  
-  ![alt text](https://github.com/gimoonnam/ImageProcessing/blob/master/images/house.png)
+  ![alt text](https://github.com/gimoonnam/gimoonnam.github.io/blob/master/assets/images/house.png)
+ 
  
  
 # Theory  
