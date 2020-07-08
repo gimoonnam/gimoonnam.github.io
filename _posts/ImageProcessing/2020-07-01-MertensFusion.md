@@ -1,24 +1,32 @@
 ---
-title: "Exposure Fusion by Merten et al.(2009)"
+title: "Exposure Fusion using Laplacian Pyramids"
 date: 2020-7-1 12:32:28 -0400
 categories: ImageProcessing
 tags:
   - openCV 
   - exposure fusion
-  - Merten's algorithm
+  - Mertens' algorithm
+  - Multiresolution blending
 use_math: true
 ---
 
 # Introduction  
 
-  This post is written to study Merten's algorithm for image exposure fusion. I will follow the details on algorithm with theory and practice.
-  
-  This algorithm implements a multiresolution blending using Gaussian and Laplacian image pyramids. 
-  
+  This post presents a Python implementation on an exposure fusion using openCV. 
+  This method is called a multiresolution blending and was proposed by Mertens et al (. ).
+ 
+  The exposure fusion aims to obtain a good quality image from images taken at different exposures. 
+
   The image blending using such pyramids is a powerful method, and yields a high quality image. 
   Besides, the Mertens' algorithm does not require a conversion to an HDR image, which is thus proposed as an effective method for an image fusion, 
   as a counterpart of others involving the conversion. The demonstration of HDR's fusion will be studied soon though.  
 
+  **Key Points of Mertens' algorithm **
+  ``` 
+    1. No conversion into HDR images 
+    2. Multiresolution blend by Gaussian and Laplacian pyramid images  
+    3. No further post improvement requried 
+  ```
 
 
 ## <span style="color:blue"> Quality measures </span> 
