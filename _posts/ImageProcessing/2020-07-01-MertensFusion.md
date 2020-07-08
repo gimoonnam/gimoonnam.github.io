@@ -8,6 +8,8 @@ tags:
   - Mertens' algorithm
   - Multiresolution blending
 use_math: true
+toc: true
+toc_sticky: true
 ---
 
 # Introduction  
