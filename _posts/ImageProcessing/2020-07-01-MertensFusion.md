@@ -16,9 +16,8 @@ use_math: true
   This method is called a multiresolution blending and was proposed by [Mertens et al.](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-8659.2008.01171.x)
  
   The exposure fusion blends images taken at different exposures. 
-  As shown in the picture below, an underexposed image becomes darker, but losses details in dark region. 
-  On the other hand, an overexposed image becomes brighter but losses details in bright region.  
-  The goal of the fusion is to obain an image with details over the entire region. 
+  As shown in the picture below, an underexposed image becomes darker, but loses details in dark region. 
+  On the other hand, an overexposed image becomes brighter but loses details in bright region. The goal of the fusion is to obain an image with details over the entire region. 
   
   ![ ](/assets/images/house.png)
   
@@ -27,14 +26,13 @@ use_math: true
   as a counterpart of others involving the conversion. The demonstration of HDR's fusion will be studied soon though.  
 
   **Key Points of Mertens' algorithm**
-  ``` 
-    1. No conversion into HDR images 
-    2. Multiresolution blending by Gaussian and Laplacian pyramid images  
-    3. No additional post improvements requried 
-  ```
+  >  1. No conversion into HDR images 
+  >  2. Multiresolution blending by Gaussian and Laplacian pyramid images  
+  >  3. No additional post improvements requried 
+
  
 # Theory  
-
+    
   ## <span style="color:blue"> Quality measures </span> 
 
    * **Contrast ($C$)**
