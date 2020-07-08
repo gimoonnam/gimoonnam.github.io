@@ -13,7 +13,7 @@ use_math: true
 # Introduction  
 
   This post presents a Python implementation on an exposure fusion using openCV. 
-  This method is called a multiresolution blending and was proposed by Mertens et al (. ).
+  This method is called a multiresolution blending and was proposed by [Mertens et al.][https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-8659.2008.01171.x]
  
   The exposure fusion aims to obtain a good quality image from images taken at different exposures. 
 
