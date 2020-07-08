@@ -14,21 +14,16 @@ use_math: true
 
   This post presents a Python implementation on an exposure fusion using openCV. 
   This method is called a multiresolution blending and was proposed by [Mertens et al.](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-8659.2008.01171.x)
- 
-  The exposure fusion blends images taken at different exposures. 
-  As shown in the picture below, an underexposed image becomes darker, but loses details in dark region. 
-  On the other hand, an overexposed image becomes brighter but loses details in bright region. The goal of the fusion is to obain an image with details over the entire region. 
-  
-  ![ ](/assets/images/house.png)
-  
+     
   The image blending using such pyramids is a powerful method, and yields a high quality image. 
   Besides, the Mertens' algorithm does not require a conversion to an HDR image, which is thus proposed as an effective method for an image fusion, 
   as a counterpart of others involving the conversion. The demonstration of HDR's fusion will be studied soon though.  
 
   **Key Points of Mertens' algorithm**
   >  1. No conversion into HDR images 
-  >  2. Multiresolution blending by Gaussian and Laplacian pyramid images  
-  >  3. No additional post improvements requried 
+  >  2. Not need to know exposure times 
+  >  3. Multiresolution blending by Gaussian and Laplacian pyramid images   
+  >  4. No additional post improvements requried 
 
  
 # Multiresolution Exposure Fusion  
@@ -80,10 +75,10 @@ use_math: true
 
 
 ## 2. Import  
+
+  First, we import images with different exposure and store them as a list stack. 
   
   ```
-      def __init__(self, weightParam, nlev):
-        
         # read images and save them as a stack 
         path = os.getcwd() + "/house/"    
 
@@ -101,4 +96,8 @@ use_math: true
         self.nlev = nlev # number of levels in image pyramids   
   ``` 
   
+  This picture shows the original images writh four different exposures, where an underexposed image becomes darker, but loses details in dark region. 
+  On the other hand, an overexposed image becomes brighter but loses details in bright region. The goal of the fusion is to obain an image with details over the entire region. 
+
+  ![ ](/assets/images/house.png)
   
