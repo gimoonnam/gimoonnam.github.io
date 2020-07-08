@@ -28,9 +28,9 @@ use_math: true
  
 # Multiresolution Exposure Fusion  
 
-  ## 1. Theory 
+## 1. Theory 
   
-  ### <span style="color:blue"> a. Quality measures </span> 
+### <span style="color:blue"> a. Quality measures </span> 
 
    * **Contrast ($C$)**
    Application of a Laplacian filter to the grayscale version of images, and take the absolute value of the filtered image. The contrast map captures details on images such as edges and texture. The resultant map is indicated as $C$. 
@@ -74,12 +74,22 @@ use_math: true
     R_{ij} = \sum_{k=1}^N \mathbf{L}[R]_{ij} I_{ij,k}
   $$
 
+## 2. Import 
 
-## 2. Import  
+```
+import os
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib import gridspec
+from IPython.display import Image
+``` 
+
+## 3. Load Images   
 
   First, we import images with different exposure and store them as a list stack. 
   
-  ```
+```
   # read images and save them as a stack 
   path = os.getcwd() + "/house/"    
 
@@ -95,7 +105,7 @@ use_math: true
   self.height = len(self.images[0][0])
   self.weightParam = weightParam 
   self.nlev = nlev # number of levels in image pyramids   
-  ``` 
+``` 
   
   This picture shows the original images writh four different exposures, where an underexposed image becomes darker, but loses details in dark region. 
   On the other hand, an overexposed image becomes brighter but loses details in bright region. The goal of the fusion is to obain an image with details over the entire region. 
