@@ -96,7 +96,7 @@ analytics:
 # Site Author
 author:
   name             : "GM NAM"
-  avatar           : "/assets/images/profile.jpg"
+  avatar           : #"/assets/images/profile.jpg"
   bio              : "Software Engineer, Ph.D in Physics"
   location         : "Seoul"
   email            :
