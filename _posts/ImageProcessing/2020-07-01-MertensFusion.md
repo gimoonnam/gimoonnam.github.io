@@ -121,14 +121,16 @@ from IPython.display import Image
 
 ## 4. Acquire weight maps
 
-  Three exponents are specified   
+  Three exponents for the weight maps are specified. 
 ```
 def getContrastWeight(self): return self.contrast_para
 def getSaturationWeight(self): return self.sat_para
 def getExposurednessWeight(self): return self.wexp_para
 ``` 
-
-
+  
+  The following snippet constructs the weight maps. The dimension of weight map is identical to that of the original images
+  (Width $\times$ Height $\times$ $N$), where $N$ is the number of images. 
+  
 ``` 
 def ConstructWeightMap(self):
     self.contrast_para, self.sat_para, self.wexp_para = self.weightParam         
@@ -149,6 +151,8 @@ def ConstructWeightMap(self):
     np.seterr(divide='ignore', invalid='ignore')        
 ```
 
+   According to eq.2, the weight maps are normalized, and the dimension of the weight map stack remains unchanged. 
+
 
 
 ## 5. Simple blending of images with weight maps 
@@ -165,12 +169,16 @@ def ConstructWeightMap(self):
 
 ![ ](/assets/images/LaplacePyramid.png)
 
-   
+
+
+## 7. Results
+
    Using eq.4, the image is reconstructed, and the resulting image shows the great details on both inside and outside room. 
    The combination of weight map exponents are $(\omega_C, \omega_S, \omega_E) = (1,1,1)$, by which the contrast, saturation, and exposedness are equaly constributed to the final image. 
+   
 ![ ](/assets/images/mergeMertens.png)    
 
-## 7. Wrapping it up 
+## 8. Wrapping it up 
    
    We have studied a multiresolution blending exposure fusion. 
    The full implementation of the exposure fusion can be found [here](https://github.com/gimoonnam/ImageProcessing/blob/master/mergeMertens_fromScratches.ipynb)
