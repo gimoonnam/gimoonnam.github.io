@@ -163,8 +163,16 @@ def ConstructWeightMap(self):
 
 ## 5. Multiresolution blending using image pyramid
 
+![ ](/assets/images/LaplacePyramid.png)
+
 
 ## 6. Test for various examples 
 
 
 ## 7. Wrapping it up 
+   
+   We have studied a multiresolution blending exposure fusion. 
+   The full implementation of the exposure fusion can be found [here](https://github.com/gimoonnam/ImageProcessing/blob/master/mergeMertens_fromScratches.ipynb)
+   
+   
+   
