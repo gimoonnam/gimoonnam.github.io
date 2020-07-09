@@ -166,7 +166,7 @@ def ConstructWeightMap(self):
 ![ ](/assets/images/LaplacePyramid.png)
 
    
-![ ](/assets/images/house.png)    
+![ ](/ImageProcessing/images/mergeMertens.png)    
 
 ## 7. Wrapping it up 
    
