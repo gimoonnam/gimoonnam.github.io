@@ -53,7 +53,7 @@ toc_sticky: true
   where $k$ indicates an index of image in given image stack, and $i,j$ are pixel's indices. The relative contributions of each measure to the weight is controlled by the exponents $\omega_{C,S,E}$, varying between 0 and 1.
 
 
-### b. Fusion
+### <span style="color:blue"> b. Fusion </span> 
 
   Once the weight maps are constructed for each images, the map needs to be normalized to obtain a consistent result as following,
 
