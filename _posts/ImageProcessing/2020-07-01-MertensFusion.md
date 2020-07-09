@@ -119,7 +119,7 @@ from IPython.display import Image
   ![ ](/assets/images/house.png)
   
 
-## 3. Acquire weight maps
+## 4. Acquire weight maps
 
   Three exponents are specified   
 ```
@@ -151,7 +151,7 @@ def ConstructWeightMap(self):
 
 
 
-## 4. Simple blending of images with weight maps 
+## 5. Simple blending of images with weight maps 
 
   but this yielded a poor quality ... 
   $$
@@ -161,13 +161,12 @@ def ConstructWeightMap(self):
 
 
 
-## 5. Multiresolution blending using image pyramid
+## 6. Multiresolution blending using image pyramid
 
 ![ ](/assets/images/LaplacePyramid.png)
 
-
-## 6. Test for various examples 
-
+   
+![alt text](assets/images/house.png)    
 
 ## 7. Wrapping it up 
    
