@@ -1,5 +1,5 @@
 ---
-title: "Image filtering using Matlab"
+title: "Image filtering in Matlab"
 date: 2020-7-2 18:22:28 -0400
 categories: ImageProcessing
 tags:
@@ -9,7 +9,7 @@ tags:
   - conv2
 use_math: true
 ---
-# 매트랩을 이용한 이미지 필터링 방법
+# 매트랩에서 이미지 필터링 방법
 
 ## Goal
   매트랩 이용한 이미지 필터링을 이해한다. 아래의 세가지 대표적인 내장 함수가 있다. 이들의 사용법을 보며 이미지의 필터링이 어떻게 이루어지는지 알아본다.
