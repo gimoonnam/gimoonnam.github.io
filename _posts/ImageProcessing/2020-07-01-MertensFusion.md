@@ -121,6 +121,7 @@ from IPython.display import Image
 
 ## 3. Acquire weight maps
 
+  Three exponents are specified   
 ```
 def getContrastWeight(self): return self.contrast_para
 def getSaturationWeight(self): return self.sat_para
@@ -128,9 +129,36 @@ def getExposurednessWeight(self): return self.wexp_para
 ``` 
 
 
+``` 
+def ConstructWeightMap(self):
+    self.contrast_para, self.sat_para, self.wexp_para = self.weightParam         
+    self.W = np.ones((self.N, self.width,self.height),dtype=np.float32)
+        
+    if self.contrast_para > 0:
+        self.W = np.power(np.multiply(self.W, self.contrast()),self.contrast_para)
+            
+    if self.sat_para > 0:
+        self.W = np.power(np.multiply(self.W, self.saturation()),self.sat_para)
+       
+    if self.wexp_para > 0:
+        self.W = np.power(np.multiply(self.W, self.well_exposedness()),self.wexp_para)    
+
+    # normalize weight map, whose size will be (width,height,n_images)
+    W_sum = self.W.sum(axis=0)
+    self.W = np.divide(self.W, W_sum+1e-12)
+    np.seterr(divide='ignore', invalid='ignore')        
+```
+
+
+
 ## 4. Simple blending of images with weight maps 
 
   but this yielded a poor quality ... 
+  $$
+    R_{ij} = \sum_{k=1}^N \hat{W}_{ij,k} I_{ij,k}
+    \tag{5}    
+  $$
+
 
 
 ## 5. Multiresolution blending using image pyramid
