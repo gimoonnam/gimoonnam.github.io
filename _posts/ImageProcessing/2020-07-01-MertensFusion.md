@@ -167,7 +167,7 @@ def ConstructWeightMap(self):
 
    
    Using eq.4, the image is reconstructed, and the resulting image shows the great details on both inside and outside room. 
-   The combination of weight map exponents are $(1,1,1)$, by which the contrast, saturation, and exposedness are equaly constributed to the final image. 
+   The combination of weight map exponents are $(\omega_C, \omega_S, \omega_E) = (1,1,1)$, by which the contrast, saturation, and exposedness are equaly constributed to the final image. 
 ![ ](/assets/images/mergeMertens.png)    
 
 ## 7. Wrapping it up 
