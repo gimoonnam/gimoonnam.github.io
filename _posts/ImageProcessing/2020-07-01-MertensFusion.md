@@ -41,7 +41,7 @@ toc_sticky: true
    The Saturation measures the degree of the exposure. A longer exposed image contains desaturated colors, which will eventually be clipped off. It is desirable to have saturated colors to make vivid images. Here, the saturation is measured as a STD of R, G, and B at each pixel.
   
    * **Well-exposedness ($E$)**
-    The raw intensities within a channel reveals how well a pixel is exposed, which is used to make sure that the intensities of all pixels are well ranged between 0 and 1, resepctively, under- and over-exposed. The well-exposedness is evaluated by a Gaussian filter with a mean of 0.5, and this filter applies to each channel individually, each of which will be multiplied to yiled the meausre $E$. 
+    The raw intensities within a channel reveals how well a pixel is exposed, which is used to make sure that the intensities of all pixels are well ranged between 0 and 1, resepctively, under- and over-exposed. The well-exposedness is evaluated by a Gaussian filter with a mean of 0.5, and this filter applies to each channel individually, each of which will be multiplied to yield the meausre $E$. 
 
    The weight map with the above three measures are given as a power function
 
@@ -155,30 +155,40 @@ def ConstructWeightMap(self):
 
 
 
-## 5. Simple blending of images with weight maps 
+## 5. Failure of simple blending and Multiresolution blending using image pyramid
 
-  but this yielded a poor quality ... 
+  It turned out that the simple blending yielded a poor quality image with halos and seams. 
   $$
     R_{ij} = \sum_{k=1}^N \hat{W}_{ij,k} I_{ij,k}
     \tag{5}    
   $$
+  
+ Thus the authors considered an alternative method for blending using a Laplacian image pyramid. 
+ 
+ A Laplacian image can be obtained by applying Laplacian operator given by the second derivatives of an intensity map 
+ 
+ $$
+   Laplace(f) = \frac{\partial^2 f}{\partial x^2} + \frac{\partial^2 f}{\partial y^2} 
+ $$
+ 
+ This operator captures edges and texture on images. 
+ 
+ An image pyramid is one kind of image processing technique to increase the image quality, which consists of downsized images from the original one. There is an original size image on the first level of the pyramid, and the size decreases by a quarter with each increase in the level. 
+ 
+ The following picture shows the obtained Laplacian pyramid of one of the 4 original images.
+
+ ![ ](/assets/images/LaplacePyramid.png)
 
 
 
-## 6. Multiresolution blending using image pyramid
-
-![ ](/assets/images/LaplacePyramid.png)
-
-
-
-## 7. Results
+## 6. Results
 
    Using eq.4, the image is reconstructed, and the resulting image shows the great details on both inside and outside room. 
    The combination of weight map exponents are $(\omega_C, \omega_S, \omega_E) = (1,1,1)$, by which the contrast, saturation, and exposedness are equaly constributed to the final image. 
    
 ![ ](/assets/images/mergeMertens.png)    
 
-## 8. Wrapping it up 
+## 7. Wrapping it up 
    
    We have studied a multiresolution blending exposure fusion. 
    The full implementation of the exposure fusion can be found [here](https://github.com/gimoonnam/ImageProcessing/blob/master/mergeMertens_fromScratches.ipynb)
