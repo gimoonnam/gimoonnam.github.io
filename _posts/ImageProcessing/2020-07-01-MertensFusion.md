@@ -195,7 +195,8 @@ def ConstructWeightMap(self):
 ## 7. Wrapping it up 
    
    We have studied a multiresolution blending exposure fusion. 
-   The full implementation of the exposure fusion can be found [here](https://github.com/gimoonnam/ImageProcessing/blob/master/mergeMertens_fromScratches.ipynb)
+   The full implementation of the exposure fusion can be found [here](https://github.com/gimoonnam/ImageProcessing/blob/master/Mertens_algorithm/mergeMertens_fromScratches.ipynb)
+   
    
    
    
