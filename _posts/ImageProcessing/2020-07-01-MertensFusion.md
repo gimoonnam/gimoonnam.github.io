@@ -192,8 +192,6 @@ def ConstructWeightMap(self):
    
 ![ ](/assets/images/mergeMertens.jpeg)    
 
-
-
 ## 7. Wrapping it up 
    
    We have studied a multiresolution blending exposure fusion. 
