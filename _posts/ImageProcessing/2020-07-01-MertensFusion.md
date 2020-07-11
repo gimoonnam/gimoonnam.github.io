@@ -157,6 +157,7 @@ def ConstructWeightMap(self):
 ## 5. Failure of simple blending and alternative multiresolution blending using image pyramid
 
   It turned out that the simple blending yielded a poor quality image with halos and seams. 
+  
   $$
     R_{ij} = \sum_{k=1}^N \hat{W}_{ij,k} I_{ij,k}
     \tag{5}    
@@ -168,6 +169,7 @@ def ConstructWeightMap(self):
  
  $$
    Laplace(f) = \frac{\partial^2 f}{\partial x^2} + \frac{\partial^2 f}{\partial y^2} 
+   \tag{6}
  $$
  
  This operator captures edges and texture on images. 
