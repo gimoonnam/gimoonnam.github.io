@@ -1,6 +1,6 @@
 ---
 title: "Exposure Fusion using Laplacian Pyramids"
-date: 2020-7-1 12:32:28 -0400
+date: 2020-7-11 12:32:28 -0400
 categories: ImageProcessing
 tags:
   - openCV 
