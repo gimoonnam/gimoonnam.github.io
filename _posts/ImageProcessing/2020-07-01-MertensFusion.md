@@ -27,7 +27,6 @@ toc_sticky: true
   >3. Multiresolution blending by Gaussian and Laplacian pyramid images   
   >4. No additional post improvements requried 
 
- 
 # Multiresolution Exposure Fusion  
 
 ## 1. Theory 
