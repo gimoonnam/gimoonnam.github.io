@@ -164,7 +164,7 @@ def ConstructWeightMap(self):
   
  Thus the authors considered an alternative method for blending using a Laplacian image pyramid. 
  
- A Laplacian image can be obtained by applying Laplacian operator given by the second derivatives of an intensity map 
+ A Laplacian image can be obtained by applying Laplacian operator given by the second derivatives of an intensity map $f=f(x,y)$
  
  $$
    Laplace(f) = \frac{\partial^2 f}{\partial x^2} + \frac{\partial^2 f}{\partial y^2} 
