@@ -178,8 +178,12 @@ def ConstructWeightMap(self):
  The following picture shows the constructed 8-level Laplacian pyramid for one of the 4 original images.
 
  ![ ](/assets/images/LaplacePyramid.png)
+ 
+ For our test image, the dimension of images on this pyramid changes as follows 
 
  ![ ](/assets/images/dimensionOfLaplacianPyramid.png)    
+ 
+ This pyramid is the result of $\mathbf{L}[R]_{ij}^l$ in eq.3, where $l$ indicates a level on the pyramid. 
 
 
 ## 6. Results
