@@ -155,7 +155,7 @@ def ConstructWeightMap(self):
 
 
 
-## 5. Failure of simple blending and Multiresolution blending using image pyramid
+## 5. Failure of simple blending and alternative multiresolution blending using image pyramid
 
   It turned out that the simple blending yielded a poor quality image with halos and seams. 
   $$
@@ -175,10 +175,11 @@ def ConstructWeightMap(self):
  
  An image pyramid is one kind of image processing technique to increase the image quality, which consists of downsized images from the original one. There is an original size image on the first level of the pyramid, and the size decreases by a quarter with each increase in the level. 
  
- The following picture shows the obtained Laplacian pyramid of one of the 4 original images.
+ The following picture shows the constructed 8-level Laplacian pyramid for one of the 4 original images.
 
  ![ ](/assets/images/LaplacePyramid.png)
 
+ ![ ](/assets/images/dimensionOfLaplacianPyramid.png)    
 
 
 ## 6. Results
@@ -187,6 +188,8 @@ def ConstructWeightMap(self):
    The combination of weight map exponents are $(\omega_C, \omega_S, \omega_E) = (1,1,1)$, by which the contrast, saturation, and exposedness are equaly constributed to the final image. 
    
 ![ ](/assets/images/mergeMertens.png)    
+
+
 
 ## 7. Wrapping it up 
    
