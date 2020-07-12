@@ -88,7 +88,7 @@ $P$ and $N$ are the number of photographs and of pixels, respectively.
 $\omega(z)$ is a weight function to impose the smoothness and fitting terms toward the middle of the response curve, which is chosen as a simple hat function as 
 
 $$
-\omage(z) = \begin{cases}
+\omege(z) = \begin{cases}
     z-Z_{min}, & \text{for z \leq \frac{1}{2}\left(Z_{min}+Z_{max}\right) }
     \\ Z_{max}-z, & \text{for z > \frac{1}{2}\left(Z_{min}+Z_{max}\right) }
   \end{cases}
