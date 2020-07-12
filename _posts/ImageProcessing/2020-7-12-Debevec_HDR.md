@@ -74,7 +74,7 @@ $$
 
 where $g = \ln f^{-1}$. 
 
-## 2. A middle curve weighted objective function for the CRF optimization 
+## 2. Weighted Objective Function for CRF Optimization 
 
 $$
 O = \sum_{i=1}^{N}\sum_{j=1}^{P}  \left( \omega(Z_{ij})\left[g(Z_{ij}) - \ln E_i - \ln \Delta t_j \right]\right)^2 + \\ \lambda \sum_{z=Z_{min}+1}^{Z_{max}+1} \left[ \omega(Z_{ij})g^{''}(z)\right]^2 
@@ -89,9 +89,16 @@ $\omega(z)$ is a weight function to impose the smoothness and fitting terms towa
 
 $$
 \omega(z) = \begin{cases}
-    z-Z_{min}, & \text{for} z \leq \frac{1}{2}\left(Z_{min}+Z_{max}\right) 
-    \\ Z_{max}-z, & \text{for} z > \frac{1}{2}\left(Z_{min}+Z_{max}\right) 
+    z-Z_{min}, & \text{for} \,z \leq \frac{1}{2}\left(Z_{min}+Z_{max}\right) 
+    \\ Z_{max}-z, & \text{for}\, z > \frac{1}{2}\left(Z_{min}+Z_{max}\right) 
   \end{cases}
 $$
+
+When measuring the response curve, the pixel locations should be chosen in a way that they are reasonably evenly distributed over $Z_{min}$ and $Z_{max}$, 
+so that the pixels are to be well sampled from the images.
+
+
+## Constructing HDR Radiance Map 
+
 
 
