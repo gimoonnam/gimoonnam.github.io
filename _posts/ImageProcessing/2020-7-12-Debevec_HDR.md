@@ -46,6 +46,9 @@ The implementation is made in Python using openCV.
 * input: a number of digitized photographs taken from the same point with different exposure times
   (assumed that the scene is static and gathering these process is completed quickly enough so that the change in lighting can be safely ignored) 
 
+
+## Camera Response Function 
+
 Suppose that we have a nonlinear function $f$ mapping the exposure $X$ to pixel values $Z$, 
 
 $$ 
@@ -63,14 +66,18 @@ E_i \Delta t_{j} = f^{-1}(Z_{ij})
 \tag{2}
 $$
 
-where Z_{ij} indicates $i$th pixel values of $j$th image. 
-
-This equation can be rewritten as follow 
+where $Z_{ij}$ indicates $i$th pixel values of $j$th image. This equation can be rewritten as follow 
 
 $$
 g(Z_{ij}) = \ln E_i + \ln \Delta t_j
+\tag{3}
 $$
 
 where $g = \ln f^{-1}$. 
 
+## Objective function for the optimization of CRF 
 
+$$
+O = \sum_{i=1}^{N}\sum_{j=1}^{P} \[g(Z_{ij}) - \ln E_i - \ln \Delta t_j \]^2 + \lambda \sum_{z=Z_{min}+1}^{Z_{max}+1} g^{\dprime}(z)^2 
+\tag{4}
+$$
