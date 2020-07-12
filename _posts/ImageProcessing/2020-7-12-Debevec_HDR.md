@@ -78,6 +78,6 @@ where $g = \ln f^{-1}$.
 ## Objective function for the optimization of CRF 
 
 $$
-O = \sum_{i=1}^{N}\sum_{j=1}^{P} \[g(Z_{ij}) - \ln E_i - \ln \Delta t_j \]^2 + \lambda \sum_{z=Z_{min}+1}^{Z_{max}+1} g^{\dprime}(z)^2 
+O = \sum_{i=1}^{N}\sum_{j=1}^{P} \left[g(Z_{ij}) - \ln E_i - \ln \Delta t_j \right]^2 + \lambda \sum_{z=Z_{min}+1}^{Z_{max}+1} g^{''}(z)^2 
 \tag{4}
 $$
