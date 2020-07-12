@@ -15,21 +15,22 @@ toc_sticky: true
 
 
 # Introduction 
-  
-  ## What is High Dynamic Range(HDR)? 
-  
+ 
+ ... 
+ 
+## What is High Dynamic Range(HDR)? 
+ ...  
     
-  ## Camera Response Function(CRF)
+## Camera Response Function(CRF)
 
-    * the film reponse to variations in exposure $X$ is a non-linear function, called "characteristic curve" of the film, 
+* the film reponse to variations in exposure $X$ is a non-linear function, called "characteristic curve" of the film, 
       accounting for a non-linear relationship between pixel exposure $X$ and its intensity $Z$
 
-    * To cover the full dynamic range, one can take a series of photographs with different exposures, 
+* To cover the full dynamic range, one can take a series of photographs with different exposures, 
       raising a question on **how to combine these separate images into a composite radiance map** 
   
-    * 
+* 
   
-  
-  ## 
+## 
   
 
