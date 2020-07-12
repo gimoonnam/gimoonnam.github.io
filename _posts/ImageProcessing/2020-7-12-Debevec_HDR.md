@@ -85,7 +85,8 @@ The first term ensures that the solution satisfies eq.3 in a least square sense.
 where the second derivative is given as a discrete form $g^{''}(z) = g(z-1) - 2g(z) + g(z+1)$ and $\lambda$ is a weight of the second term over the first one.
 $P$ and $N$ are the number of photographs and of pixels, respectively. 
 
-$\omega(z)# is a weight function to impose the smoothness and fitting terms toward the middle of the response curve, which is chosen as a simple hat function as 
+$\omega(z)$ is a weight function to impose the smoothness and fitting terms toward the middle of the response curve, which is chosen as a simple hat function as 
+
 $$
 \omage(z) = \begin{cases}
     z-Z_{min}, & \text{for z \leq \frac{1}{2}\left(Z_{min}+Z_{max}\right) }
