@@ -102,3 +102,10 @@ so that the pixels are to be well sampled from the images.
 
 
 
+
+# References
+
+* 1. [Recovering high dynamic range radiance maps from photographs] (https://dl.acm.org/doi/10.1145/258734.258884)
+* 2. [High Dynamic Range Imaging by Mantiuk *et* al. 2016](https://www.cl.cam.ac.uk/~rkm38/pdfs/mantiuk15hdri.pdf)
+* 3. [High Dynamic Range (HDR) Imaging using OpenCV](https://www.learnopencv.com/high-dynamic-range-hdr-imaging-using-opencv-cpp-python/)
+
