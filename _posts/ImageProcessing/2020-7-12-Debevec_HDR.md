@@ -16,12 +16,19 @@ toc_sticky: true
 
 # Introduction 
  
- ... 
+  The goal of this method is to render HDR cenes on conventional display devices, to be tested with real radiance maps as well as synthetically computed radiancce solutions
  
 ## What is High Dynamic Range(HDR)? 
  ...  
     
 ## Camera Response Function(CRF)
+
+* The film exposure is defined as $X = E \Deta t$, where $E$ is an irradiance at the film and $\Delta t$ is an exposure time, 
+  so $X$ is in unit of $J/m^2$. The exposure measures the total number of photons that each pixel absorb during the exposure time.  
+  
+  The assumption of this definition holds well in a reasonable range of the exposure times, but 
+  can break down under extreme conditions of very large or very low $\Delta t$.
+   
 
 * the film reponse to variations in exposure $X$ is a non-linear function, called "characteristic curve" of the film, 
       accounting for a non-linear relationship between pixel exposure $X$ and its intensity $Z$
@@ -31,6 +38,7 @@ toc_sticky: true
   
 * 
   
-## 
+  
+# Algorithm
   
 
