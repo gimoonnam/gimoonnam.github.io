@@ -22,12 +22,6 @@ The implementation is made in Python using openCV.
 ## What is High Dynamic Range(HDR)? 
  ...  
 
-
-# A brief review on Debevec's algorithm
- 
-  The goal of this method is to render HDR cenes on conventional display devices, to be tested with real radiance maps as well as synthetically computed radiancce solutions
- 
-   
 ## Camera Response Function(CRF)
 
 * The film exposure is defined as $X = E \Delta t$, where $E$ is an irradiance at the film and $\Delta t$ is an exposure time, 
@@ -40,11 +34,15 @@ The implementation is made in Python using openCV.
 * the film reponse to variations in exposure $X$ is a non-linear function, called "characteristic curve" of the film, 
       accounting for a non-linear relationship between pixel exposure $X$ and its intensity $Z$
 
+
+# Debevec's Algorithm
+ 
+  The goal of this method is to render HDR cenes on conventional display devices, to be tested with real radiance maps as well as synthetically computed radiancce solutions
+   
 * To cover the full dynamic range, one can take a series of photographs with different exposures, 
       raising a question on **how to combine these separate images into a composite radiance map** 
   
-  
-  
+
 ## Algorithm
   
 * input: a number of digitized photographs taken from the same point with different exposure times
