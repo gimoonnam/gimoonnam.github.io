@@ -13,17 +13,21 @@ toc: true
 toc_sticky: true
 ---
 
+# Introduction 
+
 In this post, I will review and implement the Debevec's algorithm for recovering HDR radiance map from photographs taken at different exposure times. 
 This post is followed by Mertens' algorithm as a series of study on exposure fusion to obtain a full detail image from differently exposed images. 
 The implementation is made in Python using openCV.
 
-# Introduction 
+## What is High Dynamic Range(HDR)? 
+ ...  
+
+
+# A brief review on Debevec's algorithm
  
   The goal of this method is to render HDR cenes on conventional display devices, to be tested with real radiance maps as well as synthetically computed radiancce solutions
  
-## What is High Dynamic Range(HDR)? 
- ...  
-    
+   
 ## Camera Response Function(CRF)
 
 * The film exposure is defined as $X = E \Delta t$, where $E$ is an irradiance at the film and $\Delta t$ is an exposure time, 
@@ -41,13 +45,13 @@ The implementation is made in Python using openCV.
   
   
   
-# Algorithm
+## Algorithm
   
 * input: a number of digitized photographs taken from the same point with different exposure times
   (assumed that the scene is static and gathering these process is completed quickly enough so that the change in lighting can be safely ignored) 
 
 
-## Camera Response Function 
+### 1. Camera Response Function 
 
 Suppose that we have a nonlinear function $f$ mapping the exposure $X$ to pixel values $Z$, 
 
@@ -75,7 +79,7 @@ $$
 
 where $g = \ln f^{-1}$. 
 
-## Objective function for the optimization of CRF 
+### 2. Objective function for the optimization of CRF 
 
 $$
 O = \sum_{i=1}^{N}\sum_{j=1}^{P} \left[g(Z_{ij}) - \ln E_i - \ln \Delta t_j \right]^2 + \lambda \sum_{z=Z_{min}+1}^{Z_{max}+1} g^{''}(z)^2 
