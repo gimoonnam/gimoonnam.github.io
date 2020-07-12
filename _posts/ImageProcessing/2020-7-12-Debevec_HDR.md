@@ -41,15 +41,12 @@ The implementation is made in Python using openCV.
    
 * To cover the full dynamic range, one can take a series of photographs with different exposures, 
       raising a question on **how to combine these separate images into a composite radiance map** 
-  
-
-## Algorithm
-  
+    
 * input: a number of digitized photographs taken from the same point with different exposure times
   (assumed that the scene is static and gathering these process is completed quickly enough so that the change in lighting can be safely ignored) 
 
 
-### 1. Camera Response Function 
+## 1. Camera Response Function 
 
 Suppose that we have a nonlinear function $f$ mapping the exposure $X$ to pixel values $Z$, 
 
@@ -77,7 +74,7 @@ $$
 
 where $g = \ln f^{-1}$. 
 
-### 2. Objective function for the optimization of CRF 
+## 2. Objective function for the optimization of CRF 
 
 $$
 O = \sum_{i=1}^{N}\sum_{j=1}^{P} \left[g(Z_{ij}) - \ln E_i - \ln \Delta t_j \right]^2 + \lambda \sum_{z=Z_{min}+1}^{Z_{max}+1} g^{''}(z)^2 
