@@ -13,6 +13,9 @@ toc: true
 toc_sticky: true
 ---
 
+In this post, I will review and implement the Debevec's algorithm for recovering HDR radiance map from photographs taken at different exposure times. 
+This post is followed by Mertens' algorithm as a series of study on exposure fusion to obtain a full detail image from differently exposed images. 
+The implementation is made in Python using openCV.
 
 # Introduction 
  
@@ -23,7 +26,7 @@ toc_sticky: true
     
 ## Camera Response Function(CRF)
 
-* The film exposure is defined as $X = E \Deta t$, where $E$ is an irradiance at the film and $\Delta t$ is an exposure time, 
+* The film exposure is defined as $X = E \Delta t$, where $E$ is an irradiance at the film and $\Delta t$ is an exposure time, 
   so $X$ is in unit of $J/m^2$. The exposure measures the total number of photons that each pixel absorb during the exposure time.  
   
   The assumption of this definition holds well in a reasonable range of the exposure times, but 
@@ -36,9 +39,38 @@ toc_sticky: true
 * To cover the full dynamic range, one can take a series of photographs with different exposures, 
       raising a question on **how to combine these separate images into a composite radiance map** 
   
-* 
   
   
 # Algorithm
   
+* input: a number of digitized photographs taken from the same point with different exposure times
+  (assumed that the scene is static and gathering these process is completed quickly enough so that the change in lighting can be safely ignored) 
+
+Suppose that we have a nonlinear function $f$ mapping the exposure $X$ to pixel values $Z$, 
+
+$$ 
+f(X) = Z   \longleftrightarrow  X = f^{-1}(Z), 
+\tag{1}
+$$
+
+Then the reconstruction of the irradiance map from the pixel values can be obtained by applying inverse $f$, 
+where $f$ is assumed to be a smooth and continuous function. 
+
+Eq.1 can be expressed with pixel($i$) and image($j$) indices as follow 
+
+$$
+E_i \Delta t_{j} = f^{-1}(Z_{ij})
+\tag{2}
+$$
+
+where Z_{ij} indicates $i$th pixel values of $j$th image. 
+
+This equation can be rewritten as follow 
+
+$$
+g(Z_{ij}) = \ln E_i + \ln \Delta t_j
+$$
+
+where $g = \ln f^{-1}$. 
+
 
