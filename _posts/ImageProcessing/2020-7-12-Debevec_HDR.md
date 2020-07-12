@@ -19,7 +19,7 @@ In this post, I will review and implement the Debevec's algorithm for recovering
 This post is followed by Mertens' algorithm as a series of study on exposure fusion to obtain a full detail image from differently exposed images. 
 The implementation is made in Python using openCV.
 
-![ ](/assets/images/kid_inTwoDifferentExposures)
+![ ](/assets/images/kid_inTwoDifferentExposures.png)
 
 
 ## What is High Dynamic Range(HDR)? 
