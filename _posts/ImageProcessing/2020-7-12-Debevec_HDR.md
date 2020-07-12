@@ -89,8 +89,8 @@ $\omega(z)$ is a weight function to impose the smoothness and fitting terms towa
 
 $$
 \omega(z) = \begin{cases}
-    z-Z_{min}, & \text{for z \leq \frac{1}{2}\left(Z_{min}+Z_{max}\right) }
-    \\ Z_{max}-z, & \text{for z > \frac{1}{2}\left(Z_{min}+Z_{max}\right) }
+    z-Z_{min}, & \text{for} z \leq \frac{1}{2}\left(Z_{min}+Z_{max}\right) 
+    \\ Z_{max}-z, & \text{for} z > \frac{1}{2}\left(Z_{min}+Z_{max}\right) 
   \end{cases}
 $$
 
