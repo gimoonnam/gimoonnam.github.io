@@ -74,14 +74,23 @@ $$
 
 where $g = \ln f^{-1}$. 
 
-## 2. Objective function for the optimization of CRF 
+## 2. A mid-pixel value weighted objective function for the CRF optimization 
 
 $$
-O = \sum_{i=1}^{N}\sum_{j=1}^{P} \left[g(Z_{ij}) - \ln E_i - \ln \Delta t_j \right]^2 + \lambda \sum_{z=Z_{min}+1}^{Z_{max}+1} g^{''}(z)^2 
+O = \sum_{i=1}^{N}\sum_{j=1}^{P}  \left{ \omega(Z_{ij})\left[g(Z_{ij}) - \ln E_i - \ln \Delta t_j \right]\right}^2 + \lambda \sum_{z=Z_{min}+1}^{Z_{max}+1} \left[ \omega(Z_{ij})g^{''}(z)\right]^2 
 \tag{4}
 $$
 
 The first term ensures that the solution satisfies eq.3 in a least square sense. The second term gives a smoothness, 
 where the second derivative is given as a discrete form $g^{''}(z) = g(z-1) - 2g(z) + g(z+1)$ and $\lambda$ is a weight of the second term over the first one.
 $P$ and $N$ are the number of photographs and of pixels, respectively. 
+
+$\omega(z)# is a weight function to impose the smoothness and fitting terms toward the middle of the response curve, which is chosen as a simple hat function as 
+$$
+\omage(z) = \begin{cases}
+    z-Z_{min}, & \text{for z \leq \frac{1}{2}\left(Z_{min}+Z_{max}\right) }
+    \\ Z_{max}-z, & \text{for z > \frac{1}{2}\left(Z_{min}+Z_{max}\right) }
+  \end{cases}
+$$
+
 
