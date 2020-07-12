@@ -77,7 +77,7 @@ where $g = \ln f^{-1}$.
 ## 2. A middle curve weighted objective function for the CRF optimization 
 
 $$
-O = \sum_{i=1}^{N}\sum_{j=1}^{P}  \left{ \omega(Z_{ij})\left[g(Z_{ij}) - \ln E_i - \ln \Delta t_j \right]\right}^2 + \lambda \sum_{z=Z_{min}+1}^{Z_{max}+1} \left[ \omega(Z_{ij})g^{''}(z)\right]^2 
+O = \sum_{i=1}^{N}\sum_{j=1}^{P}  \left( \omega(Z_{ij})\left[g(Z_{ij}) - \ln E_i - \ln \Delta t_j \right]\right)^2 + \lambda \sum_{z=Z_{min}+1}^{Z_{max}+1} \left[ \omega(Z_{ij})g^{''}(z)\right]^2 
 \tag{4}
 $$
 
