@@ -98,7 +98,7 @@ When measuring the response curve, the pixel locations should be chosen in a way
 so that the pixels are to be well sampled from the images.
 
 
-## Constructing HDR Radiance Map 
+## 3. Constructing HDR Radiance Map 
 
 
 
