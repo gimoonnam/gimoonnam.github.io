@@ -181,8 +181,46 @@ alignMTB.process(self.images, self.images)
  
 ## 3. Constructed response curves 
  
- 
- <img src ="/assets/images/ResponseCurve.png" width="300">
+ A response curve is obtained by sampling pixels from given images. The number of samples is determined by $n_{sampling} (P-1) > (Z_{max} - Z_{min})$, which ensures a sufficiently overdetermined system as proposed in the original paper
+
+```
+numSamples = math.ceil(255*2/(self.N-1))*2
+numPixels = self.row * self.col
+        
+step = int(np.floor(numPixels/numSamples))
+self.sampleIndices = list(range(0,numPixels,step))[:-1]  
+``` 
+
+This code block shows that we sampled pixels in an equal interval, and the pixel indices are stored in 'sampleIndices'. 
+
+The following code shows that the sampling is made on individual channels. 
+
+```
+# set arrays to store pixel values at sampled locations 
+      
+self.ZG = np.zeros((numSamples,self.N) ,dtype=np.uint8)
+self.ZB = np.zeros((numSamples,self.N,),dtype=np.uint8)
+self.ZR = np.zeros((numSamples,self.N) ,dtype=np.uint8)
+    
+   
+# get the sampled pixel values 
+for k in range(self.N):            
+    self.ZB[:,k] = self.flattenImage[k,0][self.sampleIndices]
+    self.ZG[:,k] = self.flattenImage[k,1][self.sampleIndices]
+    self.ZR[:,k] = self.flattenImage[k,2][self.sampleIndices]
+
+self.Bij = np.matlib.repmat(np.log(self.times), r*c,1)
+```
+
+Also, the exposure times are required to construct the response curve. 
+In this procedure, the irrandiance $E$ is assumed to be 1, thus no contribution of $E$ to exposure $X$ is made as $\log E =0$. 
+
+
+
+
+<img src ="/assets/images/ResponseCurve.png" width="300">
+
+
  
 
 
