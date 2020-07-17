@@ -234,10 +234,14 @@ The picture below shows the constructed curves for three color channels
   $$
 
   Combining the mutiple exposures has the effect of reducing noises. 
-  
+  The picture below is the merged HDR map, which looks somewhat bright, 
+  this is because the sampling of bright pixels was made with an equal probability as dark parts. 
+ 
   <img src ="/assets/images/fusedHDR_radianceMap.jpg" width="600">
   
- 
+  
+  The following picture is a tone-mapped one using Drago's method. 
+  The parameters for Drago Tonemap are **(gamma = 1, saturation=1, bias=0.85)**
   
   <img src ="/assets/images/ldr-Drago-2.jpg" width="600">
   
@@ -249,4 +253,5 @@ The picture below shows the constructed curves for three color channels
 1. [Recovering high dynamic range radiance maps from photographs](https://dl.acm.org/doi/10.1145/258734.258884)
 2. [High Dynamic Range Imaging by Mantiuk *et* al. 2016](https://www.cl.cam.ac.uk/~rkm38/pdfs/mantiuk15hdri.pdf)
 3. [High Dynamic Range (HDR) Imaging using OpenCV](https://www.learnopencv.com/high-dynamic-range-hdr-imaging-using-opencv-cpp-python/)
+4. [Drago's tonemapping] (http://resources.mpi-inf.mpg.de/tmo/logmap/logmap.pdf) 
 
