@@ -179,7 +179,7 @@ alignMTB.process(self.images, self.images)
  
  
  
-## 3. Constructed response curves 
+## 3. Camera Response Curves 
  
  A response curve is obtained by sampling pixels from given images. The number of samples is determined by $n_{sampling} (P-1) > (Z_{max} - Z_{min})$, which ensures a sufficiently overdetermined system as proposed in the original paper
 
@@ -215,14 +215,36 @@ self.Bij = np.matlib.repmat(np.log(self.times), r*c,1)
 Also, the exposure times are required to construct the response curve. 
 In this procedure, the irrandiance $E$ is assumed to be 1, thus no contribution of $E$ to exposure $X$ is made as $\log E =0$. 
 
+Like many problems in computer vision, the problem of finding the CRF is set up as an optimization problem 
+where the goal is to minimize an objective function consisting of a data term and a smoothness term. 
+These problems usually reduce to a linear least squares problem which are solved using Singular Value Decomposition (SVD) 
+that is part of all linear algebra packages. The details of the CRF recovery algorithm are in the original paper.
 
-
+The picture below shows the constructed curves for three color channels 
 
 <img src ="/assets/images/ResponseCurve.png" width="300">
 
 
- 
+## 4. Merge images 
+  
+  Once the response curves have been obtained, the original images can be merged into a single HDR image via 
+  
+  $$  
+  \ln E = \frac{\sum_{j=1}^{P}\omega(Z_{ij})\left(g(Z_{ij} - \ln \Delta t_{j}) \right)    }{\sum_{j=1}^{P}\omega(Z_{ij})}
+  $$
 
+  Combining the mutiple exposures has the effect of reducing noises. 
+  
+  <img src ="/assets/images/fusedHDR.png" width="600">
+  
+  
+
+  
+  
+  <img src ="/assets/images/ldr-Drago-2.jpg" width="600">
+  
+
+  
 
 # References
 
