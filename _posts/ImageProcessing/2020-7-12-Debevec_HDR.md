@@ -247,7 +247,7 @@ The picture below shows the constructed curves for three color channels
   
 # Wrapping it up 
 
-We have studied how to recover HDR radiance map from multiple exposure images. The full implementation of the exposure fusion can be found [here] (https://github.com/gimoonnam/ImageProcessing/blob/master/Debevec_algorithm/Debevec_fromScratches.ipynb).
+We have studied how to recover HDR radiance map from multiple exposure images. The full implementation of the exposure fusion can be found [here](https://github.com/gimoonnam/ImageProcessing/blob/master/Debevec_algorithm/Debevec_fromScratches.ipynb).
 
 
 # References
