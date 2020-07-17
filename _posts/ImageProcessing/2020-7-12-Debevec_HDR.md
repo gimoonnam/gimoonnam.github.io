@@ -25,7 +25,7 @@ The implementation is made in Python using openCV.
  
  ![ ](/assets/images/kid_inTwoDifferentExposures.png)
  
- As shown in the two pictures, the right one, HDR image, draws details in both the sky and the ground, corresponding to relatively bright and dark area. 
+ As shown in the two pictures above, the right one, which is HDR image, draws details in both the sky and the ground, corresponding to relatively bright and dark areas, respectively.
  On the other hand, in the left picture, the sky just appears as white background, which is due to limited dynamic range. 
  
  Recenlty, the HDR images have become very popular technique as the HDR images can be obtained at the level of software development. 
