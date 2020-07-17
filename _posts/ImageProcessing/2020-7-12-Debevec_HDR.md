@@ -102,6 +102,7 @@ $$
     z-Z_{min}, & \text{for} \,z \leq \frac{1}{2}\left(Z_{min}+Z_{max}\right) 
     \\ Z_{max}-z, & \text{for}\, z > \frac{1}{2}\left(Z_{min}+Z_{max}\right) 
   \end{cases}
+\tag{5}
 $$
 
 When measuring the response curve, the pixel locations should be chosen in a way that they are reasonably evenly distributed over $Z_{min}$ and $Z_{max}$, 
@@ -152,8 +153,10 @@ alignMTB.process(self.images, self.images)
  
  The alignment of images is an important step, otherwise the fused image will get blurred. 
  
- ## 2. Weight function $\omega(z)$
+ 
+ ## 2. Weight function 
   
+  The weight function $\omega(z)$ in eq.5 is constructed as follow  
   
   ```
   def constructWeightingFunction(self):
@@ -171,14 +174,16 @@ alignMTB.process(self.images, self.images)
               self.w[z] = Zmax - z + 1
   ```
   
-  ![ ](/assets/images/weightFunction.png) 
+  The constructed weight function is shown as below, and this function will impose weight to the pixel values around the median of 255 in recovering HDR map. 
+  
+  ![ ](/assets/images/weightFunction.png, width="300") 
  
  
  
  ## 3. Constructed response curves 
  
  
-  ![ ](/assets/images/ResponseCurve.png)
+  ![ ](/assets/images/ResponseCurve.png, width="300")
 
 
 # References
