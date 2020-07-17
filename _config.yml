@@ -21,7 +21,7 @@ locale                   : "en-US"
 title                    : "GM's blog"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "software engineer"
+name                     : "software engineer at Metron Hong Kong Ltd"
 description              : "An amazing website."
 url                      : "https://gimoonnam.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -96,8 +96,8 @@ analytics:
 # Site Author
 author:
   name             : "GM NAM"
-  avatar           : #"/assets/images/profile.jpg"
-  bio              : "Software Engineer"
+  avatar           : "/assets/images/profile.jpg"
+  bio              : "Software Engineer at Metron Hong Kong Ltd"
   location         : "Seoul"
   email            :
   links:
