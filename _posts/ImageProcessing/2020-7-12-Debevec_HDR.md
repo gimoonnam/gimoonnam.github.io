@@ -111,9 +111,6 @@ so that the pixels are to be well sampled from the images.
 ## 3. Constructing HDR Radiance Map 
 
     
-## 4. Tone Mapping 
-
-
 
 # Python Implemention 
 
@@ -127,7 +124,7 @@ self.images = [cv2.imread(''.join(path+fn)) for fn in filenames]
 self.times = np.array([1/30.0, 0.25, 2.5, 15.0], dtype=np.float32)
   ``` 
   
- where *'self'* is shown as thes lines are placed in a class. 
+ where *'self'* comes from the extraction from class (see the full code) 
  
  The loaded images appears as below 
  
@@ -155,9 +152,33 @@ alignMTB.process(self.images, self.images)
  
  The alignment of images is an important step, otherwise the fused image will get blurred. 
  
+ ## 2. Weight function $\omega(z)$
+  
+  
+  ```
+  def constructWeightingFunction(self):
+      # construct a weighting function 
+      Zmin = 0 
+      Zmax = 255 
+      Zmid = (Zmax+Zmin)//2
+
+      self.w = np.zeros((Zmax-Zmin+1))
+
+      for z in range(Zmin,Zmax+1): 
+          if z <= Zmid:
+              self.w[z] = z - Zmin + 1
+          else: 
+              self.w[z] = Zmax - z + 1
+  ```
+  
+  ![ ](/assets/images/weightFunction.png) 
  
  
  
+ ## 3. Constructed response curves 
+ 
+ 
+  ![ ](/assets/images/ResponseCurve.png)
 
 
 # References
