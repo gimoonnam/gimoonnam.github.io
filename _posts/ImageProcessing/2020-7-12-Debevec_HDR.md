@@ -131,7 +131,7 @@ self.times = np.array([1/30.0, 0.25, 2.5, 15.0], dtype=np.float32)
  
  The loaded images appears as below 
  
-  ![ ](/ImageProcessing/images/saintLouis_tower.png)
+  ![ ](https://raw.githubusercontent.com/gimoonnam/ImageProcessing/master/images/saintLouis_tower.png)
   
   
 
