@@ -16,12 +16,12 @@ toc_sticky: true
 # Introduction 
 
 In this post, I will review and implement the Debevec's algorithm for recovering HDR radiance map from photographs taken at different exposure times. 
-This post is followed by Mertens' algorithm as a series of study on exposure fusion to obtain a full detail image from differently exposed images. 
+This post is written as a series of study on exposure fusion to obtain a full detail image from differently exposed images. 
 The implementation is made in Python using openCV.
 
 ## What is High Dynamic Range(HDR)? 
  
- The Dynamic Range(DR) is defined as a ratio between darkest and brightest values. The High DR (HDR) refers then to an extended dynamic range of the brigthness. The brightness in the normal DR is ranged between 0 and 255 as 8-bit image, while the HDR extends such range to much larger then 255, $2^{32}-1 $ for 32-bit image. Thus, this extension allows to accommodate a high resolution of changes in the brighness, so that the HDR image captures great details in both bright and dark regions compared to DR images. 
+ The Dynamic Range(DR) is defined as a ratio between darkest and brightest values. The High DR (HDR) refers then to an extended dynamic range of the brigthness. The brightness in the normal DR is ranged between 0 and 255 as 8-bit image, while the HDR extends such range to much larger than 255, $2^{32}-1 $ for 32-bit image. Thus, this extension allows to accommodate a high resolution of changes in the brighness, so that the HDR image captures great details in both bright and dark regions compared to DR images. 
  
  ![ ](/assets/images/kid_inTwoDifferentExposures.png)
  
@@ -110,7 +110,7 @@ so that the pixels are to be well sampled from the images.
 
 ## 3. Constructing HDR Radiance Map 
 
-
+    
 ## 4. Tone Mapping 
 
 
@@ -119,6 +119,21 @@ so that the pixels are to be well sampled from the images.
 
 ## 1. Load Images 
 
+  Here, we considered four images taken with different exposure times, which are loaded with exposure times by the following lines 
+  
+  ```
+filenames = ["img0.jpg", "img1.jpg", "img2.jpg", "img3.jpg"]
+self.images = [cv2.imread(''.join(path+fn)) for fn in filenames]
+self.times = np.array([1/30.0, 0.25, 2.5, 15.0], dtype=np.float32)
+  ``` 
+  
+ where *'self'* is shown as thes lines are placed in a class. 
+ 
+ The loaded images appears as below 
+ 
+  ![ ](/ImageProcessing/images/saintLouis_tower.png)
+  
+  
 
 
 # References
