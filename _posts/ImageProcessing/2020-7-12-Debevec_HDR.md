@@ -235,11 +235,9 @@ The picture below shows the constructed curves for three color channels
 
   Combining the mutiple exposures has the effect of reducing noises. 
   
-  <img src ="/assets/images/fusedHDR.png" width="600">
+  <img src ="/assets/images/fusedHDR_radianceMap.jpg" width="600">
   
-  
-
-  
+ 
   
   <img src ="/assets/images/ldr-Drago-2.jpg" width="600">
   
