@@ -129,7 +129,7 @@ self.times = np.array([1/30.0, 0.25, 2.5, 15.0], dtype=np.float32)
  
  The loaded images appears as below 
  
-  ![ ](https://raw.githubusercontent.com/gimoonnam/ImageProcessing/master/images/saintLouis_tower.png)
+ <img src ="https://raw.githubusercontent.com/gimoonnam/ImageProcessing/master/images/saintLouis_tower.png" width="600">
   
  The exposure time increases from right to left. 
  
@@ -153,8 +153,7 @@ alignMTB.process(self.images, self.images)
  
  The alignment of images is an important step, otherwise the fused image will get blurred. 
  
- 
- ## 2. Weight function 
+## 2. Weight function 
   
   The weight function $\omega(z)$ in eq.5 is constructed as follow  
   
@@ -176,14 +175,15 @@ alignMTB.process(self.images, self.images)
   
   The constructed weight function is shown as below, and this function will impose weight to the pixel values around the median of 255 in recovering HDR map. 
   
-  ![ ](/assets/images/weightFunction.png, width="300") 
+  <img src ="/assets/images/weightFunction.png" width="300">
  
  
  
- ## 3. Constructed response curves 
+## 3. Constructed response curves 
  
  
-  ![ ](/assets/images/ResponseCurve.png, width="300")
+ <img src ="/assets/images/ResponseCurve.png" width="300">
+ 
 
 
 # References
