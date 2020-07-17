@@ -28,7 +28,7 @@ The implementation is made in Python using openCV.
  As shown in the two pictures above, the right one, which is HDR image, draws details in both the sky and the ground, corresponding to relatively bright and dark areas, respectively.
  On the other hand, in the left picture, the sky just appears as white background, which is due to limited dynamic range. 
  
- Recenlty, the HDR images have become very popular technique as the HDR images can be obtained at the level of software development. 
+ Recenlty, the HDR images have become very popular technique as they can be obtained at the level of software development. 
  
 ## Camera Response Function(CRF)
   
