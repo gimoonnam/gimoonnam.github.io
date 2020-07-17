@@ -1,5 +1,5 @@
 ---
-title: "A Review on Recovering HDR Radiance map from Photographs"
+title: "Recovering HDR Radiance map by Camera Response Curves"
 date: 2020-7-12 12:32:28 -0400
 categories: ImageProcessing
 tags:
@@ -23,9 +23,14 @@ The implementation is made in Python using openCV.
 
 
 ## What is High Dynamic Range(HDR)? 
- ...  
-
+ 
+ The Dynamic Range(DR) is defined as a ratio between darkest and brightest values. The High DR (HDR) refers then to an extended dynamic range of the brigthness. The brightness in the normal DR is ranged between 0 and 255 as 8-bit image, while the HDR extends such range to much larger then 255, $2^32-1 $ for 32-bit image. Thus, this extension can accommodate a large range of changes in the brighness, so that the HDR image captures great details in both bright and dark regions compared to DR images. 
+ 
+ Recenlty, the HDR images have become very popular technique as the HDR images can be obtained at the level of software development. 
+ 
 ## Camera Response Function(CRF)
+  
+  One very early attempt is to use a camera response curve, which relates the pixel values to irradiance of an object.   
 
 * The film exposure is defined as $X = E \Delta t$, where $E$ is an irradiance at the film and $\Delta t$ is an exposure time, 
   so $X$ is in unit of $J/m^2$. The exposure measures the total number of photons that each pixel absorb during the exposure time.  
