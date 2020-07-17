@@ -133,7 +133,31 @@ self.times = np.array([1/30.0, 0.25, 2.5, 15.0], dtype=np.float32)
  
   ![ ](https://raw.githubusercontent.com/gimoonnam/ImageProcessing/master/images/saintLouis_tower.png)
   
-  
+ The exposure time increases from right to left. 
+ 
+ The following block defines variables associated with images,  
+ ```
+self.N = len(self.images)
+self.row = len(self.images[0])
+self.col = len(self.images[0][0])
+self.l = 10 
+ ```
+ $N$ is the number of images, (here $N=4$), and row and col indicates the height and width of image in pixels. 
+ $l$ denotes $\lambda$ as a weighting factor for smoothness of the CRF. 
+ 
+ Then, the images are aligned based on median threshold bitwise(MTB) method  
+
+ ```
+# Align input images
+alignMTB = cv2.createAlignMTB()
+alignMTB.process(self.images, self.images)
+ ```
+ 
+ The alignment of images is an important step, otherwise the fused image will get blurred. 
+ 
+ 
+ 
+ 
 
 
 # References
