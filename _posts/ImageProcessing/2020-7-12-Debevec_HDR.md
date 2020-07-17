@@ -19,19 +19,21 @@ In this post, I will review and implement the Debevec's algorithm for recovering
 This post is followed by Mertens' algorithm as a series of study on exposure fusion to obtain a full detail image from differently exposed images. 
 The implementation is made in Python using openCV.
 
-![ ](/assets/images/kid_inTwoDifferentExposures.png)
-
-
 ## What is High Dynamic Range(HDR)? 
  
- The Dynamic Range(DR) is defined as a ratio between darkest and brightest values. The High DR (HDR) refers then to an extended dynamic range of the brigthness. The brightness in the normal DR is ranged between 0 and 255 as 8-bit image, while the HDR extends such range to much larger then 255, $2^32-1 $ for 32-bit image. Thus, this extension can accommodate a large range of changes in the brighness, so that the HDR image captures great details in both bright and dark regions compared to DR images. 
+ The Dynamic Range(DR) is defined as a ratio between darkest and brightest values. The High DR (HDR) refers then to an extended dynamic range of the brigthness. The brightness in the normal DR is ranged between 0 and 255 as 8-bit image, while the HDR extends such range to much larger then 255, $2^{32}-1 $ for 32-bit image. Thus, this extension allows to accommodate a high resolution of changes in the brighness, so that the HDR image captures great details in both bright and dark regions compared to DR images. 
+ 
+ ![ ](/assets/images/kid_inTwoDifferentExposures.png)
+ 
+ As shown in the two pictures, the right one, HDR image, draws details in both the sky and the ground, corresponding to relatively bright and dark area. 
+ On the other hand, in the left picture, the sky just appears as white background, which is due to limited dynamic range. 
  
  Recenlty, the HDR images have become very popular technique as the HDR images can be obtained at the level of software development. 
  
 ## Camera Response Function(CRF)
   
-  One very early attempt is to use a camera response curve, which relates the pixel values to irradiance of an object.   
-
+  One very early attempt to produce an HDR image is to use a camera response curve, which relates the pixel values to irradiance of an object.   
+  
 * The film exposure is defined as $X = E \Delta t$, where $E$ is an irradiance at the film and $\Delta t$ is an exposure time, 
   so $X$ is in unit of $J/m^2$. The exposure measures the total number of photons that each pixel absorb during the exposure time.  
   
