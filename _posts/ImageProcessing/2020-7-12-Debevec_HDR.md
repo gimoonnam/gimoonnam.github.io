@@ -118,7 +118,7 @@ so that the pixels are to be well sampled from the images.
   \tag{6}
   $$
   
-  Where, $P$ denotes the number of photographs, that is, the number of different exposure times. $Z_{ij}$ is a $i$th pixel's value of $j$th image. 
+  Where, $P$ denotes the number of photographs, that is, the number of different exposure times. $Z_{ij}$ is the $i$th pixel's value on $j$th image. 
 
   Combining the mutiple exposures has the effect of reducing noises. 
   The picture below is the merged HDR map, which looks somewhat bright, 
@@ -131,11 +131,7 @@ so that the pixels are to be well sampled from the images.
 
   Here, we considered four images taken with different exposure times, which are loaded with exposure times by the following lines 
   
-  ```
-filenames = ["img0.jpg", "img1.jpg", "img2.jpg", "img3.jpg"]
-self.images = [cv2.imread(''.join(path+fn)) for fn in filenames]
-self.times = np.array([1/30.0, 0.25, 2.5, 15.0], dtype=np.float32)
-  ``` 
+  <script src="https://gist.github.com/gimoonnam/e433d9b6c0e1679ae4dde9ebd68fe503.js"></script>
   
  where *'self'* comes from the extraction from class (see the full code) 
  
@@ -145,23 +141,11 @@ self.times = np.array([1/30.0, 0.25, 2.5, 15.0], dtype=np.float32)
   
  The exposure time increases from right to left. 
  
- The following block defines variables associated with images,  
- ```
-self.N = len(self.images)
-self.row = len(self.images[0])
-self.col = len(self.images[0][0])
-self.l = 10 
- ```
- $N$ is the number of images, (here $N=4$), and row and col indicates the height and width of image in pixels. 
- $l$ denotes $\lambda$ as a weighting factor for smoothness of the CRF. 
+ The the above block contains also the declaration of variables associated with images, $N$ is the number of images, (here $N=4$), and row and col indicates the height and width of image in pixels. $l$ denotes $\lambda$ as a weighting factor for smoothness of the CRF. 
  
  Then, the images are aligned based on median threshold bitwise(MTB) method  
 
- ```
-# Align input images
-alignMTB = cv2.createAlignMTB()
-alignMTB.process(self.images, self.images)
- ```
+<script src="https://gist.github.com/gimoonnam/b98ffc94d3361d1f4f17a9fd9e61443e.js"></script>
  
  The alignment of images is an important step, otherwise the fused image will get blurred. 
  
