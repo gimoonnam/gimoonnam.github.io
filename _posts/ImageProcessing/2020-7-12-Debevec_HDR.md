@@ -153,27 +153,13 @@ so that the pixels are to be well sampled from the images.
   
   The weight function $\omega(z)$ in eq.5 is constructed as follow  
   
-  ```
-  def constructWeightingFunction(self):
-      # construct a weighting function 
-      Zmin = 0 
-      Zmax = 255 
-      Zmid = (Zmax+Zmin)//2
-
-      self.w = np.zeros((Zmax-Zmin+1))
-
-      for z in range(Zmin,Zmax+1): 
-          if z <= Zmid:
-              self.w[z] = z - Zmin + 1
-          else: 
-              self.w[z] = Zmax - z + 1
-  ```
-  
+  <script src="https://gist.github.com/gimoonnam/165539d13912aac589ad91edcdf109d7.js"></script>
+    
   The constructed weight function is shown as below, and this function will impose weight to the pixel values around the median of 255 in recovering HDR map. 
   
   <img src ="/assets/images/weightFunction.png" width="300">
  
- 
+
  
 ## 3. Camera Response Curves 
  
