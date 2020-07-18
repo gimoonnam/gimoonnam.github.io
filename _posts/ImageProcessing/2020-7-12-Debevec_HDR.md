@@ -192,35 +192,16 @@ alignMTB.process(self.images, self.images)
 ## 3. Camera Response Curves 
  
  A response curve is obtained by sampling pixels from given images. The number of samples is determined by $n_{sampling} (P-1) > (Z_{max} - Z_{min})$, which ensures a sufficiently overdetermined system as proposed in the original paper
+ 
+<script src="https://gist.github.com/gimoonnam/375f0cee5945ffc7e54ae7538af1986a.js"></script> 
 
-```
-numSamples = math.ceil(255*2/(self.N-1))*2
-numPixels = self.row * self.col
-        
-step = int(np.floor(numPixels/numSamples))
-self.sampleIndices = list(range(0,numPixels,step))[:-1]  
-``` 
 
 This code block shows that we sampled pixels in an equal interval, and the pixel indices are stored in 'sampleIndices'. 
 
 The following code shows that the sampling is made on individual channels. 
 
-```
-# set arrays to store pixel values at sampled locations 
-      
-self.ZG = np.zeros((numSamples,self.N) ,dtype=np.uint8)
-self.ZB = np.zeros((numSamples,self.N,),dtype=np.uint8)
-self.ZR = np.zeros((numSamples,self.N) ,dtype=np.uint8)
-    
-   
-# get the sampled pixel values 
-for k in range(self.N):            
-    self.ZB[:,k] = self.flattenImage[k,0][self.sampleIndices]
-    self.ZG[:,k] = self.flattenImage[k,1][self.sampleIndices]
-    self.ZR[:,k] = self.flattenImage[k,2][self.sampleIndices]
+<script src="https://gist.github.com/gimoonnam/4564879bcc32a66b081577f7bf2ce4f3.js"></script>
 
-self.Bij = np.matlib.repmat(np.log(self.times), r*c,1)
-```
 
 Also, the exposure times are required to construct the response curve. 
 In this procedure, the irrandiance $E$ is assumed to be 1, thus no contribution of $E$ to exposure $X$ is made as $\log E =0$. 
