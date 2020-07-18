@@ -1,5 +1,5 @@
 ---
-title: "Deep Fusion for a better quality of image on iPhone 11's "
+title: "Image Fusion using Deep Learning"
 date: 2020-7-18 12:32:28 -0400
 categories: ImageProcessing
 tags:
@@ -14,6 +14,8 @@ last_modified_at: 2020-07-18
 ---
 
 
-# 
+# Introduction 
+
+to be updated soon.. 
 
 
