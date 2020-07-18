@@ -14,7 +14,7 @@ last_modified_at: 2020-07-18T10:30+09:00
 ---
 
 # Goal 
-  Bayer's pattern에 대해서 이해한다. 
+  Bayer's pattern과 컬러 이미지의 생성과정을 이해한다. 
   
 # Bayer filter
 
