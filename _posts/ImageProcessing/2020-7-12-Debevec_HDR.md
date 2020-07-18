@@ -144,7 +144,7 @@ so that the pixels are to be well sampled from the images.
  
  The the above block contains also the declaration of variables associated with images, $N$ is the number of images, (here $N=4$), and row and col indicates the height and width of image in pixels. $l$ denotes $\lambda$ as a weighting factor for smoothness of the CRF. 
  
- Then, the images are aligned based on median threshold bitwise(MTB) method  
+ Then, the images are aligned based on median threshold bitmap (MTB) method  
 
 <script src="https://gist.github.com/gimoonnam/b98ffc94d3361d1f4f17a9fd9e61443e.js"></script>
  
