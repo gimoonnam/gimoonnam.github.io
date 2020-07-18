@@ -111,6 +111,16 @@ so that the pixels are to be well sampled from the images.
 
 ## 3. Constructing HDR Radiance Map 
 
+  Once the response curves have been obtained, the original images can be merged into a single HDR image via 
+  
+  $$  
+  \ln E = \frac{\sum_{j=1}^{P}\omega(Z_{ij})\left(g(Z_{ij} - \ln \Delta t_{j}) \right)    }{\sum_{j=1}^{P}\omega(Z_{ij})}
+  \tag{6}
+  $$
+
+  Combining the mutiple exposures has the effect of reducing noises. 
+  The picture below is the merged HDR map, which looks somewhat bright, 
+  this is because the sampling of bright pixels was made with an equal probability as dark parts. 
     
 
 # Python Implemention 
@@ -227,21 +237,12 @@ The picture below shows the constructed curves for three color channels
 
 ## 4. Merge images 
   
-  Once the response curves have been obtained, the original images can be merged into a single HDR image via 
-  
-  $$  
-  \ln E = \frac{\sum_{j=1}^{P}\omega(Z_{ij})\left(g(Z_{ij} - \ln \Delta t_{j}) \right)    }{\sum_{j=1}^{P}\omega(Z_{ij})}
-  $$
+  The images are merged by eq.6, which yields a recovered fused radiance map as shown below. 
 
-  Combining the mutiple exposures has the effect of reducing noises. 
-  The picture below is the merged HDR map, which looks somewhat bright, 
-  this is because the sampling of bright pixels was made with an equal probability as dark parts. 
- 
   <img src ="/assets/images/fusedHDR_radianceMap.jpg" width="600">
   
-  
-  The following picture is a tone-mapped one using Drago's method. 
-  The parameters for Drago Tonemap are **(gamma = 1, saturation=1, bias=0.85)**
+  This is an HDR image, which needs to be converted into a 24-bit image via tone mapping. 
+  Here, we used Drago's method, where the parameters for Drago Tonemap are **(gamma = 1, saturation=1, bias=0.85)**
   
   <img src ="/assets/images/ldr-Drago-2.jpg" width="600">
   
