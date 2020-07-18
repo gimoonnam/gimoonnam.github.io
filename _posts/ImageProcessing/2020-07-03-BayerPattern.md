@@ -10,7 +10,7 @@ tags:
 use_math: true
 toc: true
 toc_sticky: true
-last_modified_at: 2020-07-18T10:30+09:00
+last_modified_at: 2020-07-18
 ---
 
 # Goal 
