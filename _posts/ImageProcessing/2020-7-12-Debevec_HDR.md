@@ -114,9 +114,11 @@ so that the pixels are to be well sampled from the images.
   Once the response curves have been obtained, the original images can be merged into a single HDR image via 
   
   $$  
-  \ln E = \frac{\sum_{j=1}^{P}\omega(Z_{ij})\left(g(Z_{ij} - \ln \Delta t_{j}) \right)    }{\sum_{j=1}^{P}\omega(Z_{ij})}
+  \ln E_{i} = \frac{\sum_{j=1}^{P}\omega(Z_{ij})\left(g(Z_{ij} - \ln \Delta t_{j}) \right)    }{\sum_{j=1}^{P}\omega(Z_{ij})}
   \tag{6}
   $$
+  
+  Where, $P$ denotes the number of photographs, that is, the number of different exposure times. $Z_{ij}$ is a $i$th pixel's value of $j$th image. 
 
   Combining the mutiple exposures has the effect of reducing noises. 
   The picture below is the merged HDR map, which looks somewhat bright, 
