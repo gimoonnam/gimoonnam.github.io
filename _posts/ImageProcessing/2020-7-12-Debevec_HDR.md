@@ -244,6 +244,8 @@ The picture below shows the constructed curves for three color channels
   This is an HDR image, which needs to be converted into a 24-bit image via tone mapping. 
   Here, we used Drago's method, where the parameters for Drago Tonemap are **(gamma = 1, saturation=1, bias=0.85)**
   
+  <script src="https://gist.github.com/gimoonnam/5306c2a8ea357c729710894f8963c64b.js"></script>
+  
   <img src ="/assets/images/ldr-Drago-2.jpg" width="600">
   
 # Wrapping it up 
