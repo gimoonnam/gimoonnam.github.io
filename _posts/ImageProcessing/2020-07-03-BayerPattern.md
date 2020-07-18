@@ -48,7 +48,7 @@ last_modified_at: 2020-07-18
   즉, Bayer filter를 사용했을때 각 픽셀에 R,G,B 컬러 셋중 하나씩 raw intensity로 기록된다. 
   이것은 알고리즘을 통해 픽셀당 RGB컬의 조합을 찾아내는 것이다. 이것을 demosaicing이라고 한다. 
    
-  여러가지 알고리즘 중 가장 많이 사용되는 것은 interpolation(내삽)을 이용한 방법이다. 대표적으로 다음의 두 가지 간단한 내삽을 사용한다.
+  여러가지 알고리즘 중 가장 많이 사용되는 것은 interpolation(내삽)을 이용한 방법이다. 대표적으로 다음의 두 가지 간단한 내삽을 사용한다....
    
     1. nearest-neighbor interpolation (poor quality)
     2. bilinear interpolation (suitable for 2D array)
