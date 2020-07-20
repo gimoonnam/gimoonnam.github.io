@@ -10,6 +10,7 @@ tags:
 use_math: true
 toc: true
 toc_sticky: true
+last_modified_at: 2020-07-20
 ---
 
 # Introduction  
@@ -79,7 +80,9 @@ toc_sticky: true
     \tag{4}    
   $$
 
-## 2. Import 
+## Python Implementation 
+
+### a. Import modules
 
 ```
 import os
@@ -90,7 +93,7 @@ from matplotlib import gridspec
 from IPython.display import Image
 ``` 
 
-## 3. Load Images   
+### b. Load Images   
 
   First, we import images with different exposure and store them as a list stack. 
   
@@ -118,7 +121,7 @@ from IPython.display import Image
   ![ ](/assets/images/house.png)
   
 
-## 4. Acquire weight maps
+### c. Construct weight maps
 
   Three exponents for the weight maps are specified. 
 ```
@@ -154,7 +157,7 @@ def ConstructWeightMap(self):
 
 
 
-## 5. Failure of simple blending and alternative multiresolution blending using image pyramid
+### d. Failure of simple blending and alternative multiresolution blending using image pyramid
 
   It turned out that the simple blending yielded a poor quality image with halos and seams. 
   
@@ -187,7 +190,7 @@ def ConstructWeightMap(self):
  This pyramid is the result of $\mathbf{L}[R]_{ij}^l$ in eq.3, where $l$ indicates a level on the pyramid. 
 
 
-## 6. Results
+### e. Results
 
    Using eq.4, the image is reconstructed, and the resulting image shows the great details on both inside and outside room. 
    The combination of weight map exponents are $(\omega_C, \omega_S, \omega_E) = (1,1,1)$, by which the contrast, saturation, and exposedness are equaly constributed to the final image. 
