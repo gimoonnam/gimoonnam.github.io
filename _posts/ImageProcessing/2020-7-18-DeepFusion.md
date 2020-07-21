@@ -1,5 +1,5 @@
 ---
-title: "딥 퓨전(Deep Fusion)이란 무엇인가?"
+title: "iPhone: 딥 퓨전(Deep Fusion)이란 무엇인가?"
 date: 2020-7-18 12:32:28 -0400
 categories: ImageProcessing
 tags:
