@@ -21,7 +21,7 @@ last_modified_at: 2020-07-21
  
  즉, 동적 범위가 넓을수록 어두운 부분에서 밝은 부분으로 변화하는 정도가 더 세분화되어 표현하여 좋은 사진을 만든다. 
  
- <img src="/assets/images/kid_inTwoDifferentExposures.png" width="600px" >
+ <center> <img src="/assets/images/kid_inTwoDifferentExposures.png" width="600px" > </center>
  
  위의 두 사진중 왼쪽은 낮은 동적 범위의 표현이고, 오른쪽은 높은 동적 범위의 사진이다. 왼쪽의 사진에서 하늘은 빛이 밝아 하얀색으로만 표현된 반면, 
  오른쪽 사진에선 구름이 보일 정도로 세밀하게 표현되었다. 이는 동적 범위가 넓어 빛의 밝기가 변하는 단계가 많기 때문이다. 
@@ -33,23 +33,22 @@ last_modified_at: 2020-07-21
  기본적인 방법은 빛의 노출이 다른 사진을 여러장 찍어 융합하는 것이다. 
 
  아래 사진은 4개의 다른 노출시간으로 찍은 사진을 보여준다. 
-  
- <figure>
-  <img src="/assets/images/house.png" width="800px" >
-  <figcaption>  </figcaption>
- </figure>
+
+ <center>
+ ![Four different exposure images] (/assets/images/house.png){: width="100%" height="100%"}
+ </center>
 
  노출시간이 적은 것을 underexposed, 긴 것을 overexposed 되었다고 한다. 적절한 노출시간을 준다고 해도 밝은 부분과 어두운 부분을 동시에 세밀하게 나타난 이미지를 
  얻는 것은 쉽지 않다. 따라서 이렇게 노출시간을 달리하며 여러장의 사진을 찍어 이것들을 융합해 이미지의 모든 부분을 세밀하게 표현한 사진을 얻는 것이다. 
  노출시간이 짧은 사진은 빛이 많은 부분을 세밀하게 표현할 수 있는 반면 어두운 부분은 충분한 빛을 받지 못해 어둡게 나온다. 
  대조적으로 노출시간이 긴 사진은 어두운 부분은 세밀하게 표현하지만, 밝은 부분은 하얗게만 표현된다. 
  
- 
+  <center>
  <figure>
   <img src="/assets/images/houseFused.png" width="600px" >
   <figcaption> 위의 사진을 융합한 결과이다. 집의 내부와 외부의 모습 모두 세밀하게 표현되어있다. </figcaption>
 </figure>
-
+ </center>
   
  
  
