@@ -45,6 +45,18 @@ The implementation is made in Python using openCV.
 * the film reponse to variations in exposure $X$ is a non-linear function, called "characteristic curve" of the film, 
       accounting for a non-linear relationship between pixel exposure $X$ and its intensity $Z$
 
+## Image Acquisition Pipeline 
+  
+  There are many steps between scene radiance and final digital values. This figure shows how the scene radiance becomes pixel values. 
+  In the middle of the conversion, unknown mappings arise from exposure, development, scanning, digiziation, and remapping. 
+ 
+  A nonlinear relation in the CRF includes an aggregate mapping from the scene radiancce to pixel values, made by several differently 
+  exposed images. 
+  
+  ![ ](/assets/images/imageAcquisitionPipeline.png) 
+  The image is taken from ref.1.  
+  
+ 
 
 # Debevec's Algorithm
  
