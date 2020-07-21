@@ -53,6 +53,8 @@ The implementation is made in Python using openCV.
   A nonlinear relation in the CRF includes an aggregate mapping from the scene radiancce to pixel values, made by several differently 
   exposed images. 
   
+  The main feature of Debevec's algorithm is to find a nonlinear CRF for given images.
+  
   ![ ](/assets/images/imageAcquisitionPipeline.png) 
   The image is taken from ref.1.  
   
