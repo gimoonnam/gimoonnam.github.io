@@ -24,7 +24,7 @@ The implementation is made in Python using openCV.
  
  The Dynamic Range(DR) is defined as a ratio between darkest and brightest values. The High DR (HDR) refers then to an extended dynamic range of the brigthness. The brightness in the normal DR is ranged between 0 and 255 as 8-bit image, while the HDR extends such range to much larger than 255, up to $2^{16}-1 $ for 16-bit image. Thus, this extension allows to accommodate a high resolution of changes in the brighness, so that the HDR image captures great details in both bright and dark regions compared to DR images. 
  
- ![ ](/assets/images/kid_inTwoDifferentExposures.png)
+ <img src="/assets/images/kid_inTwoDifferentExposures.png" width="600px" >
  
  As shown in the two pictures above, the right one, which is HDR image, draws details in both the sky and the ground, corresponding to relatively bright and dark areas, respectively.
  On the other hand, in the left picture, the sky just appears as white background, which is due to limited dynamic range. 
