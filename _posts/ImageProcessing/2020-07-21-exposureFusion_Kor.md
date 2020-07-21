@@ -46,7 +46,7 @@ last_modified_at: 2020-07-21
  
  <center>
  <figure>
-  <img src="/assets/images/houseFused.png" width="600px" >
+  <img src="/assets/images/houseFused.png" width="400px" >
   <figcaption> 위의 사진을 융합한 결과이다. 집의 내부와 외부의 모습 모두 세밀하게 표현되어있다. </figcaption>
 </figure>
  </center>
