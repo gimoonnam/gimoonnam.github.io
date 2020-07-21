@@ -18,7 +18,7 @@ last_modified_at: 2020-07-22
 
 Deep Fusion은 고전적인 이미지 융합 방법과는 다르게 Deep Learning을 이용하는 방법으로 아이폰에는 11부터 적용되었다. 
 
-구글의 픽셀폰에 비하면 다소 늦은 적용이지만, 아이폰 카메라의 업그레드에 맞춰 도입된 것이니 시기적으로 맞추었을 것으로 생각된다. 
+구글의 픽셀폰에 비하면 다소 늦은 적용이지만, 아이폰 카메라의 업그레이드에 시기적으로 맞춘 것으로 보인다. 
 
 딥 퓨전은 AI 기술을 이용해 노출시간이 다른 여러장의 사진을 융합하며 사진의 선명함(sharpness)를 개선하는 방법이다. 이것은 아이폰 11의 A13 Bionic Neural Engine을 사용하여 사진속 물체의 질감과 디테일을 향상시키며, 빛이 적을 때는 노이즈 제거하여 사진의 품질을 높인다. 
 
@@ -33,7 +33,8 @@ Deep Fusion은 고전적인 이미지 융합 방법과는 다르게 Deep Learnin
 <img src="/assets/images/DeepFusionOniPhone.jpeg" width="500px" >
 
 
-**Deep Fusion은 어떻게 작동하는가?** (파란색으로) 
+<span style="color:blue"> **Deep Fusion은 어떻게 작동하는가?** </span> 
+
 
 
 
