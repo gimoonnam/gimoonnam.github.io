@@ -60,15 +60,15 @@ last_modified_at: 2020-07-22
  
  융합하는 방법에는 크게 두 가지 방법이 있다. 
 
- 1. 카메라 반응 곡선을 통한 융합 (Camera Repsonse Function) 
+ 1. 카메라 반응 곡선을 통한 융합 (Camera Repsonse Function)   
     [Debevec et al. 1997](https://dl.acm.org/doi/10.1145/258734.258884)   
-    [포스팅 참고](https://gimoonnam.github.io/imageprocessing/Debevec_HDR/)
+    [구체적인 내용은 이 링크를 참고하세요](https://gimoonnam.github.io/imageprocessing/Debevec_HDR/)   
     
-    
- 2. 다중 해상도를 이용한 융합 (multiresolution blending)
-    [Mertens et al. 2009](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-8659.2008.01171.x)
-    [포스팅 참고](https://gimoonnam.github.io/imageprocessing/MertensFusion/)
+ 2. 다중 해상도를 이용한 융합 (multiresolution blending)   
+    [Mertens et al. 2009](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-8659.2008.01171.x)   
+    [구체적인 내용은 이 링크를 참고하세요](https://gimoonnam.github.io/imageprocessing/MertensFusion/)   
  
+
 ## 카메라 반응 곡선을 이용한 융합 
 
 
