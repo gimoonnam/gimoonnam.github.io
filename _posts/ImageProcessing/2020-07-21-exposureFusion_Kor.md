@@ -23,7 +23,7 @@ last_modified_at: 2020-07-21
  
  <figure>
  <center> <img src="/assets/images/kid_inTwoDifferentExposures.png" width="600px" > </center>   
- <\figure>
+ </figure>
 
  위의 두 사진중 왼쪽은 낮은 동적 범위의 표현이고, 오른쪽은 높은 동적 범위의 사진이다. 왼쪽의 사진에서 하늘은 빛이 밝아 하얀색으로만 표현된 반면, 
  오른쪽 사진에선 구름이 보일 정도로 세밀하게 표현되었다. 이는 동적 범위가 넓어 빛의 밝기가 변하는 단계가 많기 때문이다. 
