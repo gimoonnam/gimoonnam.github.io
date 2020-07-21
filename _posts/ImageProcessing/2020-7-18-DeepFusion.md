@@ -39,13 +39,17 @@ Deep Fusion은 고전적인 이미지 융합 방법과는 다르게 Deep Learnin
 <span style="color:blue"> **Deep Fusion은 어떻게 작동하는가?** </span> 
 
 
+# Algorithm
+
+convolution neural network 
+
 
 
 # References 
 
 1. [Google's night sight on pixel](https://venturebeat.com/2018/11/14/google-pixel-night-sight/)   
 2. [Deep Fusion Demo](https://petapixel.com/2019/10/28/deep-fusion-demo-trying-out-apples-computational-photography-tech/)   
-
+3. [ ](...)
 
 
 
