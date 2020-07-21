@@ -42,7 +42,7 @@ last_modified_at: 2020-07-21
  노출시간이 적은 것을 underexposed, 긴 것을 overexposed 되었다고 한다. 적절한 노출시간을 준다고 해도 밝은 부분과 어두운 부분을 동시에 세밀하게 나타난 이미지를 
  얻는 것은 쉽지 않다. 따라서 이렇게 노출시간을 달리하며 여러장의 사진을 찍어 이것들을 융합해 이미지의 모든 부분을 세밀하게 표현한 사진을 얻는 것이다. 
  
- ![ ](/assets/images/mergeMertens.jpeg)    
+ ![ ](/assets/images/houseFused.png)    
  
 
  융합하는 방법에는 크게 두 가지 방법이 있다. 
@@ -54,18 +54,11 @@ last_modified_at: 2020-07-21
  >   [Mertens et al. 2009](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-8659.2008.01171.x)
 
  
+# 카메라 반응 곡선을 이용한 융합 
 
 
+# 다중 해상도를 이용한 융합
 
-# 간략한 이론
-
-## 1. quality measures 
-
-## 2. Gaussian and Laplacian Pyramid
-
-## 3. Multiresolution blending 
-
-## 4. 결과 
 
 # 마무리 
   
