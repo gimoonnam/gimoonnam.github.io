@@ -13,6 +13,9 @@ toc_sticky: true
 last_modified_at: 2020-07-22
 ---
 
+<img src="/assets/images/iphone11camera-induction.jpg" width="500px" >
+
+
 최근 이미지 [노출 융합 (exposure fusion)](https://gimoonnam.github.io/imageprocessing/exposureFusion_Kor/)를 공부하며, 
 자연스럽게 Deep Fusion에 관심을 가지게 되었다.  
 
