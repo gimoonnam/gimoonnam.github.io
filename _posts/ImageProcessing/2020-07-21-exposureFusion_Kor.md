@@ -36,7 +36,7 @@ last_modified_at: 2020-07-21
  아래 사진은 4개의 다른 노출시간으로 찍은 사진을 보여준다. 
 
 
-  ![Four different exposure images](/assets/images/house.png){: width="100%" height="100%"}
+  ![Four different exposure images](/assets/images/house.png)
 
 
  노출시간이 적은 것을 underexposed, 긴 것을 overexposed 되었다고 한다. 적절한 노출시간을 준다고 해도 밝은 부분과 어두운 부분을 동시에 세밀하게 나타난 이미지를 
