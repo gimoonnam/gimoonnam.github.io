@@ -44,11 +44,10 @@ last_modified_at: 2020-07-21
  노출시간이 짧은 사진은 빛이 많은 부분을 세밀하게 표현할 수 있는 반면 어두운 부분은 충분한 빛을 받지 못해 어둡게 나온다. 
  대조적으로 노출시간이 긴 사진은 어두운 부분은 세밀하게 표현하지만, 밝은 부분은 하얗게만 표현된다. 
  
+ 
+ 아래 사진은 위의 사진들을 융합한 결과이다. 집의 내부와 외부의 모습 모두 세밀하게 표현되어있다.
  <center>
- <figure>
-  <img src="/assets/images/houseFused.png" width="400px" >
-  <figcaption> 위의 사진을 융합한 결과이다. 집의 내부와 외부의 모습 모두 세밀하게 표현되어있다. </figcaption>
-</figure>
+ <img src="/assets/images/houseFused.png" width="600px" >
  </center>
   
  
