@@ -37,7 +37,18 @@ Deep Fusion은 고전적인 이미지 융합 방법과는 다르게 Deep Learnin
 <img src="/assets/images/DeepFusionOniPhone.jpeg" width="500px" >
 
 
-<span style="color:blue"> **Deep Fusion은 어떻게 작동하는가?** </span> 
+<span style="color:blue"> **Deep Fusion은 어떻게 작동하는가?** </span>  
+
+총 9장의 사진을 찍는다. **이중 8장(짧은 노출로 4장 + 표준 노출로 4장)** 은 셔터를 누르기 전에 카메라가 이미 찍어 놓는다. 
+셔터를 누르면 나머지 한장을 긴 노출시간으로 찍는다.  
+
+여기에서 **표준노출**의 사진은 낮은 주파수(low frequency)의 정보를 가진다. 따라서 이것은 세밀한 부분을 캡쳐하기 보다 사진의 컬터톤과 같은 정보를 포함하는 사진이 된다. 반면, **짧은노출**의 사진은 아주 짧은 시간동안만 빛을 받아 높은 주파수의 정보 즉 세밀한 특징을 잡아낸다. 
+
+이 사진들을 가지고 딥 퓨전은 우선 긴 노출 하나와 표준 노출 3개로 **synthetic long**로 불리는 긴 노출 사진을 하나 만든다. 
+
+이 synthetic long과 짧은 노출 사진을 뉴럴 네트워크에 넣어 분석한다.
+
+
 
 
 # Algorithm
