@@ -23,10 +23,9 @@ last_modified_at: 2020-07-20
   as a counterpart of others involving the conversion. The demonstration of HDR's fusion will be studied soon though.  
 
   **Key Points of Mertens' algorithm**
-  >1. No conversion into HDR images 
+  >1. No conversion into HDR images ans thus no tone-mapping required
   >2. Not need to know exposure times 
   >3. Multiresolution blending by Gaussian and Laplacian pyramid images   
-  >4. No additional post improvements requried 
 
 # Multiresolution Exposure Fusion  
 
@@ -64,7 +63,15 @@ last_modified_at: 2020-07-20
 
   The resultant fusion image can then be obtained via a weighted blending of image stack. But it was turned out that the simple fusion produced undesired disturbing seams and halos on resulting images. 
 
-  To get around this problem, the authors employed a multiple resolutions using pyramidal images decomposition. 
+  To get around this problem, the authors employed a multiresolutions using pyramidal images decomposition. 
+  The multiresolution is very efficient method for extracting information from images at various scales. 
+  There are large and small features on image, and they need to be fused onto one final output. 
+  A single resolution fusion is highly likely to lose some of small features, 
+  which appears as seams and halos on the output image because of loss of detailed features at small scales.
+  
+  
+  
+  
 
   Before blending images, the Laplacian pyramid is generated as a weighted average of Laplacian decompositions for original images and Gaussian pyramid of the weight map. 
 
@@ -72,6 +79,9 @@ last_modified_at: 2020-07-20
     \mathbf{L}[R]_{ij}^l = \sum_{k=1}^{N}\mathbf{G}[{\hat W}]_{ij,k}^l \mathbf{L}[I]_{ij,k}^l
     \tag{3}
   $$
+  
+  
+  
 
   Then the final result is obtained by collapsing the Laplacian pyramid up to the original image size. 
 
