@@ -16,6 +16,7 @@ last_modified_at: 2020-07-22
 
 <img src="/assets/images/iphone11camera-induction.jpg" width="500px" >
 
+# Introduction
 
 최근 이미지 [노출 융합 (exposure fusion)](https://gimoonnam.github.io/imageprocessing/exposureFusion_Kor/)를 공부하며, 
 자연스럽게 Deep Fusion에 관심을 가지게 되었다.  
@@ -48,8 +49,10 @@ Deep Fusion은 고전적인 이미지 융합 방법과는 다르게 Deep Learnin
 
 이 synthetic long과 짧은 노출 사진을 뉴럴 네트워크에 넣어 분석한다.
 
+DF는 노이즈 감소하는 필터를 각각의 이미지에 적용하여, 픽셀 by 픽셀로 이미지들을 합성한다. 이렇게 만들어진 사진을 <span style="color:blue"> Computational photography </span>라고 애플은 소개했다. 
 
-
+사진을 찍는 아주 간단한 작업에서 이렇게 복잡한 과정이 있다는게 신기하기만 한데, 어떤 알고리즘이 사용되는지 
+공개되진 않았을 것 같지만, 일반적으로 deep fusion에서 사용되는 알고리즘에 대해서 알아보도록 하겠다. 
 
 # Algorithm
 
