@@ -63,16 +63,17 @@ last_modified_at: 2020-07-20
 
   The resultant fusion image can then be obtained via a weighted blending of image stack. But it was turned out that the simple fusion produced undesired disturbing seams and halos on resulting images. 
 
-  To get around this problem, the authors employed a multiresolutions using pyramidal images decomposition. 
+
+  To get around this problem, the authors employed a multiresolution fusion using pyramidal images decomposition. 
   The multiresolution is very efficient method for extracting information from images at various scales. 
   There are large and small features on image, and they need to be fused onto one final output. 
   A single resolution fusion is highly likely to lose some of small features, 
-  which appears as seams and halos on the output image because of loss of detailed features at small scales.
+  which often appears as seams and halos on the output image because of loss of detailed features at small scales.
   
+  The multiresolution fusion can be made by constructing image pyramid, where the pyramid stacks the same image as downsizing it from the previous level. 
+  In the architecture of pyramid, original size image is placed at the bottem level, which is decreased by a quarter of the total number of pixels as level increases. While large features on images can survive at higher levels, small features are retained at lower levels. 
   
-  
-  
-
+ 
   Before blending images, the Laplacian pyramid is generated as a weighted average of Laplacian decompositions for original images and Gaussian pyramid of the weight map. 
 
   $$
