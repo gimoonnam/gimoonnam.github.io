@@ -40,9 +40,11 @@ $$
 
 1차원 DoG으로 확인하면 아래와 같이 sigma가 1.0(<span style="color:yellow">노랑</span>) 인 분포를 0.3(<span style="color:red">빨강</span>)으로부터 빼서 <span style="color:blue"> Difference(파랑)</span>을 얻습니다. 
 
+<figure>
 <center>
 <img src="/assets/images/DoG_mexicanHat.jpeg" width="600px" >
 </center>
+</figure>
    
 결과인 파란색 곡선은 mexican hat을 닮은 모양이 됩니다. 평균값에서 주변이 음수로 떨어지며 경계를 뚜렷하게 하는 결과를 만듭니다. 
 
