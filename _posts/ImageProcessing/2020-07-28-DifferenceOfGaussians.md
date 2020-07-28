@@ -93,6 +93,8 @@ $$
 
 ## 설명 (Explanation)
 
+  1. 'gif' image Load using  **cv2.VideoCapture** and **gif.read** 
+  2. Replicate boundary condition for image filtering 
 
 
 # Wrapping up
