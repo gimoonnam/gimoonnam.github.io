@@ -42,7 +42,7 @@ $$
 
 <center>
 <img src="/assets/images/DoG_mexicanHat.jpeg" width="600px" >
-<\center>
+</center>
    
 결과인 파란색 곡선은 mexican hat을 닮은 모양이 됩니다. 평균값에서 주변이 음수로 떨어지며 경계를 뚜렷하게 하는 결과를 만듭니다. 
 
@@ -60,6 +60,9 @@ $$
 ## 파이썬 코드(Code)
  
 <script src="https://gist.github.com/gimoonnam/18348ab61a82cb9140ed9672d296b8d2.js"></script>
+
+
+## 결과 (Results)
 
 
 ## 설명 (Explanation)
