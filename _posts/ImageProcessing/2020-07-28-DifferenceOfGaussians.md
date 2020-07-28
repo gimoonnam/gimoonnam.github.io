@@ -1,5 +1,5 @@
 ---
-title: "Image Edge Enhancement: Difference of Gaussians(DoG)"
+title: "Edge Enhancement: Difference of Gaussians(DoG)"
 date: 2020-7-28 12:32:28 -0400
 categories: ImageProcessing
 tags:
