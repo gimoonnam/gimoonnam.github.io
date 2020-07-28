@@ -17,6 +17,7 @@ last_modified_at: 2020-07-28
 
 이미지 처리에서 sharpening이라고 하는 즉 선명도를 증가시키는 방법이 몇 가지 있습니다. 이 포스팅에선 **Laplace Operator** 에 대해서 보도록 하겠습니다.
 
+# Theory 
 
 ## 1. Laplace Operator 
 
@@ -36,7 +37,7 @@ where $f(x,y)$ denotes a 2-D intensity map of original image, where $x,y$ indica
 |taken from Ref.1|
 
 
-## 3. Laplace of Gaussian (LoG)
+## 2. Laplace of Gaussian (LoG)
 
 Thesecond one is the Laplace of Gaussian, in which Gaussian filter is applied to Laplacian operator as shown below. 
 
@@ -53,7 +54,14 @@ These counterpart properties are resolved by applying Laplace operator to Gaussi
 LoG is more widely used to sharpen images than Laplace and DoG. 
 
 
+# Implementation 
 
+<script src="https://gist.github.com/gimoonnam/11f62474df4c93626bb61c879199b0e0.js"></script>
+
+
+## 코딩 
+
+## 결과 
 
 
 # Wrapping up
