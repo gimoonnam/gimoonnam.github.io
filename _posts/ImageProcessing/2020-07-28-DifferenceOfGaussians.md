@@ -69,27 +69,22 @@ $$
 
 ## 결과 (Results)
 
-```
-Load and plot original image 
-```
+* **Load and plot original image** 
 <script src="https://gist.github.com/gimoonnam/65b630cadd87401368e72b278146dddc.js"></script>
 
 <img src="/assets/images/DoG_res1.png" width="250px" >
 
 ---------------------------------------
 
-```
-implementation by OpenCV
-```
+* **implementation by OpenCV**
 <script src="https://gist.github.com/gimoonnam/2308bd260aacf735354523854286cb25.js"></script>
 
 <img src="/assets/images/DoG_res2.png" width="600px" >
 
 ---------------------------------------
 
-```
-from-scratch implementation without OpenCV 
-```
+* **from-scratch implementation without OpenCV** 
+
 <script src="https://gist.github.com/gimoonnam/c7042ae9512636205205c17e9d47386f.js"></script>
 
 <img src="/assets/images/DoG_res3.png" width="600px" >
