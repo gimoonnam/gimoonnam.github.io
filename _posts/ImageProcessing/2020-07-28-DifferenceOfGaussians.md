@@ -92,6 +92,8 @@ $$
 
 # Wrapping up
 
+이 포스트에서 edge enhancement의 방법중 하나인 DoG에 대해서 알아보고 코딩을 해보았다. 이 방법은 **Laplacian filtering** 만큼 많이 쓰이니 알아두면 좋을것이다. 새로운 내용이나 보완점은 앞으로 계속 업데이트 될 것이다. 이 포스팅에 대한 github 코드는 [여기를](https://github.com/gimoonnam/ImageProcessing/blob/master/Edge_Enhancement/DiifferenceOfGaussians.ipynb) 참고하기 바란다. 
+
 
 # References 
   
