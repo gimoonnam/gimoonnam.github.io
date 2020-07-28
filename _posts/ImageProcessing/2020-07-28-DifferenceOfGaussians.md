@@ -16,6 +16,8 @@ last_modified_at: 2020-07-28
 # Introduction 
 
    지난 포스팅에서 이미지의 가장자리를 강화(edge enhancement)하는 알고리즘 중의 하나인 **Laplace operator**에 대해서 보았습니다. 이 전 포스팅은 아래 링크를 참고하세요. 이 방법은 많이 사용되는 반면 노이즈를 증가시키는 역효과를 발생시킵니다. 이것은 이미 잘 알려진 side effect인데요. 이점을 보완하는 알고리즘이 있습니다. **Difference of Gaussians(DoG)** 라는 방법입니다. 
+   
+  Your awesome text. {: .right}
 
  **DoG**가 라플라스에 비해 특별히 뛰어나기보다 노이즈를 줄인채 edge를 감지한다는 것에서 장점이 있습니다. 하지만 edge enhancement만 놓고 보면 라플라스가 떠 효과적이라고 할 수 있습니다. 
 
