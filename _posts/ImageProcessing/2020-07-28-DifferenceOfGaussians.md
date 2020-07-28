@@ -20,7 +20,7 @@ last_modified_at: 2020-07-28
  **DoG**가 라플라스에 비해 특별히 뛰어나기보다 노이즈를 줄인채 edge를 감지한다는 것에서 장점이 있습니다. 하지만 edge enhancement만 놓고 보면 라플라스가 떠 효과적이라고 할 수 있습니다. 
 
 
-## 2. Difference of Gaussian (DoG)  
+# Thoery: Difference of Gaussian (DoG)  
 
 분산이 다른 두개의 가우시안 필터를 고려합니다. 이미지이기 때문에 2차원 가우시안 함수가 되고 수식으로는 아래와 같이 표현합니다.
 
@@ -56,6 +56,8 @@ $$
 여기에서 $* $는 합성곱을 표기한다. 
 
 결과는 흑백 이미지가 되며, 이것은 **band-pass filter**를 적용한 것과 동일하며, 원본 이미지에서 **spatial frequencies**를 제거한 상태가 된다. 이것이 사람의 눈이 사물을 보고 구체적인 정보를 인식하는 과정과 동일하다고 한다. 
+
+# Implementation
 
 ## 파이썬 코드(Code)
  
