@@ -39,17 +39,22 @@ $$
  \tag{2}
  $$ 
 
+여기에서 $* $는 합성곱을 표기한다. 
+
+1차원 DoG으로 확인하면 아래와 같이 sigma가 1.0(<span style="color:yellow"> 노랑 </span>) 인 분포를 0.3(<span style="color:red"> 빨강 </span>)으로부터 빼서 <span style="color:blue"> Difference(파랑) </span>을 얻습니다. 
+
+<img src="/assets/images/DoG_mexicanHat.jpeg" width="400px" >
+
+결과인 파란색 곡선은 mexican hat을 닮은 모양이 됩니다. 평균값에서 주변이 음수로 떨어지며 경계를 뚜렷하게 하는 결과를 만듭니다. 
+
+$f(x,y)$라는 이미지가 있으면 다음과 같이 계산해서 **DoG**가 적용된 이미지를 얻을 수 있습니다. 
+
 $$
 f_{\mathrm{sharpened}}(x,y) = f(x,y)* G_1(x,y) - f(x,y) * G_2(x,y)
 \tag{3}
 $$
 
-where $* $ indicates convolution operator. 
-
-
-1차원 DoG으로 확인하면 아래와 같이 sigma가 1.0(노랑) 인 분포를 0.3(빨강)으로부터 빼서 Difference(파랑)을 얻습니다. 
-
-<img src="/assets/images/DoG_mexicanHat.jpeg" width="400px" >
+결과는 흑백 이미지가 되며, 이것은 **band-pass filter**를 적용한 것과 동일하며, 원본 이미지에서 **spatial frequencies**를 제거한 상태가 된다. 이것이 사람의 눈이 사물을 보고 구체적인 정보를 인식하는 과정과 동일하다고 한다. 
 
 ## 파이썬 코드(Code)
  
