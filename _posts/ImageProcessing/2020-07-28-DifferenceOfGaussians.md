@@ -3,32 +3,41 @@ title: "Image Edge Enhancement: Difference of Gaussians(DoG)"
 date: 2020-7-28 12:32:28 -0400
 categories: ImageProcessing
 tags:
-   - DoG 
-   - LoG
+   - Difference of Gaussian
    - edge detection 
    - Laplace operator
-   - exposure fusion
 use_math: true
 toc: true
 toc_sticky: true
-last_modified_at: 2020-07-26
+last_modified_at: 2020-07-28
 ---
 
 
 # Introduction 
 
-In this post, we will look over how to improve edges and other detailedd features on images. There are several methods, most of which uses convolutions with a filter. 
+   지난 포스팅에서 이미지의 가장자리를 강화(edge enhancement)하는 알고리즘 중의 하나인 **Laplace operator**에 대해서 보았습니다. 이 전 포스팅은 아래 링크를   
+   참고하세요. 이 방법은 많이 사용되는 반면 노이즈를 증가시키는 역효과를 발생시킵니다. 이것은 이미 잘 알려진 side effect인데요. 이점을 보완하는 알고리즘이 있습니다. **Difference of   
+   Gaussians(DoG)** 라는 방법입니다. 
+
+   **DoG**가 라플라스에 비해 특별히 뛰어나기보다 노이즈를 줄인채 edge를 감지한다는 것에서 장점이 있습니다. 하지만 edge enhancement만 놓고 보면 라플라스가 떠 효과적이라고 할 수 있습니다. 
+
 
 ## 2. Difference of Gaussian (DoG)  
+
+분산이 다른 두개의 가우시안 필터를 고려합니다. 이미지이기 때문에 2차원 가우시안 함수가 되고 수식으로는 아래와 같이 표현합니다.
 
 $$
 G_1(x,y) = \frac{1}{\sqrt{2\pi\sigma_1^2}}\exp\left(-(x^2+y^2)/2\sigma_{1}^2\right)\nonumber\\ 
 G_2(x,y) = \frac{1}{\sqrt{2\pi\sigma_2^2}}\exp\left(-(x^2+y^2)/2\sigma_{2}^2\right)\nonumber
-\tag{2} 
+\tag{1} 
 $$
 
-These two Gaussian filter produces two blurred images. Differencce of Gaussians is then made by subtracting more blurred image from less blurred one, 
-ensuring that $\sigma_1 < \sigma_2$. 
+여기에서 $\sigma_1$과 $\sigma_2$는 분산이고 이것이 가우시안 블러링의 정도를 결정합니다. 즉, 분산이 커질수록 이미지가 흐려지는 정도가 커지게 됩니다.
+**DoG**는 이 두 가우시안 빼는 것입니다. 이때 기억해야 할 것이 빼는 가우시안의 분산이 더 크게 하는 것입니다. 만약 **G1-G2**를 구한다면 G2의 분산이 더 커야 한다는 것입니다. 
+ $$
+ \sigma_1 < \sigma_2
+ \tag{2}
+ $$ 
 
 $$
 f_{\mathrm{sharpened}}(x,y) = f(x,y)* G_1(x,y) - f(x,y) * G_2(x,y)
@@ -38,18 +47,18 @@ $$
 where $* $ indicates convolution operator. 
 
 
-The resulting curve resembles a Mexican hat as shown below. 
+1차원 DoG으로 확인하면 아래와 같이 sigma가 1.0(노랑) 인 분포를 0.3(빨강)으로부터 빼서 Difference(파랑)을 얻습니다. 
 
-|<img src="/assets/images/DoG.png" width="400px" >|
-|:--:| 
-|taken from Ref.1|
+<img src="/assets/images/DoG_mexicanHat.jpeg" width="400px" >
 
-## 파이썬 코드 
-
+## 파이썬 코드(Code)
+ 
 <script src="https://gist.github.com/gimoonnam/18348ab61a82cb9140ed9672d296b8d2.js"></script>
 
 
-## 설명
+## 설명 (Explanation)
+
+
 
 # Wrapping up
 
