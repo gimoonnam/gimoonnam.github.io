@@ -62,7 +62,7 @@ G_2(x,y) = \frac{1}{\sqrt{2\pi\sigma_2^2}}\exp\left(-(x^2+y^2)/2\sigma_{2}^2\rig
 \tag{3} 
 $$
 
-These two Gaussian filter produces two blurred images. **Differencce of Gaussians** is then made by subtracting more blurred image from less blurred one, 
+These two Gaussian filter produces two blurred images. **Difference of Gaussians** is then made by subtracting more blurred image from less blurred one, 
 ensuring that $\sigma_1 < \sigma_2$. 
 
 $$
