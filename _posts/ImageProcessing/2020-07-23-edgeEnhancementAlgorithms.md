@@ -21,9 +21,9 @@ In this post, we will study edge enhancement algorithms. There are several metho
 three respresentative ones: **Laplace operator**, **Difference of Gaussians**, and **Unsharp filter**. 
 
 Codes can be found in the following linkds for each algorighms
-> [**Laplace Operator**](https://github.com/gimoonnam/ImageProcessing/blob/master/Edge_Enhancement/LaplacianFiltering.ipynb)   
-> [**Difference of Gaussians**](https://github.com/gimoonnam/ImageProcessing/blob/master/Edge_Enhancement/DiifferenceOfGaussians.ipynb)   
-> [**Unsharp Filter**](https://github.com/gimoonnam/ImageProcessing/blob/master/Edge_Enhancement/UnsharpFilter.ipynb)
+> [**1. Laplace Operator**](https://github.com/gimoonnam/ImageProcessing/blob/master/Edge_Enhancement/LaplacianFiltering.ipynb)   
+> [**2. Difference of Gaussians**](https://github.com/gimoonnam/ImageProcessing/blob/master/Edge_Enhancement/DiifferenceOfGaussians.ipynb)   
+> [**3. Unsharp Filter**](https://github.com/gimoonnam/ImageProcessing/blob/master/Edge_Enhancement/UnsharpFilter.ipynb)
 
 
 ## 1. Laplace Operator 
