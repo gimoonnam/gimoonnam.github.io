@@ -20,6 +20,11 @@ last_modified_at: 2020-07-29
 In this post, we will study edge enhancement algorithms. There are several methods, most of which uses convolutions with a filter. Among them, we will look over
 three respresentative ones: **Laplace operator**, **Difference of Gaussians**, and **Unsharp filter**. 
 
+Codes can be found in the following linkds for each algorighms
+> [**Laplace Operator**](https://github.com/gimoonnam/ImageProcessing/blob/master/Edge_Enhancement/LaplacianFiltering.ipynb)   
+> [**Difference of Gaussians**](https://github.com/gimoonnam/ImageProcessing/blob/master/Edge_Enhancement/DiifferenceOfGaussians.ipynb)   
+> [**Unsharp Filter**](https://github.com/gimoonnam/ImageProcessing/blob/master/Edge_Enhancement/UnsharpFilter.ipynb)
+
 
 ## 1. Laplace Operator 
 
@@ -103,9 +108,13 @@ $$
 where $k$ is a scaling constant, typically set from the range between 0.2 and 0.7. The sharpness of an image becomes enhanced as $k$ increases.
 
 
-
 # Wrapping up
-
+   
+   We have studied three respresentative algorithms for edge enhancement: **Laplace Operator**, **Difference of Gaussians**, and **Unsharp filter**. 
+   Python implementations of these algorithms can be found in the links attached at the beginning of this post.
+   
+   As a series of fundamental study of image processing algorithms, the following post will be covering image fusion and blending using image pyramid.   
+   
 
 # References 
   
