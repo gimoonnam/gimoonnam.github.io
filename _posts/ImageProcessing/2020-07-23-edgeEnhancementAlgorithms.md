@@ -33,7 +33,7 @@ The Laplace operator takes second derivatives of an intensity map $f(x,y)$, wher
 
 \begin{eqnarray}
 \mathbf{L} &=& \nabla^2 f(x,y) \nonumber\\
-&=& \left[\frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2}  \right] f(x,y) \number
+&=& \left[\frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2}  \right] f(x,y) \\
 \end{eqnarray}
 
 
@@ -46,14 +46,14 @@ This side effect is suppressed by applying Laplace operator to Gaussian blurred 
 
 \begin{eqnarray}
 \mathrm{LoG} &=& \nabla^2 G(x,y) \nonumber\\
-&=& -\frac{1}{\pi \sigma^2}\left[ 1- \frac{x^2+y^2}{2\sigma^2} \right] \mathrm{e} ^{-\left(x^2+y^2\right)/2\sigma^2}\number
+&=& -\frac{1}{\pi \sigma^2}\left[ 1- \frac{x^2+y^2}{2\sigma^2} \right] \mathrm{e} ^{-\left(x^2+y^2\right)/2\sigma^2}\\
 \end{eqnarray}
 
 ## 2. Difference of Gaussian (DoG)  
 
 \begin{equation}
 G_1(x,y) = \frac{1}{\sqrt{2\pi\sigma_1^2}}\exp\left(-(x^2+y^2)/2\sigma_{1}^2\right)\nonumber\\ 
-G_2(x,y) = \frac{1}{\sqrt{2\pi\sigma_2^2}}\exp\left(-(x^2+y^2)/2\sigma_{2}^2\right)\number
+G_2(x,y) = \frac{1}{\sqrt{2\pi\sigma_2^2}}\exp\left(-(x^2+y^2)/2\sigma_{2}^2\right)\\
 \end{equation}
 
 These two Gaussian filter produces two blurred images. **Difference of Gaussians** is then made by subtracting more blurred image from less blurred one, 
