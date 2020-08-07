@@ -32,8 +32,10 @@ The Laplace operator takes second derivatives of an intensity map $f(x,y)$, wher
 
 
 \begin{eqnarray}
+$$
 \mathbf{L} &=& \nabla^2 f(x,y) \nonumber\\
-&=& \left[\frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2}  \right] f(x,y) \\
+&=& \left[\frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2}  \right] f(x,y) \number\\ 
+$$
 \end{eqnarray}
 
 
