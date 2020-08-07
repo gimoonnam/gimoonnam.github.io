@@ -45,17 +45,22 @@ As shown below, for 1-D intensity profile, the **Laplace operator** captures the
 However, the Laplacian filter is very sensitive to noise despite a better performancce on edge detection. 
 This side effect is suppressed by applying Laplace operator to Gaussian blurred image that has already removed noise by blurring. This is called **Laplacian of Gaussian(LoG)**.
 
+$$
 \begin{eqnarray}
 \mathrm{LoG} &=& \nabla^2 G(x,y) \nonumber\\
-&=& -\frac{1}{\pi \sigma^2}\left[ 1- \frac{x^2+y^2}{2\sigma^2} \right] \mathrm{e} ^{-\left(x^2+y^2\right)/2\sigma^2}\\
+&=& -\frac{1}{\pi \sigma^2}\left[ 1- \frac{x^2+y^2}{2\sigma^2} \right] \mathrm{e} ^{-\left(x^2+y^2\right)/2\sigma^2}
 \end{eqnarray}
+$$
 
 ## 2. Difference of Gaussian (DoG)  
 
-\begin{equation}
+
+$$
+\begin{eqnarray}
 G_1(x,y) = \frac{1}{\sqrt{2\pi\sigma_1^2}}\exp\left(-(x^2+y^2)/2\sigma_{1}^2\right)\nonumber\\ 
-G_2(x,y) = \frac{1}{\sqrt{2\pi\sigma_2^2}}\exp\left(-(x^2+y^2)/2\sigma_{2}^2\right)\\
-\end{equation}
+G_2(x,y) = \frac{1}{\sqrt{2\pi\sigma_2^2}}\exp\left(-(x^2+y^2)/2\sigma_{2}^2\right)
+\end{eqnarray}
+$$
 
 These two Gaussian filter produces two blurred images. **Difference of Gaussians** is then made by subtracting more blurred image from less blurred one, 
 ensuring that $\sigma_1 < \sigma_2$. 
