@@ -57,11 +57,11 @@ last_modified_at: 2020-07-20
 
   Once the weight maps are constructed for each images, the map needs to be normalized to obtain a consistent result as following,
 
-  \begin{equation}
-    \hat{W}_{ij,k} = \frac{W_{ij,k}}{\left[\sum_{k^{\prime}}^{N} W_{ij,k^{\prime}} \right]}
+  \begin{equation} 
+    W_{ij,k} = \frac{W_{ij,k}}{\left[\sum_{k^{\prime}}^{N} W_{ij,k^{\prime}} \right]}
     \label{eq:two}
   \end{equation}
-
+  
   The resultant fusion image can then be obtained via a weighted blending of image stack. But it was turned out that the simple fusion produced undesired disturbing seams and halos on resulting images. 
 
 
@@ -175,7 +175,7 @@ def ConstructWeightMap(self):
   
   \begin{equation}
     R_{ij} = \sum_{k=1}^N \hat{W}_{ij,k} I_{ij,k}
-    \label{eq:5}    
+    \label{eq:5}  
   \end{equation}
   
  Thus the authors considered an alternative method for blending using a Laplacian image pyramid. 
