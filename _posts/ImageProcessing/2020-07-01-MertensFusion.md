@@ -57,10 +57,10 @@ last_modified_at: 2020-07-20
 
   Once the weight maps are constructed for each images, the map needs to be normalized to obtain a consistent result as following,
 
-  $$
+  \begin{equation}
     \hat{W}_{ij,k} = \frac{W_{ij,k}}{\left[\sum_{k^{\prime}}^{N} W_{ij,k^{\prime}} \right]}
     \label{eq:two}
-  $$
+  \end{equation}
 
   The resultant fusion image can then be obtained via a weighted blending of image stack. But it was turned out that the simple fusion produced undesired disturbing seams and halos on resulting images. 
 
@@ -77,20 +77,20 @@ last_modified_at: 2020-07-20
  
   Before blending images, the Laplacian pyramid is generated as a weighted average of Laplacian decompositions for original images and Gaussian pyramid of the weight map. 
 
-  $$
+  \begin{equation}
     \mathbf{L}[R]_{ij}^l = \sum_{k=1}^{N}\mathbf{G}[{\hat W}]_{ij,k}^l \mathbf{L}[I]_{ij,k}^l
-    \tag{3}
-  $$
+    \label{eq:3}
+  \end{equation}
   
   
   
 
   Then the final result is obtained by collapsing the Laplacian pyramid up to the original image size. 
 
-  $$
+  \begin{equation}
     R_{ij} = \sum_{k=1}^N \mathbf{L}[R]_{ij} I_{ij,k}
-    \tag{4}    
-  $$
+    \label{eq:4}    
+  \end{equation}
 
 ## Python Implementation 
 
@@ -173,19 +173,19 @@ def ConstructWeightMap(self):
 
   It turned out that the simple blending yielded a poor quality image with halos and seams. 
   
-  $$
+  \begin{equation}
     R_{ij} = \sum_{k=1}^N \hat{W}_{ij,k} I_{ij,k}
-    \tag{5}    
-  $$
+    \label{eq:5}    
+  \end{equation}
   
  Thus the authors considered an alternative method for blending using a Laplacian image pyramid. 
  
  A Laplacian image can be obtained by applying Laplacian operator given by the second derivatives of an intensity map $f=f(x,y)$
  
- $$
+ \begin{equation}
    Laplace(f) = \frac{\partial^2 f}{\partial x^2} + \frac{\partial^2 f}{\partial y^2} 
-   \tag{6}
- $$
+   \label{eq:6}
+ \end{equation}
  
  This operator captures edges and texture on images. 
  
