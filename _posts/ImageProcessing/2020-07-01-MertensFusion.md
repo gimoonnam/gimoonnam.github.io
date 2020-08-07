@@ -13,6 +13,7 @@ toc_sticky: true
 last_modified_at: 2020-07-20
 ---
 
+
 # Introduction  
 
   This post presents a Python implementation on an exposure fusion using openCV. 
