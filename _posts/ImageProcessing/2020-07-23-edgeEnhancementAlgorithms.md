@@ -30,13 +30,12 @@ Python implementations can be found in the following links for each algorighms
 
 The Laplace operator takes second derivatives of an intensity map $f(x,y)$, where $x,y$ indicate a coordinate of pixels on the images. 
 
-$$
+
 \begin{eqnarray}
 \mathbf{L} &=& \nabla^2 f(x,y) \nonumber\\
-&=& \left[\frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2}  \right] f(x,y) \nonumber
+&=& \left[\frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2}  \right] f(x,y) \number
 \end{eqnarray}
-\tag{1}
-$$
+
 
 As shown below, for 1-D intensity profile, the **Laplace operator** captures the location at which the intensity changes most rapidly, which is surrounded by the opposite signs of intensity, enhancing edge. 
 
@@ -45,30 +44,25 @@ As shown below, for 1-D intensity profile, the **Laplace operator** captures the
 However, the Laplacian filter is very sensitive to noise despite a better performancce on edge detection. 
 This side effect is suppressed by applying Laplace operator to Gaussian blurred image that has already removed noise by blurring. This is called **Laplacian of Gaussian(LoG)**.
 
-$$ 
 \begin{eqnarray}
 \mathrm{LoG} &=& \nabla^2 G(x,y) \nonumber\\
-&=& -\frac{1}{\pi \sigma^2}\left[ 1- \frac{x^2+y^2}{2\sigma^2} \right] \mathrm{e} ^{-\left(x^2+y^2\right)/2\sigma^2}\nonumber
+&=& -\frac{1}{\pi \sigma^2}\left[ 1- \frac{x^2+y^2}{2\sigma^2} \right] \mathrm{e} ^{-\left(x^2+y^2\right)/2\sigma^2}\number
 \end{eqnarray}
-\tag{2}
-$$
-
 
 ## 2. Difference of Gaussian (DoG)  
 
-$$
+\begin{equation}
 G_1(x,y) = \frac{1}{\sqrt{2\pi\sigma_1^2}}\exp\left(-(x^2+y^2)/2\sigma_{1}^2\right)\nonumber\\ 
-G_2(x,y) = \frac{1}{\sqrt{2\pi\sigma_2^2}}\exp\left(-(x^2+y^2)/2\sigma_{2}^2\right)\nonumber
-\tag{3} 
-$$
+G_2(x,y) = \frac{1}{\sqrt{2\pi\sigma_2^2}}\exp\left(-(x^2+y^2)/2\sigma_{2}^2\right)\number
+\end{equation}
 
 These two Gaussian filter produces two blurred images. **Difference of Gaussians** is then made by subtracting more blurred image from less blurred one, 
 ensuring that $\sigma_1 < \sigma_2$. 
 
-$$
-f_{\mathrm{sharpened}}(x,y) = f(x,y)* G_1(x,y) - f(x,y) * G_2(x,y)
-\tag{4}
-$$
+\begin{equation}
+f_{\mathrm{sharpened}}(x,y) = f(x,y)* G_1(x,y) - f(x,y) * G_2(x,y) 
+\label{eq:conv}
+\end{equation}
 
 where $* $ indicates convolution operator. 
 
@@ -83,10 +77,11 @@ The resulting curve retains the location of maximum intensity, and surrounding o
 
 The unsharp filter is also used to enhance edges and other details on images. As one of spatial sharpening, the principle is pretty much similar to that of **DoG**, in a way that a smoothed image is subtracted from its original one, which produces a **high-pass signal's edge image**. 
 
-$$
+\begin{equation}
 g(x,y) = f(x,y) - f_{\mathrm{smoothed}}(x,y)
-\tag{5}
-$$
+\label{eq:sub}
+\end{equation}
+
 
 where $g(x,y)$ denotes the edge image. 
 
@@ -100,10 +95,11 @@ A better understanding can be made in a signal pattern as shown below.
 
 The resultant sharpened image can then be obtained by adding the edge image to the original one:  
 
-$$
+\begin{equation}
 f_{\mathrm{sharpened}}(x,y) = f(x,y) + kg(x,y)
-\tag{6}
-$$
+\label{eq:conv2}
+\end{equation}
+
 
 where $k$ is a scaling constant, typically set from the range between 0.2 and 0.7. The sharpness of an image becomes enhanced as $k$ increases.
 
