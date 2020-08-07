@@ -58,7 +58,7 @@ last_modified_at: 2020-07-20
   Once the weight maps are constructed for each images, the map needs to be normalized to obtain a consistent result as following,
 
   \begin{equation} 
-    W_{ij,k} = \frac{W_{ij,k}}{\left[\sum_{k^{\prime}}^{N} W_{ij,k^{\prime}} \right]}
+    {\hat{W}}_{ij,k} = \frac{W_{ij,k}}{\left[\sum_{k^{\prime}}^{N} W_{ij,k^{\prime}} \right]}
     \label{eq:two}
   \end{equation}
   
@@ -78,7 +78,7 @@ last_modified_at: 2020-07-20
   Before blending images, the Laplacian pyramid is generated as a weighted average of Laplacian decompositions for original images and Gaussian pyramid of the weight map. 
 
   \begin{equation}
-    \mathbf{L}[R]_{ij}^l = \sum_{k=1}^{N}\mathbf{G}[{\hat W}]_{ij,k}^l \mathbf{L}[I]_{ij,k}^l
+    \mathbf{L}[R]_{ij}^l = \sum_{k=1}^{N}\mathbf{G}[{\hat {W}}]_{ij,k}^l \mathbf{L}[I]_{ij,k}^l
     \label{eq:3}
   \end{equation}
   
