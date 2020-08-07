@@ -75,36 +75,36 @@ The implementation is made in Python using openCV.
 
 Suppose that we have a nonlinear function $f$ mapping the exposure $X$ to pixel values $Z$, 
 
-$$ 
+\begin{equation} 
 f(X) = Z   \longleftrightarrow  X = f^{-1}(Z), 
-\tag{1}
-$$
+\label{eq:exposure}
+\end{equation}
 
 Then the reconstruction of the irradiance map from the pixel values can be obtained by applying inverse $f$, 
 where $f$ is assumed to be a smooth and continuous function. 
 
 Eq.1 can be expressed with pixel($i$) and image($j$) indices as follow 
 
-$$
+\begin{equation} 
 E_i \Delta t_{j} = f^{-1}(Z_{ij})
-\tag{2}
-$$
+\label{eq:irradiance}
+\end{equation} 
 
 where $Z_{ij}$ indicates $i$th pixel values of $j$th image. This equation can be rewritten as follow 
 
-$$
+\begin{equation} 
 g(Z_{ij}) = \ln E_i + \ln \Delta t_j
-\tag{3}
-$$
+\label{eq:log_g}
+\end{equation} 
 
 where $g = \ln f^{-1}$. 
 
 ## 2. Weighted Objective Function for CRF Optimization 
 
-$$
+\begin{equation} 
 O = \sum_{i=1}^{N}\sum_{j=1}^{P}  \left( \omega(Z_{ij})\left[g(Z_{ij}) - \ln E_i - \ln \Delta t_j \right]\right)^2 + \\ \lambda \sum_{z=Z_{min}+1}^{Z_{max}-1} \left[ \omega(z)g^{''}(z)\right]^2 
-\tag{4}
-$$
+\label{eq:obj_func}
+\end{equation} 
 
 The first term ensures that the solution satisfies eq.3 in a least square sense. The second term gives a smoothness, 
 where the second derivative is given as a discrete form $g^{''}(z) = g(z-1) - 2g(z) + g(z+1)$ and $\lambda$ is a weight of the second term over the first one.
@@ -112,13 +112,13 @@ $P$ and $N$ are the number of photographs and of pixels, respectively.
 
 $\omega(z)$ is a weight function to impose the smoothness and fitting terms toward the middle of the response curve, which is chosen as a simple hat function as 
 
-$$
+\begin{equation} 
 \omega(z) = \begin{cases}
     z-Z_{min}, & \text{for} \,z \leq \frac{1}{2}\left(Z_{min}+Z_{max}\right) 
     \\ Z_{max}-z, & \text{for}\, z > \frac{1}{2}\left(Z_{min}+Z_{max}\right) 
   \end{cases}
-\tag{5}
-$$
+\label{eq:weight_func}
+\end{equation} 
 
 When measuring the response curve, the pixel locations should be chosen in a way that they are reasonably evenly distributed over $Z_{min}$ and $Z_{max}$, 
 so that the pixels are to be well sampled from the images.
@@ -128,10 +128,10 @@ so that the pixels are to be well sampled from the images.
 
   Once the response curves have been obtained, the original images can be merged into a single HDR image via 
   
-  $$  
+  \begin{equation}   
   \ln E_{i} = \frac{\sum_{j=1}^{P}\omega(Z_{ij})\left(g(Z_{ij} - \ln \Delta t_{j}) \right)    }{\sum_{j=1}^{P}\omega(Z_{ij})}
-  \tag{6}
-  $$
+  \label{eq:HDRmerge}
+  \end{equation} 
   
   Where, $P$ denotes the number of photographs, that is, the number of different exposure times. $Z_{ij}$ is the $i$th pixel's value on $j$th image. 
 
