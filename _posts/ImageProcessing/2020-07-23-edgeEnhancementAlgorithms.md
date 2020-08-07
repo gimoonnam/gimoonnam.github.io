@@ -30,12 +30,12 @@ Python implementations can be found in the following links for each algorighms
 
 The Laplace operator takes second derivatives of an intensity map $f(x,y)$, where $x,y$ indicate a coordinate of pixels on the images. 
 
-\begin{equation}
+$$
 \begin{eqnarray}
 \mathbf{L} &=& \nabla^2 f(x,y) \nonumber\\
 &=& \left[\frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2}  \right] f(x,y) 
 \end{eqnarray}
-\end{equation
+$$
 
 
 As shown below, for 1-D intensity profile, the **Laplace operator** captures the location at which the intensity changes most rapidly, which is surrounded by the opposite signs of intensity, enhancing edge. 
