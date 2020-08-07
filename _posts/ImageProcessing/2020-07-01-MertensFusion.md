@@ -58,8 +58,7 @@ last_modified_at: 2020-07-20
   Once the weight maps are constructed for each images, the map needs to be normalized to obtain a consistent result as following,
 
   \begin{equation} 
-    \displaystyle {\hat {o}}}
-    W_{ij,k} = \frac{W_{ij,k}}{\left[\sum_{k^{\prime}}^{N} W_{ij,k^{\prime}} \right]}
+    {\hat {W}}_{ij,k} = \frac{W_{ij,k}}{\left[\sum_{k^{\prime}}^{N} W_{ij,k^{\prime}} \right]}
     \label{eq:two}
   \end{equation}
   
