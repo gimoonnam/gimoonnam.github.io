@@ -46,7 +46,7 @@ last_modified_at: 2020-07-20
 
   $$ 
     W_{ij,k} = \left(C_{ij,k}\right)^{\omega_C}\times \left(S_{ij,k}\right)^{\omega_S} \times \left(E_{ij,k}\right)^{\omega_E}  
-    \tag{1}
+    \label{eq:one}
   $$
 
   where $k$ indicates an index of image in given image stack, and $i,j$ are pixel's indices. The relative contributions of each measure to the weight is controlled by the exponents $\omega_{C,S,E}$, varying between 0 and 1.
@@ -58,7 +58,7 @@ last_modified_at: 2020-07-20
 
   $$
     \hat{W}_{ij,k} = \frac{W_{ij,k}}{\left[\sum_{k^{\prime}}^{N} W_{ij,k^{\prime}} \right]}
-    \tag{2}
+    \label{eq:two}
   $$
 
   The resultant fusion image can then be obtained via a weighted blending of image stack. But it was turned out that the simple fusion produced undesired disturbing seams and halos on resulting images. 
