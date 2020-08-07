@@ -44,10 +44,11 @@ last_modified_at: 2020-07-20
 
    The weight map with the above three measures are given as a power function
 
-  $$ 
+  
+  \begin{equation}
     W_{ij,k} = \left(C_{ij,k}\right)^{\omega_C}\times \left(S_{ij,k}\right)^{\omega_S} \times \left(E_{ij,k}\right)^{\omega_E}  
     \label{eq:one}
-  $$
+  \end{equation}
 
   where $k$ indicates an index of image in given image stack, and $i,j$ are pixel's indices. The relative contributions of each measure to the weight is controlled by the exponents $\omega_{C,S,E}$, varying between 0 and 1.
 
