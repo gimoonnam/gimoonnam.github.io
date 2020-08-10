@@ -105,16 +105,28 @@ last_modified_at: 2020-08-10
 
    <script src="https://gist.github.com/gimoonnam/f53e5051c22a697655033f070581eac7.js"></script>
    
-   <img src="/assets/images/thresholding_result1.png" width="800px" >
+   <img src="/assets/images/thresholding_result1.png" width="800px">
 
    
  ### c. OpenCV 내장 함수를 이용해서 얻은 thresh값과 비교 
+ 
+  <script src="https://gist.github.com/gimoonnam/ce5e515538201cc3be9189db5663bf87.js"></script>
 
 
  ### d. 결과 
 
-    
-   
+  <script src="https://gist.github.com/gimoonnam/531a9f7d09dde361add68f9e393204ce.js"></script>
+  
+  <img src="/assets/images/thresholding_result2.png" width="800px" >
+  
+  이진화된 이미지의 히스토그램 (histogram of binarized image) 
+  
+  <script src="https://gist.github.com/gimoonnam/60fd92a1e8aa4f6f3b54c1b9b4ce0213.js"></script>
+  
+  <img src="/assets/images/thresholding_result3.png" width="800px" >
+  
+  
+  
 
 # References and Image sources
 
