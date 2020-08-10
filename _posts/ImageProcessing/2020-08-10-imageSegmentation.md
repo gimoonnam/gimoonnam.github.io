@@ -1,5 +1,5 @@
 ---
-title: "Image Segmentation/Feature extraction Algorithms"
+title: "Image Thresholding(이미지 이진화)"
 date: 2020-8-10 11:32:28 -0400
 categories: ImageProcessing
 tags:
@@ -16,7 +16,10 @@ last_modified_at: 2020-08-10
 
 # Introduction 
 
-  이번 포스팅에서는 **이미지 세그멘테이션**에 대해서 공부해 보도록 하겠다. 이것은 **feature extraction** 을 위한 것으로 이미지내의 클래스를 구분하기 위한 처리이다. 
+  이번 포스팅에서는 **이미지 세그멘테이션**의 가장 간단한 케이스인 **이미지 2진화(image binarization)** 대해서 공부해 보도록 하겠다. 
+  
+  **이미지 2진화**는 이미지내의 물체와 배경을 0과 1 혹은 그 반대로 주어 구분하는 것을 말한다. 
+  
   
 # Algorithms 
 
