@@ -46,25 +46,31 @@ last_modified_at: 2020-08-10
    
    <script src="https://gist.github.com/gimoonnam/1b952b44c37d179e479eee5e00e62464.js"></script>
 
-   여기에서 **Thresh=0**으로 주었다. 
+   여기에서 **Thresh=0**, **최대 픽셀값은 255**으로 주었다. 
    
    <img src="/assets/images/thresholding_sample.png" width="800px" >
    
-   결과에서 보듯이 원본 이미지에는 식별하기 어려웠던 32와 5가 선명하게 보이는 것을 볼 수 있다. 그리고 숫자는 밝기가 1로 배경은 0으로 처리된 **이진 이미지 (binary image)**가 되었다. 
+   결과에서 보듯이 원본 이미지에는 식별하기 어려웠던 32와 5가 선명하게 보이는 것을 볼 수 있다. 그리고 숫자는 밝기가 255로 배경은 0으로 처리된 **이진 이미지 (binary image)**가 되었다. 
    
 
 
 ## Otsu's algorithm 
    
-   The variance of the image consists of the intra- and inter-class variances, referred to as within- and between-class variances, respectively. 
+   **Otus 알고리즘**은 **thresh** 값을 사용자 임의로 정하는 것이 아니라, 알고리즘 내에서 **자동**으로 정해지도록 하는 방법이다. 
+   
+   이 알고리즘의 기본적인 전제는 이미지가 **bimodal distribution**이라는 것이다. 즉, 이미지 픽셀값들의 히스토그램은 서로 다른 두 개의 픽셀값에서 최대값이 나타는 **double peak 분포**를 가진다는 것이다. 
+   
+   왼쪽 클래스의 피크는 배경값, 오른쪽 클래스의 피크는 물체의 값일 것이다. 이 두 분포를 가장 잘 나누는 픽셀값을 찾는 것이 이 알고리즘의 핵심이다. 
+   
+   위 전제에 의거해 다음의 수식을 세울 수 있다. 
    
    \begin{equation} 
    \sigma_{T}^2 = \sigma_w^2(t) + \sigma_b^2(t) 
    \label{eq:totalVariance}   
    \end{equation} 
 
-   The within-class variance is defined as 
-
+   이것의 의미는 전체 분포의 분산 $\sigma_T$는 두 클래스 **내의 (within-class)** 분산 $\sigma_w$ 과 두 클래스 **사이의 (between-class)** 분산$\sigma_b$으로 이루어져 있다는 것을 뜻한다. 
+  
    \begin{equation} 
    \sigma_w^2(t) = \omega_1(t)\sigma_1^2(t) + \omega_2(t)\sigma_2^2(t) 
    \label{eq:withinClass}   
@@ -77,6 +83,10 @@ last_modified_at: 2020-08-10
    \sigma_b^2(t) = \omega_1(t)\omega_2(t)\left[\mu_1(t)-\mu_2(t) \right]^2
    \label{eq:betweenClass}   
    \end{equation} 
+  
+   이때, 두 클래스의 경계값은 $\sigma_w$을 최소화와 동시에 $\sigma_b$를 최대화 시키는 값으로 정해진다.  
+   
+  
    
 
 
