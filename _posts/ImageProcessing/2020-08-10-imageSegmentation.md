@@ -114,7 +114,7 @@ last_modified_at: 2020-08-10
    \omega_1(t) = \sum_{i=0}^{t-1} p(i), \quad 
    \omega_2(t) = \sum_{i=t}^{0} p(i)
    \label{eq:classProb}
-   \end{eqnarray} 
+   \end{equation} 
   
    The resulting class probabilities are shown in the left penal below 
    
