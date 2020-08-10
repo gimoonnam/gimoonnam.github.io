@@ -18,6 +18,10 @@ last_modified_at: 2020-08-10
 
   이번 포스팅에서는 **이미지 세그멘테이션**의 가장 간단한 케이스인 **이미지 2진화(image binarization)** 대해서 공부해 보도록 하겠다. 
   
+  
+  <img src="/assets/images/seg_Thresholding.png" width="800px" >
+  
+  
   **이미지 2진화**는 이미지내의 물체와 배경을 0과 1 혹은 그 반대로 주어 구분하는 것을 말한다. 
   
   
