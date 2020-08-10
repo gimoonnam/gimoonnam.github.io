@@ -89,7 +89,7 @@ last_modified_at: 2020-08-10
    따라서 두 클래스 분포 중 하나만 선택해서 최적화 시키는 thresh값을 찾아내는 것이다. 여기에서는 Eq. \ref{eq:betweenClass} Between-class 분포를 선택하기로 한다. 
    
   
-###  a.이미지 로드와 히스토그램 측정  
+###  a. 이미지 로드와 히스토그램 측정  
  
  
    이 알고리즘의 **핵심은 이미지의 히스토그램**이고, 실행을 위해 새로운 흑백 이미지를 읽고 히스토그램을 만들어본다. 
@@ -103,10 +103,14 @@ last_modified_at: 2020-08-10
 
 
 
-###  b.Between-class variance를 최대화 시키는 thresh값 찾기 
+###  b. Between-class variance를 최대화 시키는 thresh값 찾기 
 
-
+   \begin{equation} 
+   \omega_1(t) &=& \sum_{i=0}^{t-1} p(i)
+   \omega_2(t) &=& \sum_{i=t}^{0} p(i)
+   \end{equation} 
    
+ 
 
    <script src="https://gist.github.com/gimoonnam/f53e5051c22a697655033f070581eac7.js"></script>
    
@@ -114,13 +118,13 @@ last_modified_at: 2020-08-10
 
    
    
-###  c.OpenCV 내장 함수를 이용해서 얻은 thresh값과 비교 
+###  c. OpenCV 내장 함수를 이용해서 얻은 thresh값과 비교 
  
  
   <script src="https://gist.github.com/gimoonnam/ce5e515538201cc3be9189db5663bf87.js"></script>
 
 
-### d.결과 
+### d. 결과 
 
 
   <script src="https://gist.github.com/gimoonnam/531a9f7d09dde361add68f9e393204ce.js"></script>
