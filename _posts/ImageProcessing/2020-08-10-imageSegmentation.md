@@ -123,12 +123,12 @@ last_modified_at: 2020-08-10
   
   <script src="https://gist.github.com/gimoonnam/60fd92a1e8aa4f6f3b54c1b9b4ce0213.js"></script>
   
-  <img src="/assets/images/thresholding_result3.png" width="800px" >
+  <img src="/assets/images/thresholding_result3.png" width="400px" >
   
   
   
 
 # References and Image sources
 
-1. [Otus's thresholding with OpenCV](https://www.learnopencv.com/otsu-thresholding-with-opencv/?ck_subscriber_id=572611048).  
-2. 
+1. [Otus's thresholding with OpenCV](https://www.learnopencv.com/otsu-thresholding-with-opencv/?ck_subscriber_id=572611048)      
+2. [Wikipedia](https://en.wikipedia.org/wiki/Otsu's_method)   
