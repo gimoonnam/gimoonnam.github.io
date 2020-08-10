@@ -1,5 +1,5 @@
 ---
-title: "Edge Enhancement Algorithms (이미지 경계선 강화 알고리즘)"
+title: "Edge Enhancing (이미지 경계선 강화 필터링)"
 date: 2020-7-23 12:32:28 -0400
 categories: ImageProcessing
 tags:
