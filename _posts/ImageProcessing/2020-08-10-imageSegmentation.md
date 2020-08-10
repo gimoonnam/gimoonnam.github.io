@@ -105,21 +105,34 @@ last_modified_at: 2020-08-10
 
 ###  b. Between-class variance를 최대화 시키는 thresh값 찾기 
 
-   \begin{equation} 
-   \omega_1(t) &=& \sum_{i=0}^{t-1} p(i)
-   \omega_2(t) &=& \sum_{i=t}^{0} p(i)
-   \end{equation} 
-   
- 
-
    <script src="https://gist.github.com/gimoonnam/f53e5051c22a697655033f070581eac7.js"></script>
    
-   <img src="/assets/images/thresholding_result1.png" width="800px">
-
+   In Eq. \ref{eq:betweenClass}, **the class probability** is a **cumulative sum**. 
+   But the sums run in the opposite directions as following 
    
+   \begin{eqnarray} 
+   \omega_1(t) &=& \sum_{i=0}^{t-1} p(i) \\
+   \omega_2(t) &=& \sum_{i=t}^{0} p(i)
+   \end{eqnarray} 
+  
+   The resulting class probabilities are shown in the left penal below 
+   
+   <img src="/assets/images/thresholding_result1.png" width="800px">
+   
+   **The means of classes** are calculated as following  
+   
+   \begin{eqnarray}
+   \mu_1(t) = \frac{\sum_{i=0}^{t-1} i p(i)}{\omega_1(t)} \\ 
+   \mu_2(t) = \frac{\sum_{i=t}^{0} i p(i)}{\omega_2(t)}
+   \end{eqnarray}
+   
+   In figure above, the right penal shows **the obtained between-class variance**, which appears as a quadratic function 
+   and the location of maximum pixel value is the **thresh** value. 
+    
    
 ###  c. OpenCV 내장 함수를 이용해서 얻은 thresh값과 비교 
  
+  The obtained thresh is about **131.98**, which matches well with the one obtained from OpenCV library.  
  
   <script src="https://gist.github.com/gimoonnam/ce5e515538201cc3be9189db5663bf87.js"></script>
 
