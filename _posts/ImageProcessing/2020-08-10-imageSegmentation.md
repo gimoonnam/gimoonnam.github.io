@@ -15,8 +15,6 @@ last_modified_at: 2020-08-10
 
 
 # Image Thresholding 
-
-   <img src="/assets/images/thresholding_sample.png" width="800px" >
  
  이번 포스팅에선 **이미지 이진화(image binarization)** 대해서 공부해 보도록 한다.
 
@@ -39,7 +37,21 @@ last_modified_at: 2020-08-10
   
    이것을 위해서 분리하는 영역과 배경의 픽셀값을 구분한다. 이것을 이라고 하며, 두 영역을 구분하는 픽셀값을 찾는 것을 뜻한다. 대표적으로 **Otsu**'s 방법이 있다. 
 
+   우선 필요한 모듈을 로딩하도록 한다. 
+   
+   <script src="https://gist.github.com/gimoonnam/d308cf557a8ac4a73227f142c9d54df9.js"></script>
+   
+   
+   그리고 이미지를 읽어 변수에 저장하고 **OpenCV**의 라이브러리를 이용해서 **이진화**를 실행해본다. 
+   
+   <script src="https://gist.github.com/gimoonnam/1b952b44c37d179e479eee5e00e62464.js"></script>
 
+   여기에서 **Thresh=0**으로 주었다. 
+   
+   <img src="/assets/images/thresholding_sample.png" width="800px" >
+   
+   결과에서 보듯이 원본 이미지에는 식별하기 어려웠던 32와 5가 선명하게 보이는 것을 볼 수 있다. 그리고 숫자는 밝기가 1로 배경은 0으로 처리된 **이진 이미지 (binary image)**가 되었다. 
+   
 
 
 ## Otsu's algorithm 
