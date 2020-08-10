@@ -108,7 +108,7 @@ last_modified_at: 2020-08-10
    <script src="https://gist.github.com/gimoonnam/f53e5051c22a697655033f070581eac7.js"></script>
    
    In Eq. \ref{eq:betweenClass}, **the class probability** is a **cumulative sum**. 
-   But the sums run in the opposite directions as following 
+   But the sums run **in the opposite directions** as following 
    
    \begin{equation} 
    \omega_1(t) = \sum_{i=0}^{t-1} p(i), \quad 
@@ -152,7 +152,17 @@ last_modified_at: 2020-08-10
   
   <img src="/assets/images/thresholding_result3.png" width="400px" >
   
+
+# Wrapping it up  
   
+  이번 포스팅에선 **image segmentation**의 기초적인 **이미지 이진화 처리**에 대해서 정리해 보았다. 
+  이 방법은 주로 이미지의 전처리에 해당하며 **Computer vision**에서 중요한 기초이다. 
+  
+  **임계값(thresh)** 을 찾아 픽셀값을 나누어 이미지의 픽셀값을 **0**과 **255** 두 그룹으로 양분하는 것이 핵심이다. 
+  
+  임계값은 주로 어림짐작으로 줄 수 있는 반면, Otus 알고리즘은 이미지 픽셀값들의 히스토그램을 이용해 자동으로 그 값을 찾는다.
+ 
+  이어지는 포스팅에선 **Computer vision**에서 아주 중요한 기술인 **K-Means Clustering**을 이용한 **image segmentation**에 대해서 공부해 보도록 하겠다. 
   
 
 # References and Image sources
