@@ -165,7 +165,7 @@ last_modified_at: 2020-08-10
   이어지는 포스팅에선 **Computer vision**에서 아주 중요한 기술인 **K-Means Clustering**을 이용한 **image segmentation**에 대해서 공부해 보도록 하겠다. 
   
 
-# References and Image sources
+# References
 
 1. [Otus's thresholding with OpenCV](https://www.learnopencv.com/otsu-thresholding-with-opencv/?ck_subscriber_id=572611048)      
 2. [Wikipedia](https://en.wikipedia.org/wiki/Otsu's_method)   
