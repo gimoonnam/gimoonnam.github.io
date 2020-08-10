@@ -16,7 +16,7 @@ last_modified_at: 2020-08-10
 
 # Image Thresholding 
 
-   <img src="/assets/images/seg_Thresholding.png" width="800px" >
+   <img src="/assets/images/thresholding_sample.png" width="800px" >
  
  이번 포스팅에선 **이미지 이진화(image binarization)** 대해서 공부해 보도록 한다.
 
