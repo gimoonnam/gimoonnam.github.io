@@ -39,14 +39,14 @@ last_modified_at: 2020-08-10
    
    \begin{equation} 
    \sigma_{T}^2 = \sigma_w^2(t) + \sigma_b^2(t) 
-   \labels{eq:totalVariance}   
+   \label{eq:totalVariance}   
    \end{equation} 
 
    The within-class variance is defined as 
 
    \begin{equation} 
    \sigma_w^2(t) = \omega_1(t)\sigma_1^2(t) + \omega_2(t)\sigma_2^2(t) 
-   \labels{eq:withinClass}   
+   \label{eq:withinClass}   
    \end{equation} 
 
 
@@ -54,7 +54,7 @@ last_modified_at: 2020-08-10
 
    \begin{equation} 
    \sigma_b^2(t) = \omega_1(t)\omega_2(t)\left[\mu_1(t)-\mu_2(t) \right]^2
-   \labels{eq:betweenClass}   
+   \label{eq:betweenClass}   
    \end{equation} 
    
 
