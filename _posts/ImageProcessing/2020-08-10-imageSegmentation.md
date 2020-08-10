@@ -86,29 +86,35 @@ last_modified_at: 2020-08-10
   
    이때, 두 클래스의 경계값은 $\sigma_w$을 최소화 시킴과 동시에 $\sigma_b$를 최대화 시키는 값으로 정해진다.  
    
+   따라서 두 클래스 분포 중 하나만 선택해서 최적화 시키는 thresh값을 찾아내는 것이다. 여기에서는 Eq. \label{eq:betweenClass} Between-class 분포를 선택하기로 한다. 
+   
+ ### a. 이미지 로드와 히스토그램 측정  
+ 
+   이 알고리즘의 **핵심은 이미지의 히스토그램**이고, 실행을 위해 새로운 흑백 이미지를 읽고 히스토그램을 만들어본다. 
   
-
    <script src="https://gist.github.com/gimoonnam/064b1203b24e2c5da6abdb567ef7017f.js"></script>
+
+   히스토그램에 오른쪽 밝은 값의 픽셀이 많이 있는 것을 알 수 있고 대부분 배경에서 온 것들이다. 반면 우리가 분리해내고 싶은 부분은 
+   배와 그위의 사람들이다. 이 부분은 비교적 낮은 픽셀값들에 해당하며 그 비율은 배경에 비해 아주 낮다. 
 
    <img src="/assets/images/thresholding_sample2.png" width="800px" >
 
 
 
+ ### b. Between-class variance를 최대화 시키는 thresh값 찾기 
 
    <script src="https://gist.github.com/gimoonnam/f53e5051c22a697655033f070581eac7.js"></script>
    
    <img src="/assets/images/thresholding_result1.png" width="800px" >
 
    
+ ### c. OpenCV 내장 함수를 이용해서 얻은 thresh값과 비교 
+
+
+ ### d. 결과 
+
+    
    
-
-
-
-## Mumford-Shah functional 
-
-## Hough algorithm 
-
-
 
 # References and Image sources
 
