@@ -88,6 +88,8 @@ last_modified_at: 2020-08-10
    
   
    
+   
+   <script src="https://gist.github.com/gimoonnam/064b1203b24e2c5da6abdb567ef7017f.js"></script>
 
 
 ## Mumford-Shah functional 
