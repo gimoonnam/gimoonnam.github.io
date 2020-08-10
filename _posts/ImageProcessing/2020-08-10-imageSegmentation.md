@@ -33,15 +33,39 @@ last_modified_at: 2020-08-10
   
    이것을 위해서 분리하는 영역과 배경의 픽셀값을 구분한다. 이것을 이라고 하며, 두 영역을 구분하는 픽셀값을 찾는 것을 뜻한다. 대표적으로 **Otsu**'s 방법이 있다. 
 
-
 ## Otsu's algorithm 
+   
+   The variance of the image consists of the intra- and inter-class variances, referred to as within- and between-class variances, respectively. 
+   
+   \begin{equation} 
+   \sigma_{T}^2 = \sigma_w^2(t) + \sigma_b^2(t) 
+   \labels{eq:totalVariance}   
+   \end{equation} 
 
-## *K*-Means clustering을 이용한 segmentation
+   The within-class variance is defined as 
+
+   \begin{equation} 
+   \sigma_w^2(t) = \omega_1(t)\sigma_1^2(t) + \omega_2(t)\sigma_2^2(t) 
+   \labels{eq:withinClass}   
+   \end{equation} 
+
+
+   the between-class variance is defined as
+
+   \begin{equation} 
+   \sigma_b^2(t) = \omega_1(t)\omega_2(t)\left[\mu_1(t)-\mu_2(t) \right]^2
+   \labels{eq:betweenClass}   
+   \end{equation} 
    
-   [reference](https://towardsdatascience.com/introduction-to-image-segmentation-with-k-means-clustering-83fd0a9e2fc3)
-   
+
 
 ## Mumford-Shah functional 
 
 ## Hough algorithm 
 
+
+
+# References and Image sources
+
+1. [Otus's thresholding with OpenCV](https://www.learnopencv.com/otsu-thresholding-with-opencv/?ck_subscriber_id=572611048).  
+2. 
