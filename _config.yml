@@ -96,9 +96,9 @@ analytics:
 # Site Author
 author:
   name             : "GM NAM"
-  avatar           : "/assets/images/profile.jpg"
-  bio              : "Software Engineer @ Metron Hong Kong Ltd"
-  location         : "Seoul"
+  avatar           : #"/assets/images/profile.jpg"
+  bio              : "used to be a camera test engineer"
+  location         : "Seoul, Republic of Korea"
   email            :
   links:
     - label: "Email"
