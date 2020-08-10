@@ -84,14 +84,25 @@ last_modified_at: 2020-08-10
    \label{eq:betweenClass}   
    \end{equation} 
   
-   이때, 두 클래스의 경계값은 $\sigma_w$을 최소화와 동시에 $\sigma_b$를 최대화 시키는 값으로 정해진다.  
+   이때, 두 클래스의 경계값은 $\sigma_w$을 최소화 시킴과 동시에 $\sigma_b$를 최대화 시키는 값으로 정해진다.  
    
   
- 
+
    <script src="https://gist.github.com/gimoonnam/064b1203b24e2c5da6abdb567ef7017f.js"></script>
 
    <img src="/assets/images/thresholding_sample2.png" width="800px" >
+
+
+
+
+   <script src="https://gist.github.com/gimoonnam/f53e5051c22a697655033f070581eac7.js"></script>
    
+   <img src="/assets/images/thresholding_result1.png" width="800px" >
+
+   
+   
+
+
 
 ## Mumford-Shah functional 
 
