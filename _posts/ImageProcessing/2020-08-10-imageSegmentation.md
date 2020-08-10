@@ -110,9 +110,10 @@ last_modified_at: 2020-08-10
    In Eq. \ref{eq:betweenClass}, **the class probability** is a **cumulative sum**. 
    But the sums run in the opposite directions as following 
    
-   \begin{eqnarray} 
-   \omega_1(t) &=& \sum_{i=0}^{t-1} p(i) \\
-   \omega_2(t) &=& \sum_{i=t}^{0} p(i)
+   \begin{equation} 
+   \omega_1(t) = \sum_{i=0}^{t-1} p(i), \quad 
+   \omega_2(t) = \sum_{i=t}^{0} p(i)
+   \label{eq:classProb}
    \end{eqnarray} 
   
    The resulting class probabilities are shown in the left penal below 
@@ -121,10 +122,11 @@ last_modified_at: 2020-08-10
    
    **The means of classes** are calculated as following  
    
-   \begin{eqnarray}
-   \mu_1(t) = \frac{\sum_{i=0}^{t-1} i p(i)}{\omega_1(t)} \\ 
+   \begin{equation}
+   \mu_1(t) = \frac{\sum_{i=0}^{t-1} i p(i)}{\omega_1(t)}, \quad 
    \mu_2(t) = \frac{\sum_{i=t}^{0} i p(i)}{\omega_2(t)}
-   \end{eqnarray}
+   \label{eq:classMean}
+   \end{equation}
    
    In figure above, the right penal shows **the obtained between-class variance**, which appears as a quadratic function 
    and the location of maximum pixel value is the **thresh** value. 
