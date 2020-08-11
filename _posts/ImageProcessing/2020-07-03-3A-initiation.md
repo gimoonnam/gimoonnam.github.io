@@ -42,7 +42,7 @@ last_modified_at: 2020-08-11
   c. Machine Learning-based definition of contrast 
 
 
-  {% include 파일명.html id="https://www.youtube.com/watch?v=IZ3Wdq8S1O0" %}  
+  [PDAF vs Original AF](https://www.youtube.com/watch?v=IZ3Wdq8S1O0)
 
   
   
