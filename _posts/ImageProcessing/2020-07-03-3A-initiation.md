@@ -37,12 +37,12 @@ last_modified_at: 2020-08-11
  
 ### Other common algorithms 
  
-  a. <span style="color:blue"> PDAF (Phase Detection Auto Focus) </span>
-  b. Laser 
-  c. Machine Learning-based definition of contrast 
+  * <span style="color:blue"> PDAF (Phase Detection Auto Focus) </span>  [(YouTube video) PDAF vs Original AF](https://www.youtube.com/watch?v=IZ3Wdq8S1O0).  
+  * Laser   
+  * Machine Learning-based definition of contrast.   
 
 
-  [(YouTube video) PDAF vs Original AF](https://www.youtube.com/watch?v=IZ3Wdq8S1O0)
+  
 
   
   
