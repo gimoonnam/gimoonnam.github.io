@@ -1,5 +1,5 @@
 ---
-title: "Autofocus algorithm in Digital smartphones"
+title: "3A Algorithms in Digital Smartphones"
 date: 2020-7-3 23:34:28 -0400
 categories: ImageProcessing
 tags:
@@ -13,29 +13,29 @@ toc_sticky: true
 last_modified_at: 2020-08-11
 ---
 
-# Introduction 
+
   
   
-## Autofocus algorithms 
+# 1. Autofocus algorithms 
 
   * Algorithms and formulas are based on perceptions of the **human eyes**, which are more sensitive to brightness/luminance compared to chrominance   
   * Y value in both **YUV** and the **YCrCb** color space indicates the **luminance**  
   
   
-### Contrast-based Autofocus as the basic algorithm 
+## Contrast-based Autofocus as the basic algorithm 
   
   * measures the contrast at different lens positions 
   * find the **maximum** contrast. 
   * the contrast is defined as **the degree of sharpness** within an image 
   
   
-### How to define contrast? 
+## How to define contrast? 
 
   * The complexity of the autofocus algorithm depends on the method to define the contrast, which is differene from company to company   
   * <span style="color:blue"> **Canny Edge Detection**  </span>: one basic method for assigning a contrast value, available in **OpenCV**.  
  
  
-### Other common algorithms 
+## Other common algorithms 
  
   * <span style="color:blue"> PDAF (Phase Detection Auto Focus) </span>  [(YouTube video) PDAF vs Original AF](https://www.youtube.com/watch?v=IZ3Wdq8S1O0).  
   * Laser   
@@ -43,6 +43,10 @@ last_modified_at: 2020-08-11
 
 
   
+# 2. Autoexposure 
+
+
+# 3. Autowhite balance
 
   
   
