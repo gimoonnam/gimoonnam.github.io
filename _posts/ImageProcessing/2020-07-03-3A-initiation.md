@@ -24,32 +24,35 @@ last_modified_at: 2020-08-11
   
 ### Contrast-based Autofocus as the basic algorithm 
   
-  a. measures the contrast at different lens positions 
-  b. find the **maximum** contrast. 
-  c. the contrast is defined as **the degree of sharpness** within an image 
+  * measures the contrast at different lens positions 
+  * find the **maximum** contrast. 
+  * the contrast is defined as **the degree of sharpness** within an image 
   
   
 ### How to define contrast? 
 
-  a. The complexity of the autofocus algorithm depends on the method to define the contrast, which is differene from company to company   
-  b. <span style="color:blue"> **Canny Edge Detection**  </span>: one basic method for assigning a contrast value, available in **OpenCV**.  
+  * The complexity of the autofocus algorithm depends on the method to define the contrast, which is differene from company to company   
+  * <span style="color:blue"> **Canny Edge Detection**  </span>: one basic method for assigning a contrast value, available in **OpenCV**.  
  
  
 ### Other common algorithms 
  
-  a. PDAF (Phase Detection Auto Focus) 
+  a. <span style="color:blue"> PDAF (Phase Detection Auto Focus) </span>
   b. Laser 
   c. Machine Learning-based definition of contrast 
 
 
-  [PDAF vs Original AF](https://www.youtube.com/watch?v=IZ3Wdq8S1O0)
+  [(YouTube video) PDAF vs Original AF](https://www.youtube.com/watch?v=IZ3Wdq8S1O0)
 
   
   
 # References 
   1. [Medium: How the camera Autofocus feature works in Digital smartphone](https://medium.com/@sedara/how-the-camera-autofocus-feature-works-in-digital-smartphones-8382d511996c#e3b6).  
   2. [Color conversion in OpenCV](https://docs.opencv.org/3.1.0/de/d25/imgproc_color_conversions.html).  
-  3. 
+  3. [Naver blog](https://m.blog.naver.com/PostView.nhn?blogId=pamtek&logNo=220647682375&proxyReferer=https:%2F%2Fwww.google.com%2F).  
+  4. [What is PDAF and how does it work?](https://www.androidauthority.com/how-pdaf-works-1102272/). 
+  
+  
   
   
      
