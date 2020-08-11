@@ -16,7 +16,7 @@ last_modified_at: 2020-08-11
 
   
   
-# 1. Autofocus algorithms 
+# 1. Autofocus(AF) algorithms 
 
   * Algorithms and formulas are based on perceptions of the **human eyes**, which are more sensitive to brightness/luminance compared to chrominance   
   * Y value in both **YUV** and the **YCrCb** color space indicates the **luminance**  
@@ -43,10 +43,10 @@ last_modified_at: 2020-08-11
 
 
   
-# 2. Autoexposure 
+# 2. Autoexposure(AE)
 
 
-# 3. Autowhite balance
+# 3. Autowhitebalance(AWB)
 
   
   
