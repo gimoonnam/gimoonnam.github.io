@@ -15,8 +15,6 @@ last_modified_at: 2020-08-12
 
 <img src="/assets/images/Python.jpg" width="800px" >
 
-<span style="color:blue"> **Canny Edge Detection**  </span>
-
 
 # What is the difference between list and tuple in Python? 
 
@@ -27,18 +25,17 @@ Also, I often came across the moment to choose which array is good to use among 
 I found that they have different properties despite some commons. 
 So I wanted to document the commons and differences between list and tuple. List and Tuple are mainly used type of containers to handle an array in Python. 
 
-* <span style="color:blue"> **Commons**  </span>
+## <span style="color:blue"> Commons  </span>
 
-Both are variable containers, which can accommodate all types of variable such as numbers and strings
-Heterogeneous type of variables can be stored in the same container. 
+  Both are variable containers, which can accommodate all types of variable such as numbers and strings
+  Heterogeneous type of variables can be stored in the same container. 
 
 
-* <span style="color:blue"> **Differences**  </span>
-
-List is mutable, meaning that size and element can be changed 
-On the other hand, Tuple is immutable, so once the tuple is defined, it cannot be edited. append() method is not applicable in a tuple
-
-Speed of iteration: Tuple is faster than list
+## <span style="color:blue"> Differences  </span>
+  
+  List is mutable, meaning that size and element can be changed. 
+  On the other hand, Tuple is immutable, so once the tuple is defined, it cannot be edited. append() method is not applicable in a tuple
+  **Speed of iteration: Tuple is faster than list**
 
 
 
