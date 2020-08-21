@@ -81,8 +81,12 @@ last_modified_at: 2020-08-21
    
    실제 이미지에 대한 **K-Means clustering**를 실행해 보도록 하겠다. 
 
+   다음의 코드는 이미지를 읽고 **K-means clustering**을 진행하는 함수를 보여준다. 
+   여기에서 주의해야 할 것은 **cv2.kmeans**에 입력하는 데이터는 반드시 **float32 타입**이어야 한다는 것이다. 
+   변환하지 않고 입력하면 **assertion error**를 낼 것이다. 위의 예제에도 동일하게 적용된다. 
    
-
+   <script src="https://gist.github.com/gimoonnam/de7268174895c7ac86aff8da26cb0669.js"></script>
+   
    <img src="/assets/images/kmeans_img_results.jpeg" width="800px" >
    
    
