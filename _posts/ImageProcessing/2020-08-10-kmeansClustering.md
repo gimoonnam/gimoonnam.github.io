@@ -39,7 +39,7 @@ last_modified_at: 2020-08-21
    
    입력 데이터는 txt파일이며 다음의 **(number of points, 2(x,y))** 의 차원을 갖는다. 
    
-   <img src="/assets/images/kmeans_test_fig2.png" width="400px" >
+   <img src="/assets/images/kmeans_test_fig2.png" width="70px" >
    
    데이터를 읽어 numpy array로 저장한다. 
    
@@ -51,10 +51,10 @@ last_modified_at: 2020-08-21
    
    우선 **criteria**로 알고리즘이 멈출 조건을 준다. 
 
-   >> * **cv2.TERM_CRITERIA_EPS**: ***epsilon***으로 주어진 정확도를 만족하면 반복을 멈춘다. 
-   >> * **cv2.TERM_CRITERIA_MAX_ITER**: 정확도와 상관없이 미리 정해진 반복 횟수를 다 채우면 알고리즘을 멈춘다. 
-   >> * **cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER** : 위 둘 중 한 조건이 만족되면 멈춘다.
-   >> 여기에서 **max_iter=10**, **epsilon=1.0** 으로 주었다.   
+   > * **cv2.TERM_CRITERIA_EPS**: ***epsilon***으로 주어진 정확도를 만족하면 반복을 멈춘다. 
+   > * **cv2.TERM_CRITERIA_MAX_ITER**: 정확도와 상관없이 미리 정해진 반복 횟수를 다 채우면 알고리즘을 멈춘다. 
+   > * **cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER** : 위 둘 중 한 조건이 만족되면 멈춘다.
+   > 여기에서 **max_iter=10**, **epsilon=1.0** 으로 주었다.   
  
 
 
