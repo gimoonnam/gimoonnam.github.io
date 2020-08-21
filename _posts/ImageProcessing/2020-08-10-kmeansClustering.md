@@ -87,6 +87,15 @@ last_modified_at: 2020-08-21
    
    <script src="https://gist.github.com/gimoonnam/de7268174895c7ac86aff8da26cb0669.js"></script>
    
+   위 코드에서 주목할 것은 12번째 줄의 **cv2.kmeans** 입력 변수에 클러스터 센터의 초기 위치를 **KMEANS_PP_CENTERS**라는 옵션이다. 
+   이것은 위의 예제에서 사용한 랜덤하게 초기 위치를 정하는 **KMEANS_RANDOM_CENTERS**와는 다른 방법이다. 
+   
+   이미지와 같이 데이터나 clustering의 복잡도가 높은 경우에는 초기 중심을 어떻게 주는냐에 따라 알고리즘의 성능이 크게 차이나게 된다. 랜덤하게 주면 
+   중심을 찾지 못하고 소위 **로컬 미니마에 갇히게 될** 가능성이 높아진다. 이것은 clustering 알고리즘에서 잘 알려진 문제이며, 이것을 완화하는 조건이 
+   **K-Means++** 이다. 이것에 대한 자세한 내용은 Ref.4를 참고하기 바란다. 
+   
+### Results 
+
    세 개의 다른 $K=3,5,7$에 대해서 결과를 확인해 보도록 하자. 
    
    <img src="/assets/images/kmeans_result_K3.png" width="800px" >
@@ -107,4 +116,6 @@ last_modified_at: 2020-08-21
   1. [reference](https://towardsdatascience.com/introduction-to-image-segmentation-with-k-means-clustering-83fd0a9e2fc3)   
   2. [Open Source Computer Vision](https://docs.opencv.org/master/d1/d5c/tutorial_py_kmeans_opencv.html)   
   3. [Wikipedia](https://ko.wikipedia.org/wiki/K-%ED%8F%89%EA%B7%A0_%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98)  
+  4. [k-means++ for choosing initial centers (Wiki)](https://en.wikipedia.org/wiki/K-means%2B%2B)  
+  
   
