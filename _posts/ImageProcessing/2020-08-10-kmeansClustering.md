@@ -87,7 +87,13 @@ last_modified_at: 2020-08-21
    
    <script src="https://gist.github.com/gimoonnam/de7268174895c7ac86aff8da26cb0669.js"></script>
    
-   <img src="/assets/images/kmeans_img_results.jpeg" width="800px" >
+   세 개의 다른 $K=3,5,7$에 대해서 결과를 확인해 보도록 하자. 
+   
+   <img src="/assets/images/kmeans_result_K3.png" width="800px" >
+
+   <img src="/assets/images/kmeans_result_K5.png" width="800px" >
+
+   <img src="/assets/images/kmeans_result_K7.png" width="800px" >   
    
    
 
