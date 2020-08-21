@@ -97,18 +97,21 @@ last_modified_at: 2020-08-21
 ### Results 
 
    세 개의 다른 $K=3,5,7$에 대해서 결과를 확인해 보도록 하자. 
-   
+  
    <img src="/assets/images/kmeans_result_K3.png" width="800px" >
 
    <img src="/assets/images/kmeans_result_K5.png" width="800px" >
 
    <img src="/assets/images/kmeans_result_K7.png" width="800px" >   
    
-   
+  $K$가 증가할수록 이미지 컬러의 세분화가 증가하는 것을 알수있다. 이미지에서 clustering은 비슷한 픽셀값을 가지는 것들을 분류하는 것이다. 
+  따라서 클러스터 갯수가 늘어날수록 이미지내의 물체를 세밀하게 구분할 수 있게된다. 
+  
 
 # Wrapping it up 
 
-
+   이 포스팅에서는 computer vision의 가장 중요한 기술인 이미지 분할에 대해서 공부해보았다. 특히, OpenCV에서 제공하는 k-means clustering을 이용해서 
+   이미지의 컬러를 구분하는 것을 해보았다. 이것을 기초로 다음 포스팅에는 머신러닝을 이용한 이미지 분할에 대해서 알아보도록 하겠다. 
 
 
 # References 
