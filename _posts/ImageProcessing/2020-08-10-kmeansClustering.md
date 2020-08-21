@@ -83,7 +83,7 @@ last_modified_at: 2020-08-21
 
    
 
-   <img src="/assets/images/kmeans_img_results.jpeg" width="400px" >
+   <img src="/assets/images/kmeans_img_results.jpeg" width="800px" >
    
    
 
