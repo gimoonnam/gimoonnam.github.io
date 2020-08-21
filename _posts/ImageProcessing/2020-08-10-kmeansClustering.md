@@ -17,12 +17,12 @@ last_modified_at: 2020-08-21
 
 # Introduction 
 
-**이미지 분할(segmentation)** 은 컴퓨터 비전에서 중요한 물체를 인식하고 분리하는데 기초가 되는 중요한 이미지 처리 방법이다. 
+**이미지 분할(segmentation)** 은 컴퓨터 비전에서 물체를 인식하고 분리하는데 기초가 되는 중요한 이미지 처리 방법이다. 
 이번 포스팅에서는 **K-Means clustering**을 이용한 이미지 분할이 어떻게 이루어지는지 공부해 보도록 하겠다. K-Means Clustering를 지원하는 많은 라이브러리 중 
 **OpenCV**를 이용하도록 하겠다. 
 
 
-## Trial application of kmeans in OpenCV with small number of points 
+## Pre-test with a few points  
    
    먼저 몇개의 포인트로 이루어진 데이터에 대해서 OpenCV의 K-means clustering이 어떻게 작동하는지 테스트 해보도록 하겠다. 
    다음의 12개의 점들이 주어졌다고 하자. 
@@ -37,12 +37,25 @@ last_modified_at: 2020-08-21
 
    cv2에 K-means함수가 포함되어 있다. matplotlib는 결과를 그리기 위해 로딩했다. 
    
-   입력 데이터는 txt파일이며 다음의 **(number of points, 2(x,y))** 의 차원을 갖는다. 데이터를 읽어 numpy array로 저장한다. 
+   입력 데이터는 txt파일이며 다음의 **(number of points, 2(x,y))** 의 차원을 갖는다. 
+   
+   <img src="/assets/images/kmeans_test_fig2.png" width="400px" >
+   
+   데이터를 읽어 numpy array로 저장한다. 
    
    <script src="https://gist.github.com/gimoonnam/bee9944aeb37d7ce84e4cb035d297fab.js"></script>
    
+   **OpenCV**에서는 다음과 같이 k-means clustering을 실행한다. 
    
+   <script src="https://gist.github.com/gimoonnam/8c8de044e14f64cea1fe1a0bf05924cb.js"></script>
    
+   우선 **criteria**로 알고리즘이 멈출 조건을 준다. 
+
+   >> * **cv2.TERM_CRITERIA_EPS**: ***epsilon***으로 주어진 정확도를 만족하면 반복을 멈춘다. 
+   >> * **cv2.TERM_CRITERIA_MAX_ITER**: 정확도와 상관없이 미리 정해진 반복 횟수를 다 채우면 알고리즘을 멈춘다. 
+   >> * **cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER** : 위 둘 중 한 조건이 만족되면 멈춘다.
+   >> 여기에서 **max_iter=10**, **epsilon=1.0** 으로 주었다.   
+ 
 
 
 ## *K*-Means clustering을 이용한 segmentation
