@@ -45,18 +45,41 @@ last_modified_at: 2020-08-21
    
    <script src="https://gist.github.com/gimoonnam/bee9944aeb37d7ce84e4cb035d297fab.js"></script>
    
-   **OpenCV**에서는 다음과 같이 k-means clustering을 실행한다. 
+   
+   실행전 알고리즘을 멈출 조건을 다음과 같이 주도록 한다. 
    
    <script src="https://gist.github.com/gimoonnam/8c8de044e14f64cea1fe1a0bf05924cb.js"></script>
-   
-   우선 **criteria**로 알고리즘이 멈출 조건을 준다. 
-
+  
    > * **cv2.TERM_CRITERIA_EPS**: ***epsilon***으로 주어진 정확도를 만족하면 반복을 멈춘다. 
    > * **cv2.TERM_CRITERIA_MAX_ITER**: 정확도와 상관없이 미리 정해진 반복 횟수를 다 채우면 알고리즘을 멈춘다. 
    > * **cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER** : 위 둘 중 한 조건이 만족되면 멈춘다.
    > 여기에서 **max_iter=10**, **epsilon=1.0** 으로 주었다.   
  
+   
+   조건을 주었다면 알고리즘을 실행한다. 
+     
+   <script src="https://gist.github.com/gimoonnam/c026d247b49a97269a7ecdca721cc959.js"></script>
+  
+   **K**는 데이터를 분류할 클러스터의 수이다. 이 예제에서는 3으로 주어 기대한대로 분류를 잘 하는지 보도록 한다. **attempts**는 알고리즘의 실행 횟수이다. 
+   10으로 주었다. 따라서 10번의 독립적인 실행으로 분류를 한 후 **최적의 밀집도(compactness)** 를 가지는 결과를 리턴하게 될 것이다. 
+   
+   세 개의 output 변수가 있다. 
+   
+   > ret: 밀집도(compactness)이다. 이것은 각 클러스터의 중심으로부터 거리제곱의 합이다. 
+   > labels: 각 점이 어느 클러스터에 속하게 되었는지 표시한다
+   > centers: 클러스터의 중심 좌표를 리턴한다. K개의 데이터를 가진다. 
+   
 
+   다음과 같이 결과를 그려본다. 
+   
+   <script src="https://gist.github.com/gimoonnam/4f85865b84be3c2a7701bef89cc4d94e.js"></script>
+   
+   <img src="/assets/images/kmeans_test_fig3.png" width="400px" >
+   
+   예상한대로 분류가 잘 된 것을 볼 수 있다. 
+   
+   
+  
 
 ## *K*-Means clustering을 이용한 segmentation
    
