@@ -80,8 +80,15 @@ last_modified_at: 2020-08-21
 ## 2. Image segmentation using *K*-Means clustering with OpenCV 
    
    연습을 끝내고 실제 이미지에 대한 **K-Means clustering**를 실행해 보도록 하겠다. 
+
+   
+
+   <img src="/assets/images/kmeans_img_results.jpeg" width="400px" >
    
    
+
+# Wrapping it up 
+
 
 
 
