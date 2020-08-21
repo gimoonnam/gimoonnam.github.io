@@ -22,7 +22,7 @@ last_modified_at: 2020-08-21
 **OpenCV**를 이용하도록 하겠다. 
 
 
-## Pre-test with a few points  
+## 1. Pre-test with a few points  
    
    먼저 몇개의 포인트로 이루어진 데이터에 대해서 OpenCV의 K-means clustering이 어떻게 작동하는지 테스트 해보도록 하겠다. 
    다음의 12개의 좌표로 이루어진 데이터가 있다. 이 데이터의 차원은 **(12, 2(x,y))**가 될 것이다. 
@@ -62,9 +62,9 @@ last_modified_at: 2020-08-21
    
    세 개의 output 변수가 있다. 
    
-   > * ret: 밀집도(compactness)이다. 이것은 각 클러스터의 중심으로부터 거리제곱의 합이다.   
-   > * labels: 각 점이 어느 클러스터에 속하게 되었는지 표시한다   
-   > * centers: 클러스터의 중심 좌표를 리턴한다. K개의 데이터를 가진다.   
+   > * **ret**: 밀집도(compactness)이다. 이것은 각 클러스터의 중심으로부터 거리제곱의 합이다.   
+   > * **labels**: 각 점이 어느 클러스터에 속하게 되었는지 표시한다   
+   > * **centers**: 클러스터의 중심 좌표를 리턴한다. K개의 데이터를 가진다.   
    
 
    다음과 같이 결과를 그려본다. 
@@ -75,12 +75,12 @@ last_modified_at: 2020-08-21
    
    예상한대로 분류가 잘 된 것을 볼 수 있다. 
    
-   
-  
+ 
 
-## *K*-Means clustering을 이용한 segmentation
+## 2. Image segmentation using *K*-Means clustering with OpenCV 
    
-
+   연습을 끝내고 실제 이미지에 대한 **K-Means clustering**를 실행해 보도록 하겠다. 
+   
    
 
 
