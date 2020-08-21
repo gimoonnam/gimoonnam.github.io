@@ -1,5 +1,5 @@
 ---
-title: "Image Segmentation by K-Means Clustering with OpenCV"
+title: "Image Segmentation(이미지 분할) by K-Means Clustering with OpenCV"
 date: 2020-8-10 11:32:28 -0400
 categories: ImageProcessing
 tags:
@@ -24,7 +24,7 @@ last_modified_at: 2020-08-21
 
 ## 1. Pre-test with a few points  
    
-   먼저 몇개의 포인트로 이루어진 데이터에 대해서 OpenCV의 K-means clustering이 어떻게 작동하는지 테스트 해보도록 하겠다. 
+   먼저 몇개의 포인트로 이루어진 데이터에 대해서 **OpenCV**의 **K-means clustering**이 어떻게 작동하는지 테스트 해보도록 하겠다. 
    다음의 12개의 좌표로 이루어진 데이터가 있다. 이 데이터의 차원은 **(12, 2(x,y))**가 될 것이다. 
    
    <img src="/assets/images/kmeans_test_fig1.jpeg" width="450px" >
