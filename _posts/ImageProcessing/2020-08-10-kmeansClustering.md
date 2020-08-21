@@ -25,9 +25,9 @@ last_modified_at: 2020-08-21
 ## Pre-test with a few points  
    
    먼저 몇개의 포인트로 이루어진 데이터에 대해서 OpenCV의 K-means clustering이 어떻게 작동하는지 테스트 해보도록 하겠다. 
-   다음의 12개의 점들이 주어졌다고 하자. 
-
-   <img src="/assets/images/kmeans_test_fig1.png" width="400px" >
+   다음의 12개의 좌표로 이루어진 데이터가 있다. 이 데이터의 차원은 **(12, 2(x,y))**가 될 것이다. 
+   
+   <img src="/assets/images/kmeans_test_fig1.jpeg" width="400px" >
    
    3개의 클러스터로 이루어져있다고 금방 알 수 있다. 이것을 알고리즘이 잘 찾는지 확인해 보자. 
    
@@ -36,8 +36,6 @@ last_modified_at: 2020-08-21
    <script src="https://gist.github.com/gimoonnam/93baf6bef05d8ad50e35c10bec85e017.js"></script>
 
    cv2에 K-means함수가 포함되어 있다. matplotlib는 결과를 그리기 위해 로딩했다. 
-   
-   입력 데이터는 txt파일이며 다음의 **(number of points, 2(x,y))** 의 차원을 갖는다. 
    
    <img src="/assets/images/kmeans_test_fig2.png" width="70px" >
    
