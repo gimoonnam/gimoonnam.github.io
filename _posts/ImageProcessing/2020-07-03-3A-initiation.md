@@ -15,6 +15,8 @@ last_modified_at: 2020-08-11
   
 # 1. Autofocus(AF) algorithms 
 
+<img src="/assets/images/AF_fig1.png" width="400px" >
+
   * Algorithms and formulas are based on perceptions of the **human eyes**, which are more sensitive to brightness/luminance compared to chrominance   
   * **Y** value in the colorspace of both **YUV** and **YCrCb** indicates the **luminance**  
   
@@ -41,6 +43,9 @@ last_modified_at: 2020-08-11
 
   
 # 2. Autoexposure(AE)
+
+<img src="/assets/images/AE_fig1.png" width="500px" >
+
 
 ## General Scheme of Algorithm 
 
@@ -73,7 +78,6 @@ EV_{opt} = EV_{pre} + \log_2(B_{pre}) + \log_2(B_{opt})
  
  
 ## High Dynamic-Range Histogram(HDH) AE
-
 
 
 
