@@ -88,6 +88,12 @@ EV_{opt} = EV_{pre} + \log_2(B_{pre}) + \log_2(B_{opt})
 
 Human eyes adapt to varying illumination conditions that image sensor can't, thus this needs to be computed 
 
+There are two ways of balancing 
+- Pre-computed sets 
+- Guess with an algorithm 
+
+## Gray World White Balancing Algoritm 
+
   
   
   
@@ -96,8 +102,11 @@ Human eyes adapt to varying illumination conditions that image sensor can't, thu
   2. [Color conversion in OpenCV](https://docs.opencv.org/3.1.0/de/d25/imgproc_color_conversions.html).  
   3. [Naver blog](https://m.blog.naver.com/PostView.nhn?blogId=pamtek&logNo=220647682375&proxyReferer=https:%2F%2Fwww.google.com%2F).  
   4. [What is PDAF and how does it work?](https://www.androidauthority.com/how-pdaf-works-1102272/). 
-  5. [Using Brightness Histogram to perform
+  5. [AE: Using Brightness Histogram to perform
 Optimum Auto Exposure](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.149.8920&rep=rep1&type=pdf).
+  6. [AWB: Gray World Algorithm](https://web.stanford.edu/~sujason/ColorBalancing/grayworld.html).  
+  7. [AWB: By OpenCV on Stack**overflow**](https://stackoverflow.com/questions/46390779/automatic-white-balancing-with-grayworld-assumption)
+  
   
      
    
