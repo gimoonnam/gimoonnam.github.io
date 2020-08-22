@@ -12,14 +12,11 @@ toc: true
 toc_sticky: true
 last_modified_at: 2020-08-11
 ---
-
-
-  
   
 # 1. Autofocus(AF) algorithms 
 
   * Algorithms and formulas are based on perceptions of the **human eyes**, which are more sensitive to brightness/luminance compared to chrominance   
-  * Y value in both **YUV** and the **YCrCb** color space indicates the **luminance**  
+  * **Y** value in the colorspace of both **YUV** and **YCrCb** indicates the **luminance**  
   
   
 ## Contrast-based Autofocus as the basic algorithm 
@@ -31,7 +28,7 @@ last_modified_at: 2020-08-11
   
 ## How to define contrast? 
 
-  * The complexity of the autofocus algorithm depends on the method to define the contrast, which is differene from company to company   
+  * The complexity of the autofocus algorithm depends on the method to define the contrast, which is different from company to company   
   * <span style="color:blue"> **Canny Edge Detection**  </span>: one basic method for assigning a contrast value, available in **OpenCV**.  
  
  
@@ -44,6 +41,31 @@ last_modified_at: 2020-08-11
 
   
 # 2. Autoexposure(AE)
+
+Auto exposure is to find an optimal exposure time at a given environment, which is 
+typically made in the following steps.  
+
+**Step 1**: A pre-determined exposure value can be calculated as follow
+ 
+ $$
+ EV = \log_2\left(F^2/T \right) = 2\log_2(F) - \log_2(T)
+ \label{eq:EVpre}
+ $$
+ 
+ * **$EV$**: Exposure value   
+ * **F**: Aperture size 
+ * **T**: exposure time (duration) 
+
+
+**Step 2**: Convert the **RGB** values to Brightness $B$  
+**Step 3**: Derive a single number $B_{pre}$ from the brightness picture   
+**Step 4**: Calculate the optimum exposure $EV_{opt}$ 
+
+$$
+EV_{opt} = EV_{pre} + \log_2(B_{pre}) + \log_2(B_{opt}) 
+$$
+
+
 
 
 # 3. Autowhitebalance(AWB)
