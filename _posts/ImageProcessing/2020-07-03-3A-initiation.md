@@ -78,7 +78,11 @@ EV_{opt} = EV_{pre} + \log_2(B_{pre}) + \log_2(B_{opt})
 
 
 
-# 3. Autowhitebalance(AWB)
+# 3. Autowhitebalance(AWB) (Color Balancing) 
+
+<img src="/assets/images/AWB_fig1.png" width="500px" >
+
+Human eyes adapt to varying illumination conditions that image sensor can't, thus this needs to be computed 
 
   
   
