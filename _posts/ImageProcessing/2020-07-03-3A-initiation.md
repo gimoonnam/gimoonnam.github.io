@@ -47,10 +47,11 @@ typically made in the following steps.
 
 **Step 1**: A pre-determined exposure value can be calculated as follow
  
- $$
+ 
+ \begin{equation}
  EV = \log_2\left(F^2/T \right) = 2\log_2(F) - \log_2(T)
  \label{eq:EVpre}
- $$
+ \end{equation}
  
  * **$EV$**: Exposure value   
  * **F**: Aperture size 
@@ -61,9 +62,9 @@ typically made in the following steps.
 **Step 3**: Derive a single number $B_{pre}$ from the brightness picture   
 **Step 4**: Calculate the optimum exposure $EV_{opt}$ 
 
-$$
+\begin{equation}
 EV_{opt} = EV_{pre} + \log_2(B_{pre}) + \log_2(B_{opt}) 
-$$
+\end{equation}
 
 
 
