@@ -42,6 +42,8 @@ last_modified_at: 2020-08-11
   
 # 2. Autoexposure(AE)
 
+## General Scheme of Algorithm 
+
 Auto exposure is to find an optimal exposure time at a given environment, which is 
 typically made in the following steps.  
 
@@ -67,10 +69,18 @@ EV_{opt} = EV_{pre} + \log_2(B_{pre}) + \log_2(B_{opt})
 \end{equation}
 
 
+## Mean Value AE (Ref.5) 
+ 
+ 
+## High Dynamic-Range Histogram(HDH) AE
+
+
+
 
 
 # 3. Autowhitebalance(AWB)
 
+  
   
   
 # References 
@@ -78,9 +88,8 @@ EV_{opt} = EV_{pre} + \log_2(B_{pre}) + \log_2(B_{opt})
   2. [Color conversion in OpenCV](https://docs.opencv.org/3.1.0/de/d25/imgproc_color_conversions.html).  
   3. [Naver blog](https://m.blog.naver.com/PostView.nhn?blogId=pamtek&logNo=220647682375&proxyReferer=https:%2F%2Fwww.google.com%2F).  
   4. [What is PDAF and how does it work?](https://www.androidauthority.com/how-pdaf-works-1102272/). 
-  
-  
-  
+  5. [Using Brightness Histogram to perform
+Optimum Auto Exposure](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.149.8920&rep=rep1&type=pdf).
   
      
    
