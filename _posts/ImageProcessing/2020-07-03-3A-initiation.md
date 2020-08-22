@@ -1,5 +1,5 @@
 ---
-title: "3A Algorithms in Digital Smartphones"
+title: "3A Algorithms in Digital Cameras"
 date: 2020-7-3 23:34:28 -0400
 categories: ImageProcessing
 tags:
@@ -10,7 +10,7 @@ tags:
 use_math: true
 toc: true
 toc_sticky: true
-last_modified_at: 2020-08-11
+last_modified_at: 2020-08-22
 ---
   
 # 1. Autofocus(AF) algorithms 
