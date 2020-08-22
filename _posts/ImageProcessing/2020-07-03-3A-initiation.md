@@ -92,7 +92,7 @@ There are two ways of balancing
 - Pre-computed sets 
 - Guess with an algorithm 
 
-## Gray World White Balancing Algoritm 
+## Gray World White Balancing Algorithm 
 
   
   
