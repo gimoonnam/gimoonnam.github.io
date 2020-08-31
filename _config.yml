@@ -96,8 +96,8 @@ analytics:
 # Site Author
 author:
   name             : "GM NAM"
-  avatar           : "/assets/images/profile.jpg"
-  bio              : "used to be a camera test engineer"
+  avatar           : #"/assets/images/profile.jpg"
+  bio              : "Camera test engineer"
   location         : "Seoul, Republic of Korea"
   email            :
   links:
