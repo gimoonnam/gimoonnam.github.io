@@ -25,7 +25,7 @@ last_modified_at: 2020-08-31
 이를 해결할 수 있는 두 가지 방법을 살펴보도록 하자. 
 
    
-    
+========================   
     
 
 
@@ -41,14 +41,13 @@ last_modified_at: 2020-08-31
 <script src="https://gist.github.com/gimoonnam/224fdfa50c17e29d9fcae4dd6757626a.js"></script>
 
 
-
+========================
    
     
    
    
    
-   
-   
+
 
 
 # Solution 2: 1.x 버전의 compatibility mode 적용 
