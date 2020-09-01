@@ -28,6 +28,10 @@ last_modified_at: 2020-08-31
     
     
 
+
+
+
+
 # Solution 1: Tensorflow의 버전 업데이트에 따른 변화 적용 
 
 첫 번째 방법은 **Tensorflow의 버전 업데이트에 따른 변화 적용**하는 것이다. 업데이트에 대한 자세한 내용은 [이 링크](https://www.tensorflow.org/guide/migrate)를 참고하기 바란다. 
@@ -40,7 +44,11 @@ last_modified_at: 2020-08-31
 
    
     
-    
+   
+   
+   
+   
+   
 
 
 # Solution 2: 1.x 버전의 compatibility mode 적용 
