@@ -1,5 +1,5 @@
 ---
-title: "What I studied today"
+title: "SelfStudyDiary"
 permalink: /categories/SelfStudyDiary/
 layout: category
 author_profile: true
