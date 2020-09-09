@@ -48,7 +48,7 @@ First method is apply changes in **Tensorflow 2.0**. Please refer to the details
 # Solution 2: to use compatibility mode 
 ---------------------------------------
 
-The second method is to disable the updated features in 2.0 by applying **compatibility mode 적용**. This can be implemented as following, then you will still be able to declare **tf.placeholder**. 
+The second method is to disable the updated features in 2.0 by applying **compatibility mode **. This can be implemented as following, then you will still be able to declare **tf.placeholder**. 
 
 <script src="https://gist.github.com/gimoonnam/3b057a0a2ad8fcdc698509e56e055ead.js"></script>
 
