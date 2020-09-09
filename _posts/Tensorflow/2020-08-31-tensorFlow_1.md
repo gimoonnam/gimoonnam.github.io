@@ -1,5 +1,5 @@
 ---
-title: "AttributeError: module ‘tensorflow’ has no attribute ‘placeholder' 해결 방법"
+title: "How to resolve: AttributeError: module ‘tensorflow’ has no attribute ‘placeholder'"
 date: 2020-8-31 05:34:28 -0400
 categories: Tensorflow
 tags:
