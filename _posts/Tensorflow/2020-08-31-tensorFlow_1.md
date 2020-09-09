@@ -8,33 +8,33 @@ tags:
 use_math: true
 toc: true
 toc_sticky: true
-last_modified_at: 2020-08-31
+last_modified_at: 2020-09-8
 ---
 
-# 증상 
+# Issue 
 ---------------------------------------
 
-* **텐서플로우가 2.x**으로 업데이트 되면서 **tf.placeholder**를 사용할 수 없게 되었다. 
+* As **tensorflow** has been updated to **2.x**, it no longer supports **tf.placeholder**. 
 
 <script src="https://gist.github.com/gimoonnam/116dae24c5d91a128b36ffb85aa28701.js"></script>
 
-* 다음과 같이 **placeholder** 모듈을 찾을 수 없다는 에러를 낸다. 
+* the code above will raise an error that **placeholder** cannot be found.
 
 <img src="/assets/images/tf_placeholder_error.png" width="800px" >
 
 
-이를 해결할 수 있는 두 가지 방법을 살펴보도록 하자. 
+There are two ways to get around this issue.  
 
    
 
-    
+   
 
-# Solution 1: Tensorflow의 버전 업데이트에 따른 변화 적용 
+# Solution 1: to follow the update scheme of Tensorflow 2.0 
 ---------------------------------------
 
-첫 번째 방법은 **Tensorflow의 버전 업데이트에 따른 변화 적용**하는 것이다. 업데이트에 대한 자세한 내용은 [이 링크](https://www.tensorflow.org/guide/migrate)를 참고하기 바란다. 
+First method is apply changes in **Tensorflow 2.0**. Please refer to the details on the update [this link](https://www.tensorflow.org/guide/migrate).
 
-**placeholder** 문제는 다음과 같이 적용하면 해결할 수 있다. 
+**placeholder** can be replaced by **variable** as shown below.  
 
 <script src="https://gist.github.com/gimoonnam/224fdfa50c17e29d9fcae4dd6757626a.js"></script>
 
@@ -42,17 +42,16 @@ last_modified_at: 2020-08-31
 
 
    
-   
-   
 
 
 
-# Solution 2: 1.x 버전의 compatibility mode 적용 
+# Solution 2: to use compatibility mode 
 ---------------------------------------
 
-두 번째 방법은 **tensorflor 1.x 버전의 compatibility mode 적용**하는 것이다. 이것은 2.x버전의 바뀐 내용을 사용하지 않겠다고 선언해주는 것으로, 
-다음과 같이 **tensorflow.compat.v1** 모듈을 읽고 **tf.disable_v2_behavior()**를 실행하면 이전 버전과 동일하게 **placeholder**를 실행할 수 있다. 
+The second method is to disable the updated features in 2.0 by applying **compatibility mode 적용**. This can be implemented as following, then you will still be able to declare **tf.placeholder**. 
 
 <script src="https://gist.github.com/gimoonnam/3b057a0a2ad8fcdc698509e56e055ead.js"></script>
+
+
 
 
