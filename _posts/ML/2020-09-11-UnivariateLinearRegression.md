@@ -92,7 +92,7 @@ The implementation in a class is as below
 
 <script src="https://gist.github.com/gimoonnam/6c7afda5e27ea883a1e54f9b3f4775ce.js"></script>
 
-The resulting of the above code is 
+The result of the training is 
 
 <img src="/assets/images/result_ULR_numpy.png" width="800px" >
 
@@ -100,6 +100,14 @@ The resulting of the above code is
 
 ## 2. ULR with Tensorflow 2.0 
 
+Next, we implement the ULR with the same dataset with tensorflow. Since the tensorflow is a software library, there are several functions to study. Besides, the LR is carried out in a batched data, which is much faster than training by individual data input. 
+
+<script src="https://gist.github.com/gimoonnam/b08e8d3d6987d6b81ade25e44f3601db.js"></script>
+
+
+As shown in the result below, the batch train produces a noisy profile of loss function, which is eventually saturated at an optimized value. The result of train fits the data pretty well. 
+
+<img src="/assets/images/result_ULR_TF.png" width="800px" >
 
 
 
