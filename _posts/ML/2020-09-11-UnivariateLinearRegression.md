@@ -122,7 +122,9 @@ As shown in the result below, the batch train produces a noisy profile of loss f
 
 # Concluding remarks
 
+In this post, I have studied the Linear Regression of a single variable set (weight and bias). For complete study, I have implemented the Linear Regression with three different libraries: Numpy, Tensorflow 2.0, and Keras. This low- to high-level implementation provided a comprehensive understanding on how the algorithm works, which is especially very helpful for a beginner. 
 
+In the following post, as a continuation of self-study on ML, I will study a logistic regression. 
 
 
 
