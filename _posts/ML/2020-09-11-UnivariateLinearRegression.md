@@ -41,7 +41,6 @@ In this post, I study a Linear Regression(LR), which is a basic subject in Machi
         w = w - \alpha \frac{\partial J}{\partial w}, \quad b = b - \alpha \frac{\partial J}{\partial b}
         \label{eq:w_updated}
     \end{equation}     
-     
     \begin{equation} 
        \frac{\partial J}{\partial w} = \frac{1}{N}\sum_{i=1}^{N}\left(wx^{(i)}+b - y^{(i)} \right)x^{(i)}
        \label{eq:dJ_dw}
@@ -57,7 +56,7 @@ In this post, I study a Linear Regression(LR), which is a basic subject in Machi
 
 ## 0. Module load and Data Acquisition 
 
-Load modules 
+Loading modules 
 ```
 from sklearn.datasets import make_regression
 import matplotlib.pyplot as plt
@@ -108,7 +107,6 @@ Next, we implement the ULR with the same dataset with tensorflow. Since the tens
 As shown in the result below, the batch train produces a noisy profile of loss function, which is eventually saturated at an optimized value. The result of train fits the data pretty well. 
 
 <img src="/assets/images/result_ULR_TF.png" width="800px" >
-
 
 
 
