@@ -82,17 +82,19 @@ y = np.expand_dims(y, axis=1)
 Split the date into train and test sets with 80% and 20%, respectively. 
 
 ```
-train_x = X[:80]
-test_x  = X[80:]
-train_y = y[:80]
-test_y  = y[80:]
-
+train_x, train_y = X[:80], y[:80]
+test_x, test_y   = X[80:], y[80:]
 ```
 
 ## 1. ULR with Numpy as ***from-scratch*** approach
 
+The implementation in a class is as below 
 
+<script src="https://gist.github.com/gimoonnam/6c7afda5e27ea883a1e54f9b3f4775ce.js"></script>
 
+The resulting of the above code is 
+
+<img src="/assets/images/result_ULR_numpy.png" width="800px" >
 
 
 
