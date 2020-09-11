@@ -112,6 +112,9 @@ As shown in the result below, the batch train produces a noisy profile of loss f
 
 ## 3. ULR with Keras 
 
+<script src="https://gist.github.com/gimoonnam/6fa1ded9a20fff781188119652bc87c4.js"></script>
+
+<script src="https://gist.github.com/gimoonnam/de16ed4d9564536650ff70686a7db476.js"></script>
 
 
 
