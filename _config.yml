@@ -19,6 +19,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 # Site Settings
 locale                   : "en-US"
 title                    : "GM's blog"
+timezone: Asia/Seoul
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "software engineer @ Metron Hong Kong Ltd"
