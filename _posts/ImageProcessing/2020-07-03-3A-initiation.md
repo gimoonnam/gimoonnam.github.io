@@ -96,8 +96,13 @@ There are two ways of balancing
 - Pre-computed sets 
 - Guess with an algorithm 
 
-## Gray World White Balancing Algorithm 
+## Algorithms [ref](https://www.programmersought.com/article/97221124576/)
+  
+  * Gray World White Balancing Algorithm 
+  * perfect reflection 
+  * Dynamic threshold 
 
+  
   
   
   
