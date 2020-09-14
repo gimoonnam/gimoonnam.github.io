@@ -111,7 +111,7 @@ Optimum Auto Exposure](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.
   6. [AWB: Gray World Algorithm](https://web.stanford.edu/~sujason/ColorBalancing/grayworld.html).  
   7. [AWB: By OpenCV on Stack**overflow**](https://stackoverflow.com/questions/46390779/automatic-white-balancing-with-grayworld-assumption)
   
-  
+  8. [OpenCV autofocus using gradient operators](https://www.programmersought.com/article/2549148775/) 
      
    
   
