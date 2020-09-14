@@ -34,15 +34,15 @@ Camera's autofocus automatically adjusts the distance between the camera lens an
 
   * The complexity of the autofocus algorithm depends on the method to define the contrast, which is different from company to company   
   * <span style="color:blue"> **Canny Edge Detection**  </span>: one basic method for assigning a contrast value, available in **OpenCV**.  
+  * Tenengrad gradient method (using Sobel operator) 
+  * Laplacian gradient method (using Laplace operator) 
+  * Variance method 
  
  
 ## Other common algorithms 
  
   * <span style="color:blue"> PDAF (Phase Detection Auto Focus) </span>  [(YouTube video) PDAF vs Original AF](https://www.youtube.com/watch?v=IZ3Wdq8S1O0).   
   * Machine Learning-based definition of contrast.   
-  * Tenengrad gradient method (using Sobel operator) 
-  * Laplacian gradient method (using Laplace operator) 
-  * Variance method 
 
 
   
