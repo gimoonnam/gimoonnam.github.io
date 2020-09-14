@@ -15,6 +15,8 @@ last_modified_at: 2020-08-22
   
 # 1. Autofocus(AF) algorithms 
 
+Camera's autofocus automatically adjusts the distance between the camera lens and the CCD through the camera's internal micro-driving motor to ensure that the image plane is projected onto the CCD's image surface.
+
 <img src="/assets/images/AF_fig1.png" width="300px" >
 
   * Algorithms and formulas are based on perceptions of the **human eyes**, which are more sensitive to brightness/luminance compared to chrominance   
@@ -36,9 +38,11 @@ last_modified_at: 2020-08-22
  
 ## Other common algorithms 
  
-  * <span style="color:blue"> PDAF (Phase Detection Auto Focus) </span>  [(YouTube video) PDAF vs Original AF](https://www.youtube.com/watch?v=IZ3Wdq8S1O0).  
-  * Laser   
+  * <span style="color:blue"> PDAF (Phase Detection Auto Focus) </span>  [(YouTube video) PDAF vs Original AF](https://www.youtube.com/watch?v=IZ3Wdq8S1O0).   
   * Machine Learning-based definition of contrast.   
+  * Tenengrad gradient method (using Sobel operator) 
+  * Laplacian gradient method (using Laplace operator) 
+  * Variance method 
 
 
   
