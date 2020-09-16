@@ -23,23 +23,22 @@ Camera's autofocus automatically adjusts the distance between the camera lens an
   * **Y** value in the colorspace of both **YUV** and **YCrCb** indicates the **luminance**  
   
   
-## Contrast-based Autofocus as the basic algorithm 
+## Contrast Detection AutoFocus (CDAF) 
   
   * measures the contrast at different lens positions 
   * find the **maximum** contrast. 
   * the contrast is defined as **the degree of sharpness** within an image 
-  
-  
-## How to define contrast? 
+    
+### How to define contrast? 
 
-  * The complexity of the autofocus algorithm depends on the method to define the contrast, which is different from company to company   
-  * <span style="color:blue"> **Canny Edge Detection**  </span>: one basic method for assigning a contrast value, available in **OpenCV**.  
-  * Tenengrad gradient method (using Sobel operator) 
-  * Laplacian gradient method (using Laplace operator) 
-  * Variance method 
+  The complexity of the autofocus algorithm depends on the method to define the contrast, which is different from company to company   
+  1. Canny Edge Detection
+  2. Tenengrad gradient method (using Sobel operator) 
+  3. Laplacian gradient method (using Laplace operator) 
+  4. Variance method 
  
  
-## Other common algorithms 
+## Other algorithms 
  
   * <span style="color:blue"> PDAF (Phase Detection Auto Focus) </span>  [(YouTube video) PDAF vs Original AF](https://www.youtube.com/watch?v=IZ3Wdq8S1O0).   
   * Machine Learning-based definition of contrast.   
