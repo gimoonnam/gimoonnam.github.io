@@ -40,8 +40,8 @@ Camera's autofocus automatically adjusts the distance between the camera lens an
  
 ## Other algorithms 
  
-  * <span style="color:blue"> PDAF (Phase Detection Auto Focus) </span>  [(YouTube video) PDAF vs Original AF](https://www.youtube.com/watch?v=IZ3Wdq8S1O0).   
-  * Machine Learning-based definition of contrast.   
+  * <span style="color:blue"> Phase Detection Auto Focus (PDAF) </span>  [(YouTube video) PDAF vs Original AF](https://www.youtube.com/watch?v=IZ3Wdq8S1O0).   
+  * Machine Learning-based definition of contrast
 
 
   
