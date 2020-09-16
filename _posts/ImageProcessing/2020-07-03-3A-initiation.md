@@ -29,14 +29,16 @@ Camera's autofocus automatically adjusts the distance between the camera lens an
   * find the **maximum** contrast. 
   * the contrast is defined as **the degree of sharpness** within an image 
     
-### How to define contrast? 
+  
+  **Image clarity evaluation methods**
 
   The complexity of the autofocus algorithm depends on the method to define the contrast, which is different from company to company   
-  1. Canny Edge Detection
-  2. Tenengrad gradient method (using Sobel operator) 
-  3. Laplacian gradient method (using Laplace operator) 
-  4. Variance method 
- 
+  ```
+1. Canny Edge Detection
+2. Tenengrad gradient method (using Sobel operator) 
+3. Laplacian gradient method (using Laplace operator) 
+4. Variance method 
+ ```
  
 ## b. Other algorithms 
  
