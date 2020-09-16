@@ -23,7 +23,7 @@ Camera's autofocus automatically adjusts the distance between the camera lens an
   * **Y** value in the colorspace of both **YUV** and **YCrCb** indicates the **luminance**  
   
   
-## Contrast Detection AutoFocus (CDAF) 
+## a. Contrast Detection AutoFocus (CDAF) 
   
   * measures the contrast at different lens positions 
   * find the **maximum** contrast. 
@@ -38,7 +38,7 @@ Camera's autofocus automatically adjusts the distance between the camera lens an
   4. Variance method 
  
  
-## Other algorithms 
+## b. Other algorithms 
  
   * <span style="color:blue"> Phase Detection Auto Focus (PDAF) </span>  [(YouTube video) PDAF vs Original AF](https://www.youtube.com/watch?v=IZ3Wdq8S1O0).   
   * Machine Learning-based definition of contrast
