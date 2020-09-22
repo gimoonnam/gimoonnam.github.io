@@ -65,7 +65,7 @@ import tensorflow as tf
 import time
 ```
 
-```
+```python
 X, y = make_regression(n_samples=100, 
                        n_features=1, 
                        bias=10.0, noise=10.0, random_state=2)
@@ -73,14 +73,14 @@ X, y = make_regression(n_samples=100,
 where X is input data and y is a label data. 
 
 The dimemsion of label data is changed to (n_samples, 1). 
-```
+```python
 y = np.expand_dims(y, axis=1)
 ```
 
 
 Split the date into train and test sets with 80% and 20%, respectively. 
 
-```
+```python
 train_x, train_y = X[:80], y[:80]
 test_x, test_y   = X[80:], y[80:]
 ```
