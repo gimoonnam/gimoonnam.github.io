@@ -57,7 +57,7 @@ In this post, I study a Linear Regression(LR), which is a basic subject in Machi
 ## 0. Module load and Data Acquisition 
 
 Loading modules 
-```
+```python
 from sklearn.datasets import make_regression
 import matplotlib.pyplot as plt
 import numpy as np
